@@ -25,7 +25,20 @@
 				<Param name="array" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Array.fill" func="yes">
+		<KeyWord name="Array.deleteIndex" func="yes">
+			<Overload retVal="array" descr="Deletes the array element with the specified index.
+			Requires 1.52o.">
+				<Param name="array" />
+				<Param name="index" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Array.deleteValue" func="yes">
+			<Overload retVal="array" descr="Deletes all numeric or string elements in the array that contain the value.
+			Requires 1.52o. Example: http://wsr.imagej.net//macros/examples/ArrayDeleteDemo.txt">
+				<Param name="array" />
+				<Param name="value" />
+			</Overload>
+		</KeyWord><KeyWord name="Array.fill" func="yes">
 			<Overload retVal="array" descr="Assigns the specified numeric value to each element of array.">
 				<Param name="array" />
 				<Param name="value" />
@@ -374,10 +387,12 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Dialog.create" func="yes">
-			<Overload retVal="" descr="Creates a dialog box with the specified title. Call Dialog.addString(),
-			Dialog.addNumber(), etc. to add components to the dialog. Call Dialog.show() to display the dialog and Dialog.getString(),
-			Dialog.getNumber(), etc. to retrieve the values entered by the user. Refer to the
-			 ''https://imagej.nih.gov/ij/macros/DialogDemo.txt'' DialogDemo macro for an example.">
+			<Overload retVal="" descr="Creates a modal dialog box with the specified title, or use Dialog.createNonBlocking(Title) to create a non-modal dialog. Call Dialog.addString(), Dialog.addNumber etc. to add components to the dialog. Call Dialog.show() to display the dialog and Dialog.getString(),  Dialog.getNumber() etc. to retrieve the values entered by the user.">
+			 	<Param name="Title" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Dialog.createNonBlocking" func="yes">
+			<Overload retVal="" descr="Creates a non-model dialog box with the specified title.">
 			 	<Param name="Title" />
 			</Overload>
 		</KeyWord>
