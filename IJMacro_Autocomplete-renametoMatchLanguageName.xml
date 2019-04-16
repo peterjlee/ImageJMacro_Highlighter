@@ -3486,18 +3486,14 @@ Requires 1.52m.">
 				<Param name="columnName" />
 			</Overload>
 		</KeyWord>		
-		<KeyWord name="Table.getSelectionEnd" func="yes">
-			<Overload retVal="" descr="Returns the index of last selected row in the table identified by (title), or -1 if there is no 
-			selection.">
-				<Param name="title" />
-				<Param name="rowIndex" />
+		<KeyWord name="Table.getSelectionEnd" func="no">
+			<Overload retVal="" descr="Returns the index of the last selected row in the current table,
+			or -1 if there is no selection.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Table.getSelectionStart" func="yes">
-			<Overload retVal="" descr="Returns the index of first selected row in the table identified by ''title'', or -1 if 
-			there is no selection.">
-				<Param name="title" />
-				<Param name="rowIndex" />
+		<KeyWord name="Table.getSelectionStart" func="no">
+			<Overload retVal="" descr="Returns the index of the first selected row in the current table,
+			or - 1 if there is no selection.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Table.getString" func="yes">
@@ -3538,7 +3534,8 @@ Requires 1.52m.">
 			</Overload>
 		</KeyWord>		
 		<KeyWord name="Table.set" func="yes">
-			<Overload retVal="" descr="Assigns a numeric or string value to the cell at the specified column and row.">
+			<Overload retVal="" descr="Assigns a numeric or string value to
+			the cell at the specified column and row.">
 				<Param name="columnName" />
 				<Param name="rowIndex" />
 				<Param name="value" />
@@ -3551,11 +3548,10 @@ Requires 1.52m.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Table.setSelection" func="yes">
-			<Overload retVal="" descr="Selects a range of rows in the table identified by ''title''. 
+			<Overload retVal="" descr="Selects a range of rows in the current table.
 			Use range (-1, -1) for selecting none.">
 				<Param name="firstRowIndex" />
 				<Param name="lastRowIndex" />
-				<Param name="title" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Table.showArrays" func="yes">
