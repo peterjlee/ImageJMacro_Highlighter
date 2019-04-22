@@ -3043,13 +3043,14 @@ Requires 1.52m.">
 			enables/disables the Edit greater than Options greater than Appearance ''Auto 
 			contrast stacks'' option. You can also have newly displayed stack slices 
 			contrast enhanced by holding the shift key down 
-			when navigating stacks.">
+			when navigating stacks.
+			setOption('ShowRowIndexes', boolean) Enables/disables display of Results table row indexes">
 				<Param name="option" />
 				<Param name="boolean" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="setPasteMode" func="yes">
-			<Overload retVal="" descr="Sets the transfer mode used by the Edit greater than Paste command, where mode is ''Copy'', 
+			<Overload retVal="" descr="Sets the transfer mode used by the Edit grea.ter than Paste command, where mode is ''Copy'', 
 			''Blend'', ''Average'', ''Difference'', ''Transparent-white'', 
 			''Transparent-zero'', 
 			''AND'', ''OR'', ''XOR'', ''Add'', ''Subtract'', 
@@ -3562,8 +3563,15 @@ Requires 1.52m.">
 				<Param name="..." />
 			</Overload>
 		</KeyWord>
+		<KeyWord name="Table.showRowIndexes" func="yes">
+			<Overload retVal="" descr="
+Enable/disable display of row indexes.">
+				<Param name="boolean" />
+			</Overload>
+		</KeyWord>
 		<KeyWord name="Table.showRowNumbers" func="yes">
-			<Overload retVal="" descr="Enable/disable row numbers. Default is 'false'.">
+			<Overload retVal="" descr="
+Enable/disable display of row numbers. Default is 'false'.">
 				<Param name="boolean" />
 			</Overload>
 		</KeyWord>
