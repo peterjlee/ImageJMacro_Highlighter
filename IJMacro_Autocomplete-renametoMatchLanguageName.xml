@@ -1184,7 +1184,9 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getPixel" func="yes">
-			<Overload retVal="" descr="Returns the value of the pixel at (x,y). 
+			<Overload retVal="" descr="Returns the raw value of the pixel at (x,y). Use value(x,y)</a> to get 
+calibrated pixel values from 8 and 16 bit images
+ and intensity values from RGB images. 
 			Note that pixels in RGB images contain red, green and 
 			blue components that need to be extracted using shifting and masking. See the ''
 			http://wsr.imagej.net/macros/tools/ColorPickerTool.txt'' Color Picker Tool macro for an example that shows how to do 
@@ -2979,16 +2981,20 @@ Requires 1.52m.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="setLocation" func="yes">
-			<Overload retVal="" descr="Moves the active window to a new location. 
-			Use call(''ij.gui.ImageWindow.setNextLocation'', x, y) to set the location of the next opened window.
-			See also: getLocationAndSize, screenWidth, screenHeight.">
+			<Overload retVal="" descr="Moves the active window to a new location. Use
+ Table.setLocationAndSize(x,y,width,height,title)
+to set the location and size of a specified window.
+Use call("ij.gui.ImageWindow.setNextLocation", x, y)
+to set the location of the next opened window.
+	See also: getLocationAndSize, screenWidth, screenHeight.">
 				<Param name="x" />
 				<Param name="y" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="setLocation" func="yes">
-			<Overload retVal="" descr="Moves and resizes the active image window. The new location of the top-left corner is specified 
-			by x and y, and the new size by width and height.">
+			<Overload retVal="" descr="Moves and resizes the active image window. The new location of the top-left corner is
+specified by x and y, and the new size by width and height.
+See also Table.setLocationAndSize.">
 				<Param name="x" />
 				<Param name="y" />
 				<Param name="width" />
@@ -3546,6 +3552,16 @@ Requires 1.52m.">
 			<Overload retVal="" descr="Assigns an array to the specified column.">
 				<Param name="columnName" />
 				<Param name="array" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Table.setLocationAndSize" func="yes">
+			<Overload retVal="" descr="Sets the location and size of the current table.
+Works with other types of windows if a title is specified as the
+fifth argument. Requires 1.52o.">
+				<Param name="x" />
+				<Param name="y" />
+				<Param name="width" />
+				<Param name="height" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Table.setSelection" func="yes">
