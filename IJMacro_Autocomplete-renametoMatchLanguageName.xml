@@ -26,8 +26,8 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Array.deleteIndex" func="yes">
-			<Overload retVal="array" descr="Deletes the array element with the specified index.
-			Requires 1.52o.">
+			<Overload retVal="array" descr="Returns a version of an array where the element
+			with the specified index has been deleted.">
 				<Param name="array" />
 				<Param name="index" />
 			</Overload>
@@ -206,12 +206,13 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="call" func="yes">
-			<Overload retVal="" descr="Calls a public static method in a Java class, passing an arbitrary 
-			number of string arguments, and returning a string. Refer to the 
+			<Overload retVal="" descr="Calls a public static method in a Java class, passing an arbitrary number
+			of string arguments, and returning a string. Refer to the 
 			''http://wsr.imagej.net/macros/CallJavaDemo.txt'' CallJavaDemo 
 			macro and the ''../../plugins/imp-props.html''ImpProps plugin 
 			for examples. Note that the call() function does not work when ImageJ is 
-			running as an unsigned applet.">
+			running as an unsigned applet.
+			call(''class.method'') Calls a public static no-argument method in a Java class and returns a string.">
 				<Param name="''class.method''" />
 				<Param name="arg1" />
 				<Param name="arg2" />
@@ -281,9 +282,9 @@
 		<KeyWord name="debug" func="yes">
 			<Overload retVal="" descr="Calls the macro debugger,
 			 where 'arg' is ''break'' (the default), ''run'', ''trace'',
-			 ''fast-trace'' or ''dump''. Call debug(''dump'') to display
+			 ''fast-trace'', ''dump'' or ''throw''. Call debug(''dump'') to display
 			 the contents of the symbol table, the tokenized macro code
-			 and the variable stack.">
+			 and the variable stack. Call debug(''throw'') to display an example ''Exception'' window.">
 				<Param name="arg" />
 			</Overload>
 		</KeyWord>
@@ -1184,13 +1185,13 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getPixel" func="yes">
-			<Overload retVal="" descr="Returns the raw value of the pixel at (x,y). Use value(x,y)</a> to get 
-calibrated pixel values from 8 and 16 bit images
- and intensity values from RGB images. 
+			<Overload retVal="" descr="Returns the raw value of the pixel at (x,y).
+			Use value(x,y)</a> to get calibrated pixel values from 8 and 16 bit images and intensity values from RGB images.
 			Note that pixels in RGB images contain red, green and 
 			blue components that need to be extracted using shifting and masking. See the ''
 			http://wsr.imagej.net/macros/tools/ColorPickerTool.txt'' Color Picker Tool macro for an example that shows how to do 
-			this.">
+			this.
+			Use ''getValue(x,y)'' to get calibrated pixel values from 8 and 16 bit images and intensity values from RGB images.">
 				<Param name="x" />
 				<Param name="y" />
 			</Overload>
@@ -1332,7 +1333,7 @@ calibrated pixel values from 8 and 16 bit images
 		</KeyWord>
 		<KeyWord name="getValue(''color.foreground'')" func="no">
 			<Overload retVal="" descr="Returns the current foreground color as a value that can be passed to the 
-			setColor(value) function. The value returned is the pixel value used by the Edit greater than Fillcommand and by 
+			setColor(value) function. The value returned is the pixel value used by the Edit greater than Fill command and by 
 			drawing tools.">
 			</Overload>
 		</KeyWord>
@@ -1341,25 +1342,23 @@ calibrated pixel values from 8 and 16 bit images
 			setColor(value) function. The value returned is the pixel value used by the Edit greater than Clear command.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getValue(''rgb.foreground'')" func="no">
-			<Overload retVal="" descr="Returns the current foreground color as an RGB pixel value (''
-			https://imagej.nih.gov/ij/macros/examples/ForegroundBackgroundColors.txt'' example).">
-			</Overload>
-		</KeyWord>
-		<KeyWord name="getValue(''rgb.background'')" func="no">
-			<Overload retVal="" descr="Returns the current background color as an RGB pixel value.">
+		<KeyWord name="getValue(''font.height'')" func="no">
+			<Overload retVal="" descr="Returns the height, in pixels, of the current font.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getValue(''font.size'')" func="no">
 			<Overload retVal="" descr="Returns the size, in points, of the current font.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getValue(''font.height'')" func="no">
-			<Overload retVal="" descr="Returns the height, in pixels, of the current font.">
-			</Overload>
-		</KeyWord>
-		<KeyWord name="getValue(''selection.width'')" func="no">
-			<Overload retVal="" descr="Returns the stroke width of the current selection.">
+		<KeyWord name="getValue(''Mean, Median, Feret, etc.'')" func="no">
+			<Overload retVal="" descr="Returns a measurement result, where the argument is
+			''Area'', ''Mean'', ''StdDev'', ''Mode'', ''Min'', ''Max'', ''X'', ''Y'', ''XM'', ''YM'',
+			''Perim.'', ''BX'', ''BY'', ''Width'', ''Height'', ''Major'', ''Minor'', ''Angle'', ''Circ.'',
+			''Feret'', ''IntDen'', ''Median'', ''Skew'', ''Kurt'', ''%Area'', ''RawIntDen'', ''Ch'', ''Slice'',
+			''Frame'', ''FeretX'', ''FeretY'', ''FeretAngle'', ''MinFeret'', ''AR'', ''Round'', ''Solidity'',
+			''MinThr'' or ''MaxThr''.
+			Add ''raw'' to the argument to disable calibration, for example getValue(''Mean raw'').
+			Add ''limit'' to the argument to enable the ''limit to threshold'' option. Requires 1.52p.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getValue(''results.count'')" func="no">
@@ -1367,6 +1366,30 @@ calibrated pixel values from 8 and 16 bit images
 			works with tables that are not named ''Results''. Requires 1.49t.">
 			</Overload>
 		</KeyWord>
+		<KeyWord name="getValue(''rgb.background'')" func="no">
+			<Overload retVal="" descr="Returns the current background color as an RGB pixel value.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="getValue(''rgb.foreground'')" func="no">
+			<Overload retVal="" descr="Returns the current foreground color as an RGB pixel value (''
+			https://imagej.nih.gov/ij/macros/examples/ForegroundBackgroundColors.txt'' example).">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="getValue(''rotation.angle'')" func="no">
+			<Overload retVal="" descr="Returns the current Image...Transform...Rotate angle.
+			Requires 1.52p.">
+			</Overload>
+		</KeyWord>		
+		<KeyWord name="getValue(''selection.size'')" func="no">
+			<Overload retVal="" descr="Returns the number of points in the current selection,
+			or 0 if there is no selection.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="getValue(''selection.width'')" func="no">
+			<Overload retVal="" descr="Returns the stroke width of the current selection.">
+			</Overload>
+		</KeyWord>
+
 		<KeyWord name="getVersion()" func="no">
 			<Overload retVal="" descr="Returns the ImageJ version number as a string 
 			(e.g., ''1.34s''). See also: IJ.getFullVersion.">
@@ -1676,7 +1699,6 @@ Requires 1.52m.">
 				<Param name="n" />
 			</Overload>
 		</KeyWord>
-
 		<KeyWord name="makeArrow" func="yes">
 			<Overload retVal="" descr="Creates an arrow selection, where 'style' is a string containing ''filled'', 
 			''notched'', ''open'', ''headless'' or ''bar'', plus the optional modifiers 
@@ -3458,6 +3480,10 @@ See also Table.setLocationAndSize.">
 				<Param name="index" />
 			</Overload>
 		</KeyWord>
+		<KeyWord name="Table.allHeadings" func="no">
+			<Overload retVal="" descr="All 38 default measurement headings as a space-delimited string.">
+			</Overload>
+		</KeyWord>
 		<KeyWord name="Table.applyMacro" func="yes">
 			<Overload retVal="" descr="Applies macro code to each row of the table. Columns are assigned variable names as given by 
 			Table.headings. New variables starting with an uppercase letter create a new column with this name. The variable 'row' (row 
@@ -3697,6 +3723,15 @@ Enable/disable display of row numbers. Default is 'false'.">
 			<Overload retVal="" descr="Call this function to update the 
 			''Results'' window after the results table has been modified by 
 			calls to the setResult() function.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="value" func="yes">
+			<Overload retVal="" descr="Returns the value of the pixel at (x,y).
+			For 8 and 16 bit images, it is the calibrated value.
+			For RGB images, it is the intensity value.
+			Use getPixel(x,y) to get raw pixel values. Requires 1.52p.">
+				<Param name="x" />
+				<Param name="y" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="wait" func="yes">

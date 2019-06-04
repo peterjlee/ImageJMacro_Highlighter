@@ -382,6 +382,7 @@ String.paste
 String.resetBuffer
 String.show
 substring
+Table.allHeadings
 Table.applyMacro
 Table.create
 Table.deleteColumn
