@@ -15,7 +15,7 @@
 		<KeyWord name="Array.concat" func="yes">
 			<Overload retVal="array" descr="Returns a new array created by joining two
 			 or more arrays or values
-			https://imagej.nih.gov/ij/macros/examples/ArrayConcatExamples.tx">
+			http://wsr.imagej.net/macros/examples/ArrayConcatExamples.txt">
 				<Param name="array1" />
 				<Param name="array2" />
 			</Overload>
@@ -34,7 +34,7 @@
 		</KeyWord>
 		<KeyWord name="Array.deleteValue" func="yes">
 			<Overload retVal="array" descr="Deletes all numeric or string elements in the array that contain the value.
-			Requires 1.52o. Example: http://wsr.imagej.net//macros/examples/ArrayDeleteDemo.txt">
+			Requires 1.52o. Example: http://wsr.imagej.net/macros/examples/ArrayDeleteDemo.txt">
 				<Param name="array" />
 				<Param name="value" />
 			</Overload>
@@ -49,7 +49,7 @@
 			 (sorted with descending strength). 'Tolerance' is the minimum amplitude difference
 			 needed to separate two peaks. With v1.51n and later, there is an optional
 			 'edgeMode' argument: 0=include edges, 1=exclude edges(default), 2=circular array.
-			 ''https://imagej.nih.gov/ij/macros/examples/FindMaxima1D.txt'' ">
+			 ''http://wsr.imagej.net/macros/examples/FindMaxima1D.txt'' ">
 				<Param name="array" />
 				<Param name="tolerance" />
 			</Overload>
@@ -64,7 +64,7 @@
 			<Overload retVal="array" descr="Calculates and returns the Fourier amplitudes of array.
 			 WindowType can be ''none'', ''Hamming'', ''Hann'',
 			 or ''flat-top'', or may be omitted (meaning ''none''). 
-			 See the ''https://imagej.nih.gov/ij/macros/examples/TestArrayFourier.txt'' TestArrayFourier macro for an example and 
+			 See the ''http://wsr.imagej.net/macros/examples/TestArrayFourier.txt'' TestArrayFourier macro for an example and 
 			 more documentation. Requires 1.49i.">
 				<Param name="array" />
 				<Param name="windowType" />
@@ -90,7 +90,7 @@
 			 degrees (straight=0, convex = positive if contour is clockwise).
 			Set 'arm'=1 to calculate the angle from the closest vertex points left and right, or use arm greater than 
 			1 for more distant neighbors and smoother results.
-			 Requires 1.51n. ''https://imagej.nih.gov/ij/macros/examples/VertexAngles.txt'' ">
+			 Requires 1.51n. ''http://wsr.imagej.net/macros/examples/VertexAngles.txt'' ">
 				<Param name="xArr" />
 				<Param name="yArr" />
 				<Param name="arm" />
@@ -103,7 +103,7 @@
 		</KeyWord>
 		<KeyWord name="Array.rankPositions" func="yes">
 			<Overload retVal="array" descr="Returns, as an array, the rank position indexes of array, starting with the index of the 
-			smallest value (''https://imagej.nih.gov/ij/macros/examples/ArraySortingDemo.txt'' example).">
+			smallest value (''http://wsr.imagej.net/macros/examples/ArraySortingDemo.txt'' example).">
 				<Param name="array" />
 			</Overload>
 		</KeyWord>
@@ -120,7 +120,7 @@
 		</KeyWord>
 		<KeyWord name="Array.rotate" func="yes">
 			<Overload retVal="array" descr="Rotates the array elements by 'd' steps (positive 'd' = rotate right). 
-			Requires 1.51n. ''https://imagej.nih.gov/ij/macros/examples/RotateArray.txt'' ">
+			Requires 1.51n. ''http://wsr.imagej.net/macros/examples/RotateArray.txt'' ">
 				<Param name="array" />
 				<Param name="d" />
 			</Overload>
@@ -132,7 +132,7 @@
 		</KeyWord>
 		<KeyWord name="Array.show" func="yes">
 			<Overload retVal="array" descr="Displays one or more arrays in a Results window
-			 (''https://imagej.nih.gov/ij/macros/examples/ShowArrayDemo.txt'' ).
+			 (''http://wsr.imagej.net/macros/examples/ShowArrayDemo.txt'' ).
 			 If title (optional) is ''Results'', the window will be the active Results
 			 window, otherwise, it will be a dormant Results window
 			 (see also IJ.renameResults).
@@ -146,7 +146,7 @@
 		</KeyWord>
 		<KeyWord name="Array.slice" func="yes">
 			<Overload retVal="array" descr="Extracts a part of an array and returns it.
-			 (''https://imagej.nih.gov/ij/macros/examples/ArraySliceExamples.txt'' ).">
+			 (''http://wsr.imagej.net/macros/examples/ArraySliceExamples.txt'' ).">
 				<Param name="array" />
 				<Param name="start" />
 				<Param name="end" />
@@ -315,7 +315,7 @@
 		<KeyWord name="Dialog.addHelp" func="yes">
 			<Overload retVal="" descr="Adds a ''Help'' button that opens the specified URL in the default browser. This can be 
 			used to supply a help page for this dialog or macro. With v1.46b or later, displays an HTML formatted message if 'url' starts 
-			with '' less than html greater than '' (''https://imagej.nih.gov/ij/macros/examples/DialogWithHelp.txt'' example).">
+			with '' less than html greater than '' (''http://wsr.imagej.net/macros/examples/DialogWithHelp.txt'' example).">
 				<Param name="url" />
 			</Overload>
 		</KeyWord>
@@ -347,7 +347,7 @@
 			where 'label' is the group label, 'items' is an array 
 			containing the button labels, 'rows' and 'columns' specify the grid size, 
 			and 'default' is the label of the default button. 
-			(''https://imagej.nih.gov/ij/macros/examples/RadioButtonDemo.txt'' example).">
+			(''http://wsr.imagej.net/macros/examples/RadioButtonDemo.txt'' example).">
 				<Param name="label" />
 				<Param name="items" />
 				<Param name="rows" />
@@ -358,7 +358,7 @@
 		<KeyWord name="Dialog.addSlider" func="yes">
 			<Overload retVal="" descr="Adds a slider controlled numeric field to the dialog, 
 			using the specified label, and min, max and default values 
-			(''https://imagej.nih.gov/ij/macros/examples/SliderDemo.txt'' example). 
+			(''http://wsr.imagej.net/macros/examples/SliderDemo.txt'' example). 
 			Values with decimal points are used when (max-min)<=5 and min, max or default are non-integer.">
 				<Param name="label" />
 				<Param name="min" />
@@ -494,7 +494,7 @@
 			Call getStringWidth() to get the width of the text in pixels.
 			Refer to the ''http://wsr.imagej.net/macros/TextDemo.txt''
 			TextDemo macro for examples and to
-			 ''https://imagej.nih.gov/ij/macros/examples/DrawTextWithBackground.txt''
+			 ''http://wsr.imagej.net/macros/examples/DrawTextWithBackground.txt''
 			DrawTextWithBackground to see how to draw text with a background.">
 				<Param name="''text''" />
 				<Param name="x" />
@@ -503,7 +503,7 @@
 		</KeyWord>
 		<KeyWord name="drawString" func="yes">
 			<Overload retVal="" descr="Draws text at the specified location with a filled background (''
-			https://imagej.nih.gov/ij/macros/examples/DrawTextWithBackground.txt'' ).">
+			http://wsr.imagej.net/macros/examples/DrawTextWithBackground.txt'' ).">
 				<Param name="''text''" />
 				<Param name="x" />
 				<Param name="y" />
@@ -745,7 +745,7 @@
 			Equation can be either the equation name or an index. 
 			The equation names are shown in the drop down menu in the Analyze greater than Tools greater than Curve Fitting 
 			window. With ImageJ 1.42f or later, equation can be a string containing a user-defined equation 
-			(''https://imagej.nih.gov/ij/macros/examples/UserDefinedCurveFits.txt'' example).">
+			(''http://wsr.imagej.net/macros/examples/UserDefinedCurveFits.txt'' example).">
 				<Param name="equation" />
 				<Param name="xpoints" />
 				<Param name="ypoints" />
@@ -754,7 +754,7 @@
 		<KeyWord name="Fit.doFit" func="yes">
 			<Overload retVal="" descr="Fits the specified equation to the points defined by xpoints, ypoints, using initial parameter 
 			values contained in initialGuesses, an array equal in length to the number of parameters in equation (''
-			https://imagej.nih.gov/ij/macros/examples/RodbardSigmoidFit.txt'' example).">
+			http://wsr.imagej.net/macros/examples/RodbardSigmoidFit.txt'' example).">
 				<Param name="equation" />
 				<Param name="xpoints" />
 				<Param name="ypoints" />
@@ -763,7 +763,7 @@
 		</KeyWord>
 		<KeyWord name="Fit.f" func="yes">
 			<Overload retVal="" descr="Returns the y value at x(''
-			https://imagej.nih.gov/ij/macros/examples/PlotSigmoidDerivatives.txt'' example).">
+			http://wsr.imagej.net/macros/examples/PlotSigmoidDerivatives.txt'' example).">
 				<Param name="x" />
 			</Overload>
 		</KeyWord>
@@ -998,7 +998,7 @@
 		<KeyWord name="getInfo(''command.name'')" func="no">
 			<Overload retVal="" descr="Returns the name of the most recently invoked command. The names of commands invoked using 
 			keyboard shortcuts are preceded by ''^'' 
-			(''https://imagej.nih.gov/ij/macros/examples/GetCommandNameDemo.txt''
+			(''http://wsr.imagej.net/macros/examples/GetCommandNameDemo.txt''
 			example).">
 			</Overload>
 		</KeyWord>
@@ -1131,7 +1131,7 @@
 		</KeyWord>
 		<KeyWord name="getList(''threshold.methods'')" func="no">
 			<Overload retVal="" descr="Returns a list of the available automatic thresholding methods 
-			(''https://imagej.nih.gov/ij/macros/examples/AutoThresholdingDemo.txt'' example).">
+			(''http://wsr.imagej.net/macros/examples/AutoThresholdingDemo.txt'' example).">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getList(''LUTs'')" func="no">
@@ -1372,7 +1372,7 @@
 		</KeyWord>
 		<KeyWord name="getValue(''rgb.foreground'')" func="no">
 			<Overload retVal="" descr="Returns the current foreground color as an RGB pixel value (''
-			https://imagej.nih.gov/ij/macros/examples/ForegroundBackgroundColors.txt'' example).">
+			http://wsr.imagej.net/macros/examples/ForegroundBackgroundColors.txt'' example).">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getValue(''rotation.angle'')" func="no">
@@ -1458,14 +1458,14 @@
 		</KeyWord>
 		<KeyWord name="IJ.pad" func="yes">
 			<Overload retVal="" descr="Pads 'n' with leading zeros and returns the result (''
-			https://imagej.nih.gov/ij/macros/examples/StackOverlay.txt'' example).">
+			http://wsr.imagej.net/macros/examples/StackOverlay.txt'' example).">
 				<Param name="n" />
 				<Param name="length" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="IJ.redirectErrorMessages()" func="no">
 			<Overload retVal="" descr="Causes next image opening error to be redirected to the Log window and prevents the macro from 
-			being aborted (''https://imagej.nih.gov/ij/macros/examples/BatchMeasureWithRedirectedErrors.txt'' example).">
+			being aborted (''http://wsr.imagej.net/macros/examples/BatchMeasureWithRedirectedErrors.txt'' example).">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="IJ.renameResults" func="yes">
@@ -1590,7 +1590,7 @@ Requires 1.52m.">
 			<Overload retVal="" descr="Returns true if the value of the number n is NaN (Not-a-Number). A common way to create a NaN is 
 			to divide zero by zero. Comparison with a NaN always returns false so ''if (n!=n)'' is equivalent to 
 			(isNaN(n))''. Note that the numeric constant NaN is predefined in the macro language. The ''
-			https://imagej.nih.gov/ij/macros/examples/NaNs.txt'' NaNs macro demonstrates how to remove NaNs from an image.">
+			http://wsr.imagej.net/macros/examples/NaNs.txt'' NaNs macro demonstrates how to remove NaNs from an image.">
 				<Param name="n" />
 			</Overload>
 		</KeyWord>
@@ -1703,7 +1703,7 @@ Requires 1.52m.">
 			<Overload retVal="" descr="Creates an arrow selection, where 'style' is a string containing ''filled'', 
 			''notched'', ''open'', ''headless'' or ''bar'', plus the optional modifiers 
 			''outline'', ''double'', ''small'', ''medium'' and ''large'' (''
-			https://imagej.nih.gov/ij/macros/examples/Arrows.txt'' example).
+			http://wsr.imagej.net/macros/examples/Arrows.txt'' example).
 			See also: 
 			quot;Roi.setStrokeWidth and quot;Roi.setStrokeColor.
 			Requires 1.49a.">
@@ -1820,7 +1820,7 @@ Requires 1.52m.">
 			 are the coordinates (in pixels) of the upper left corner of the selection.
 			 The selection will use the font and size 
 			specified by the last call to setFont(). The
-			''https://imagej.nih.gov/ij/macros/examples/CreateOverlay.txt''
+			''http://wsr.imagej.net/macros/examples/CreateOverlay.txt''
 			CreateOverlay macro provides an example.">
 				<Param name="string" />
 				<Param name="x" />
@@ -1997,7 +1997,7 @@ Requires 1.52m.">
 			<Overload retVal="" descr="Draws text at the specified location and adds it to the overlay.
 			The first character is drawn obove and to the right of (x,y).
 			Use setFont() to specify the font and setColor to set specify the color 
-			(''https://imagej.nih.gov/ij/macros/examples/OverlayDrawStringDemo.txt'' example).">
+			(''http://wsr.imagej.net/macros/examples/OverlayDrawStringDemo.txt'' example).">
 				<Param name="''text''" />
 				<Param name="x" />
 				<Param name="y" />
@@ -2006,7 +2006,7 @@ Requires 1.52m.">
 		<KeyWord name="Overlay.drawString" func="yes">
 			<Overload retVal="" descr="Draws text at the specified location and 
 			angle and adds it to the overlay 
-			(''https://imagej.nih.gov/ij/macros/examples/RotatedText.txt'' example).">
+			(''http://wsr.imagej.net/macros/examples/RotatedText.txt'' example).">
 				<Param name="''text''" />
 				<Param name="x" />
 				<Param name="y" />
@@ -2081,7 +2081,7 @@ Requires 1.52m.">
 		</KeyWord>
 		<KeyWord name="Overlay.setPosition" func="yes">
 			<Overload retVal="" descr="Sets the stack position (slice number) of the last item added to the overlay (''
-			https://imagej.nih.gov/ij/macros/examples/StackOverlay.txt'' example).">
+			http://wsr.imagej.net/macros/examples/StackOverlay.txt'' example).">
 				<Param name="n" />
 			</Overload>
 		</KeyWord>
@@ -2261,7 +2261,7 @@ Requires 1.52m.">
 		</KeyWord>		
 		<KeyWord name="Plot.getValues" func="yes">
 			<Overload retVal="" descr="Returns the values displayed by clicking on ''List'' in a plot or histogram window (''
-			https://imagej.nih.gov/ij/macros/examples/PlotGetValuesDemo.txt'' example).">
+			http://wsr.imagej.net/macros/examples/PlotGetValuesDemo.txt'' example).">
 				<Param name="xpoints" />
 				<Param name="ypoints" />
 			</Overload>
@@ -2281,7 +2281,7 @@ Requires 1.52m.">
 		</KeyWord>		
 		<KeyWord name="Plot.setBackgroundColor" func="yes">
 			<Overload retVal="" descr="Sets the background color of the plot frame (''
-			https://imagej.nih.gov/ij/macros/examples/PlotBackgroundColorDemo.txt'' example).Requires 1.49h.">
+			http://wsr.imagej.net/macros/examples/PlotBackgroundColorDemo.txt'' example).Requires 1.49h.">
 				<Param name="color" />
 			</Overload>
 		</KeyWord>	
@@ -2361,7 +2361,7 @@ Requires 1.52m.">
 		<KeyWord name="Plot.setLogScaleX" func="yes">
 			<Overload retVal="" descr="Sets the x axis scale to Logarithmic, or back to linear if the optional boolean argument is 
 			false. In versions up to 1.49s, it must be called immediately after Plot.create and before Plot.setLimits. See the ''
-			https://imagej.nih.gov/ij/macros/examples/LogLogPlot.txt'' LogLogPlot macro for an example.">
+			http://wsr.imagej.net/macros/examples/LogLogPlot.txt'' LogLogPlot macro for an example.">
 				<Param name="boolean" />
 			</Overload>
 		</KeyWord>
@@ -2545,7 +2545,7 @@ Requires 1.52m.">
 		</KeyWord>
 		<KeyWord name="Roi.getSplineAnchors" func="yes">
 			<Overload retVal="" descr="Returns the x and y coordinates of the anchor points of a spline fitted selection
-			(''https://imagej.nih.gov/ij/macros/examples/GetSetAnchors.txt'' example).">
+			(''http://wsr.imagej.net/macros/examples/GetSetAnchors.txt'' example).">
 				<Param name="x" />
 				<Param name="y" />
 			</Overload>
@@ -2592,14 +2592,14 @@ Requires 1.52m.">
 		</KeyWord>
 		<KeyWord name="Roi.setPolygonSplineAnchors" func="yes">
 			<Overload retVal="" descr="Creates or updates a spline fitted polygon selection
-			(''https://imagej.nih.gov/ij/macros/examples/GetSetAnchors.txt'' example).">
+			(''http://wsr.imagej.net/macros/examples/GetSetAnchors.txt'' example).">
 				<Param name="x" />
 				<Param name="y" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Roi.setPolylineSplineAnchors" func="yes">
 			<Overload retVal="" descr="Creates or updates a spline fitted polyline selection
-			(''https://imagej.nih.gov/ij/macros/examples/GetSetAnchors.txt'' example).">
+			(''http://wsr.imagej.net/macros/examples/GetSetAnchors.txt'' example).">
 				<Param name="x" />
 				<Param name="y" />
 			</Overload>
@@ -2883,7 +2883,7 @@ Requires 1.52m.">
 			<Overload retVal="" descr="Uses the specified method to set the threshold levels of  the current image. Use the 
 			getList(''threshold.methods'') function to get a list of the available methods. Concatenate '' dark'' to the 
 			method name if the image has a dark background. For an example, see the ''
-			https://imagej.nih.gov/ij/macros/examples/AutoThresholdingDemo.txt'' AutoThresholdingDemo macro.">
+			http://wsr.imagej.net/macros/examples/AutoThresholdingDemo.txt'' AutoThresholdingDemo macro.">
 				<Param name="method" />
 			</Overload>
 		</KeyWord>
@@ -2965,7 +2965,7 @@ Requires 1.52m.">
 		</KeyWord>
 		<KeyWord name="setFont(''user'')" func="no">
 			<Overload retVal="" descr="Sets the font to the one defined in the Edit greater than Options greater than Fonts window. See also: 
-			quot;getInfo(''font.name''), getValue(''font.size'') and getValue(''font.height'').">
+			'getInfo(''font.name''), getValue(''font.size'') and getValue(''font.height'').">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="setForegroundColor" func="yes">
@@ -3003,12 +3003,10 @@ Requires 1.52m.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="setLocation" func="yes">
-			<Overload retVal="" descr="Moves the active window to a new location. Use
- Table.setLocationAndSize(x,y,width,height,title)
-to set the location and size of a specified window.
-Use call("ij.gui.ImageWindow.setNextLocation", x, y)
-to set the location of the next opened window.
-	See also: getLocationAndSize, screenWidth, screenHeight.">
+			<Overload retVal="" descr="Moves the active window to a new location. 
+			Use Table.setLocationAndSize(x,y,width,height,title) to set the location and size of a specified window.
+			Use call('ij.gui.ImageWindow.setNextLocation', x, y) to set the location of the next opened window.
+			See also: getLocationAndSize, screenWidth, screenHeight.">
 				<Param name="x" />
 				<Param name="y" />
 			</Overload>
@@ -3067,12 +3065,14 @@ See also Table.setLocationAndSize.">
 		<KeyWord name="setOption" func="yes">
 			<Overload retVal="" descr="Enables or disables an ImageJ option, 
 			where option is one of the following options and boolean is 
-			either true or false. <blockquote> ''AutoContrast'' 
+			either true or false. ''AutoContrast'' 
 			enables/disables the Edit greater than Options greater than Appearance ''Auto 
 			contrast stacks'' option. You can also have newly displayed stack slices 
 			contrast enhanced by holding the shift key down 
 			when navigating stacks.
-			setOption('ShowRowIndexes', boolean) Enables/disables display of Results table row indexes">
+			setOption('ShowRowIndexes', boolean) Enables/disables display of Results table row indexes
+			setOption('CopyHeaders', boolean) Enables/disables the 'Copy column headers' option in the
+			Edit...Options...Input/Output dialog. See 'String.copyResults'. Requires v1.52p.">
 				<Param name="option" />
 				<Param name="boolean" />
 			</Overload>
@@ -3101,8 +3101,8 @@ See also Table.setLocationAndSize.">
 		<KeyWord name="setResult" func="yes">
 			<Overload retVal="" descr="Adds an entry to the ImageJ results table or modifies an existing entry.
 			The first argument specifies a column in the table. If the specified column does not exist, it is added. 
-			The second argument specifies the row, where 0 less than =row less than =nResults. (nResults is a predefined variable.) A row is added to 
-			the table if row=nResults.
+			The second argument specifies the row, where 0 less than =row less than =nResults.
+			(nResults is a predefined variable.) A row is added to the table if row=nResults.
 			The third argument is the value to be added or modified. With v1.47o or later, it can be a string. Call 
 			setResult(''Label'', row, string) to set the row label. Call updateResults() to display the updated table in the 
 			''Results'' window. For examples, see the ''http://wsr.imagej.net/macros/SineCosineTable.txt'' 
@@ -3220,7 +3220,7 @@ See also Table.setLocationAndSize.">
 			<Overload retVal="" descr="Updates the ImageJ progress bar, where 0.0<=progress less than =1.0. The progress bar is not displayed 
 			if the time between the first and second calls to this function is less than 30 milliseconds. It is erased when the macro 
 			terminates or progress is  greater than =1.0. Use negative values to show subordinate progress bars as moving dots (''
-			https://imagej.nih.gov/ij/macros/examples/DualProgressDemo.txt'' example).">
+			http://wsr.imagej.net/macros/examples/DualProgressDemo.txt'' example).">
 				<Param name="progress" />
 			</Overload>
 		</KeyWord>
@@ -3439,12 +3439,14 @@ See also Table.setLocationAndSize.">
 		</KeyWord>
 		<KeyWord name="String.copyResults" func="no">
 			<Overload retVal="" descr="Copies the Results table, or selected rows in the Results table (1.47i or later), to the 
-			clipboard.">
+			clipboard.
+			Column headers are included if the 'Copy column headers' option in the Edit...Options...Input/Output dialog is enabled.
+			Use SetOption('CopyHeaders',boolean) to programmatically enable/disable this option.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="String.getResultsHeadings " func="no">
 			<Overload retVal="" descr="Returns the Results window headers. ''
-			https://imagej.nih.gov/ij/macros/examples/PrintResults.txt'' Example.">
+			http://wsr.imagej.net/macros/examples/PrintResults.txt'' Example.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="String.paste " func="no">
@@ -3582,8 +3584,7 @@ See also Table.setLocationAndSize.">
 		</KeyWord>
 		<KeyWord name="Table.setLocationAndSize" func="yes">
 			<Overload retVal="" descr="Sets the location and size of the current table.
-Works with other types of windows if a title is specified as the
-fifth argument. Requires 1.52o.">
+			Works with other types of windows if a title is specified as the fifth argument. Requires 1.52o.">
 				<Param name="x" />
 				<Param name="y" />
 				<Param name="width" />
@@ -3606,14 +3607,12 @@ fifth argument. Requires 1.52o.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Table.showRowIndexes" func="yes">
-			<Overload retVal="" descr="
-Enable/disable display of row indexes.">
+			<Overload retVal="" descr="Enable/disable display of row indexes.">
 				<Param name="boolean" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Table.showRowNumbers" func="yes">
-			<Overload retVal="" descr="
-Enable/disable display of row numbers. Default is 'false'.">
+			<Overload retVal="" descr="Enable/disable display of row numbers. Default is 'false'.">
 				<Param name="boolean" />
 			</Overload>
 		</KeyWord>
@@ -3697,7 +3696,7 @@ Enable/disable display of row numbers. Default is 'false'.">
 		</KeyWord>
 		<KeyWord name="toUnscaled" func="yes">
 			<Overload retVal="" descr="Converts scaled coordinates to unscaled pixel coordinates using the properties of the current 
-			image or plot. Also accepts arrays. Refer to the ''https://imagej.nih.gov/ij/macros/examples/AdvancedPlots.txt'' 
+			image or plot. Also accepts arrays. Refer to the ''http://wsr.imagej.net/macros/examples/AdvancedPlots.txt'' 
 			AdvancedPlots macro set for examples.">
 				<Param name="x" />
 				<Param name="y" />
@@ -3761,6 +3760,5 @@ Enable/disable display of row numbers. Default is 'false'.">
 			the dialog box.">
 			</Overload>
 		</KeyWord>
-
 	</AutoComplete>
 </NotepadPlus>
