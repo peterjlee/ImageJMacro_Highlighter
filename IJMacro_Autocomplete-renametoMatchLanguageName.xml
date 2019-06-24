@@ -1807,12 +1807,12 @@ Requires 1.52m.">
 		<KeyWord name="makeSelection" func="yes">
 			<Overload retVal="" descr="Creates a selection from a list of XY coordinates. The first argument should be 
 			''polygon'', ''freehand'', ''polyline'', ''freeline'', ''angle'' or 
-			''point'', or the numeric value returned by selectionType. The xcoord and ycoord arguments 
+			''point'', or the numeric value returned by selectionType. The xpoints and ypoints arguments 
 			are numeric arrays that contain the X and Y coordinates. See the ''
 			http://wsr.imagej.net/macros/MakeSelectionDemo.txt'' MakeSelectionDemo macro for examples.">
 				<Param name="type" />
-				<Param name="xcoord" />
-				<Param name="ycoord" />
+				<Param name="xpoints" />
+				<Param name="ypoints" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="makeText" func="yes">
@@ -2571,6 +2571,13 @@ Requires 1.52m.">
 		<KeyWord name="Roi.setFillColor" func="yes">
 			<Overload retVal="" descr="Sets the selection fill color (''red'', ''5500ff00''. etc.).">
 				<Param name="color" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Roi.setAntiAlias" func="yes">
+			<Overload retVal="" descr="Controls whether anti-aliasing is used when drawing selections.
+			Example:http://wsr.imagej.net/macros/AntiAliasingDemo.txt
+			Requires 1.52p.">
+				<Param name="boolean" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Roi.setFillColor" func="yes">

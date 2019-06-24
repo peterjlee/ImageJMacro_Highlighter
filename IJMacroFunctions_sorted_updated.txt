@@ -292,6 +292,7 @@ Roi.getStrokeColor
 Roi.getType
 Roi.move
 Roi.remove
+Roi.setAntiAlias
 Roi.setFillColor
 Roi.setName
 Roi.setPolygonSplineAnchors
