@@ -1350,7 +1350,7 @@
 			<Overload retVal="" descr="Returns the size, in points, of the current font.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getValue(''Mean, Median, Feret, etc.'')" func="no">
+		<KeyWord name="getValue(''Measurement'')" func="no">
 			<Overload retVal="" descr="Returns a measurement result, where the argument is
 			''Area'', ''Mean'', ''StdDev'', ''Mode'', ''Min'', ''Max'', ''X'', ''Y'', ''XM'', ''YM'',
 			''Perim.'', ''BX'', ''BY'', ''Width'', ''Height'', ''Major'', ''Minor'', ''Angle'', ''Circ.'',
@@ -1382,14 +1382,18 @@
 		</KeyWord>		
 		<KeyWord name="getValue(''selection.size'')" func="no">
 			<Overload retVal="" descr="Returns the number of points in the current selection,
-			or 0 if there is no selection.">
+			or 0 if there is no selection. Requires 1.52p.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getValue(''selection.width'')" func="no">
 			<Overload retVal="" descr="Returns the stroke width of the current selection.">
 			</Overload>
 		</KeyWord>
-
+		<KeyWord name="getValue(''x,y'')" func="no">
+			<Overload retVal="" descr="Returns the coordinates of the current selection.
+			Requires 1.52p.">
+			</Overload>
+		</KeyWord>
 		<KeyWord name="getVersion()" func="no">
 			<Overload retVal="" descr="Returns the ImageJ version number as a string 
 			(e.g., ''1.34s''). See also: IJ.getFullVersion.">
@@ -1512,8 +1516,7 @@
 		</KeyWord>
 		<KeyWord name="is(''animated'')" func="no">
 			<Overload retVal="" descr="Returns <i>true</i> if the current image has an area selection.
-			
-Requires 1.52m.">
+			Requires 1.52m.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="is(''applet'')" func="no">
@@ -2145,11 +2148,13 @@ Requires 1.52m.">
 			(type) can be  ''line'', filled'', ''bars'', ''circles'', ''boxes'', 
 			''triangles'', ''crosses'', ''diamonds'', ''dots'', 
 			''x'', ''connected'', ''error bars'' (in y direction) or ''xerror bars''. 
-			In 1.49t or later, error bars apply to the last dataset 
-			provided by Plot.create or Plot.add.">
+			In 1.49t or later, error bars (supplied by an optional fourth argument) apply to the last
+			dataset provided by ''Plot.create'' or ''Plot.add''.
+			1.52q adds ''label'' parameter used by ''Plot.showValuesWithLabels''">
 				<Param name="type" />
 				<Param name="xValues" />
 				<Param name="yValues" />
+				<Param name="label" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Plot.addHistogram" func="yes">
@@ -2392,6 +2397,12 @@ Requires 1.52m.">
 		</KeyWord>		
 		<KeyWord name="Plot.showValues()" func="no">
 			<Overload retVal="" descr="Displays the plot values in the Results window. Must be preceded by Plot.show.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Plot.showValuesWithLabels()" func="no">
+			<Overload retVal="" descr="Displays the plot values in the Results window using the dataset labels,
+			for example the labels supplied by ''Plot.setLegend''. Must be preceded by ''Plot.show''.
+			Requires 1.52q.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Plot.update()" func="no">
@@ -3079,7 +3090,9 @@ See also Table.setLocationAndSize.">
 			when navigating stacks.
 			setOption('ShowRowIndexes', boolean) Enables/disables display of Results table row indexes
 			setOption('CopyHeaders', boolean) Enables/disables the 'Copy column headers' option in the
-			Edit...Options...Input/Output dialog. See 'String.copyResults'. Requires v1.52p.">
+			Edit...Options...Input/Output dialog. See 'String.copyResults'.
+			setOption(''CopyHeadings'',boolean).
+			Requires v1.52p.">
 				<Param name="option" />
 				<Param name="boolean" />
 			</Overload>

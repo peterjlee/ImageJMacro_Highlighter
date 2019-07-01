@@ -265,6 +265,7 @@ Plot.setStyle
 Plot.setXYLabels
 Plot.show
 Plot.showValues
+Plot.showValuesWithLabels
 Plot.update
 Plot.useTemplate
 pow
