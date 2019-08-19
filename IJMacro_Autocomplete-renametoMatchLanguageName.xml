@@ -126,19 +126,15 @@
 			</Overload>
 		</KeyWord>		
 		<KeyWord name="Array.show" func="yes">
-			<Overload retVal="array" descr="Displays the contents of array in a window.">
-				<Param name="array" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="Array.show" func="yes">
 			<Overload retVal="array" descr="Displays one or more arrays in a Results window
 			 (''http://wsr.imagej.net/macros/examples/ShowArrayDemo.txt'' ).
+			 Without option the form is arrayShow(''arrayName'').
 			 If title (optional) is ''Results'', the window will be the active Results
 			 window, otherwise, it will be a dormant Results window
 			 (see also IJ.renameResults).
 			 If title ends with ''(indexes)'', a 0-based Index column is shown.
 			 If title ends with ''(row numbers)'', the row number column is shown.">
-				<Param name="''title''" />
+				<Param name="title" />
 				<Param name="array1" />
 				<Param name="array2" />
 				<Param name="..." />
@@ -320,21 +316,20 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Dialog.addMessage" func="yes">
-			<Overload retVal="" descr="Adds a message to the dialog. The message can be broken into multiple lines by inserting new line 
-			characters (''\n'') into the string.">
+			<Overload retVal="" descr="Adds a message to the dialog. The message can be broken into 
+			multiple lines by inserting new line characters (''\n'') into the string.
+			For >1.52q a font size and color can be optionally specified:
+			''http://wsr.imagej.net//macros/examples/DialogMessageDemo.txt''.">
 				<Param name="string" />
+				<Param name="fontSize" />
+				<Param name="fontColor" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Dialog.addNumber" func="yes">
-			<Overload retVal="" descr="Adds a numeric field to the dialog, using the specified label and default value.">
-				<Param name="label" />
-				<Param name="default" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="Dialog.addNumber" func="yes">
-			<Overload retVal="" descr="Adds a numeric field, using the specified label and default value. DecimalPlaces specifies the 
-			number of digits to right of decimal point, columns specifies the the field width in characters and units is a string that is 
-			displayed to the right of the field.">
+			<Overload retVal="" descr="Adds a numeric field, using the specified ''label'' and ''default'' value.
+			Optional: ''decimalPlaces'' specifies the number of digits to right of decimal point.
+			Optional: ''columns'' specifies the the field width in characters.
+			Optional: ''units'' is a string that is displayed to the right of the field.">
 				<Param name="label" />
 				<Param name="default" />
 				<Param name="decimalPlaces" />
@@ -367,13 +362,8 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Dialog.addString" func="yes">
-			<Overload retVal="" descr="Adds a text field to the dialog, using the specified label and initial text.">
-				<Param name="label" />
-				<Param name="initialText" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="Dialog.addString" func="yes">
-			<Overload retVal="" descr="Adds a text field to the dialog, where columns specifies the field width in characters.">
+			<Overload retVal="" descr="Adds a text field to the dialog.
+			Optional: ''columns'' specifies the field width in characters.">
 				<Param name="label" />
 				<Param name="initialText" />
 				<Param name="columns" />
@@ -442,16 +432,9 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="doWand" func="yes">
-			<Overload retVal="" descr="Equivalent to clicking on the current image at (x,y) with the wand tool. Note that some objects, 
-			especially one pixel wide lines, may not be reliably traced unless they have been thresholded (highlighted in red) using 
-			setThreshold.">
-				<Param name="x" />
-				<Param name="y" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="doWand" func="yes">
-			<Overload retVal="" descr="Traces the boundary of the area with pixel values within 'tolerance' of the value of the pixel at 
-			(x,y). 'mode' can be ''4-connected'', ''8-connected'' or ''Legacy''. ''Legacy'' is for 
+			<Overload retVal="" descr="Traces the boundary of the area with pixel values at (x,y).
+			Optional:  within 'tolerance' of the value of the pixel.
+			Optional: 'mode' can be ''4-connected'', ''8-connected'' or ''Legacy''. ''Legacy'' is for 
 			compatibility with previous versions of ImageJ; it is ignored if 'tolerance' > 0.">
 				<Param name="x" />
 				<Param name="y" />
@@ -495,15 +478,9 @@
 			Refer to the ''http://wsr.imagej.net/macros/TextDemo.txt''
 			TextDemo macro for examples and to
 			 ''http://wsr.imagej.net/macros/examples/DrawTextWithBackground.txt''
-			DrawTextWithBackground to see how to draw text with a background.">
-				<Param name="''text''" />
-				<Param name="x" />
-				<Param name="y" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="drawString" func="yes">
-			<Overload retVal="" descr="Draws text at the specified location with a filled background (''
-			http://wsr.imagej.net/macros/examples/DrawTextWithBackground.txt'' ).">
+			DrawTextWithBackground to see how to draw text with a background.
+			Optional: fill with ''background''
+			Example: http://wsr.imagej.net/macros/examples/DrawTextWithBackground.txt'' ).">
 				<Param name="''text''" />
 				<Param name="x" />
 				<Param name="y" />
@@ -525,33 +502,14 @@
 		</KeyWord>
 		<KeyWord name="eval" func="yes">
 			<Overload retVal="" descr="Evaluates (runs) one or more lines of macro code. 
-			An optional second argument can be used to pass a string to the macro being evaluated. 
 			See also: ''http://wsr.imagej.net/macros/EvalDemo.txt'' EvalDemo macro and 
-			runMacro function.">
-				<Param name="macro" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="eval" func="yes">
-			<Overload retVal="" descr="Evaluates the ''../javascript.html''JavaScript code 
-			contained in the string javascript, for example 
-			eval(''script'',''IJ.getInstance().setAlwaysOnTop(true);''). See also: 
-			runMacro(path,arg).">
-				<Param name="''script''" />
-				<Param name="javascript" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="eval" func="yes">
-			<Overload retVal="" descr="Evaluates the ''../../plugins/bsh/index.html''BeanShell code contained in the string 
-			script.">
-				<Param name="''bsh''" />
-				<Param name="script" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="eval" func="yes">
-			<Overload retVal="" descr="Evaluates the ''../../plugins/jython/index.html''Python code contained in the string 
-			script.">
-				<Param name="''python''" />
-				<Param name="script" />
+			runMacro function.
+			Options: if ''language'' is 'macro' no script type is required but an optional
+			second argument can be used to pass a string to the macro being evaluated. 
+			''language'' can be ''script'' or ''js'' for javascript, 'bsh' or 'python'
+			e.g.  eval(''js'',''Prefs.blackBackground'')">
+				<Param name="language" />
+				<Param name="script type" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="exec" func="yes">
@@ -561,14 +519,9 @@
 				<Param name="string or strings" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="exit()" func="no">
-			<Overload retVal="" descr="Terminates execution of the macro and, optionally, 
-			displays an error message.">
-			</Overload>
-		</KeyWord>
 		<KeyWord name="exit(''error message'')" func="no">
-			<Overload retVal="" descr="Terminates execution of the macro and, optionally, 
-			displays an error message.">
+			<Overload retVal="" descr="Terminates execution of the macro.
+			Optional: displays an ''error message''.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="exp" func="yes">
@@ -668,15 +621,12 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="File.openAsRawString" func="yes">
-			<Overload retVal="" descr="Opens a file and returns up to the first 5,000 bytes as a string. Returns all the bytes in the 
+			<Overload retVal="" descr="Opens a file:
+			If no ''count'' option: returns up to the first 5,000 bytes as a string. Returns all the bytes in the 
 			file if the name ends with ''.txt'' . Refer to the ''
 			http://wsr.imagej.net/macros/First10Bytes.txt'' First10Bytes and ''
-			http://wsr.imagej.net/macros/ZapGremlins.txt'' ZapGremlins macros for examples.">
-				<Param name="path" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="File.openAsRawString" func="yes">
-			<Overload retVal="" descr="Opens a file and returns up to the first count bytes as a string.">
+			http://wsr.imagej.net/macros/ZapGremlins.txt'' ZapGremlins macros for examples.
+			Option: Opens a file and returns up to the first 'count' bytes as a string">
 				<Param name="path" />
 				<Param name="count" />
 			</Overload>
@@ -752,9 +702,14 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Fit.doFit" func="yes">
-			<Overload retVal="" descr="Fits the specified equation to the points defined by xpoints, ypoints, using initial parameter 
-			values contained in initialGuesses, an array equal in length to the number of parameters in equation (''
-			http://wsr.imagej.net/macros/examples/RodbardSigmoidFit.txt'' example).">
+			<Overload retVal="" descr="Fits the specified equation to the points defined by xpoints, ypoints. 
+			Equation can be either the equation name or an index. 
+			The equation names are shown in the drop down menu in the Analyze greater than Tools greater than Curve Fitting 
+			window. With ImageJ 1.42f or later, equation can be a string containing a user-defined equation 
+			(''http://wsr.imagej.net/macros/examples/UserDefinedCurveFits.txt'' example).
+			Option: Uses initial parameter values contained in ''initialGuesses'', an array equal in length
+			to the number of parameters in equation, example:
+			(''http://wsr.imagej.net/macros/examples/RodbardSigmoidFit.txt'').">
 				<Param name="equation" />
 				<Param name="xpoints" />
 				<Param name="ypoints" />
@@ -832,14 +787,11 @@
 			eval(macro), IJ.runMacro(macro, arg) or IJ.runMacroFile(path, arg).">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getBoolean(''message'')" func="no">
-			<Overload retVal="" descr="Displays a dialog box containing the specified message and ''Yes'', ''No'' and 
-			''Cancel'' buttons. Returns true (1) if the user clicks ''Yes'', returns false (0) if the user clicks 
-			''No'' and exits the macro if the user clicks ''Cancel''.">
-			</Overload>
-		</KeyWord>
 		<KeyWord name="getBoolean" func="yes">
-			<Overload retVal="" descr="Displays a dialog box containing the specified message and buttons with custom labels.">
+			<Overload retVal="" descr=" Displays a dialog box containing the specified message and ''Yes'', ''No'' and 
+			''Cancel'' buttons. Returns true (1) if the user clicks ''Yes'', returns false (0) if the user clicks 
+			''No'' and exits the macro if the user clicks ''Cancel''.
+			Option: Displays a dialog box containing the specified message and buttons with custom 'yesLabel' and 'noLabel'.">
 				<Param name="message" />
 				<Param name="yesLabel" />
 				<Param name="noLabel" />
@@ -896,46 +848,18 @@
 			http://wsr.imagej.net/macros/GetDirectoryDemo.txt'' GetDirectoryDemo and ''
 			http://wsr.imagej.net/macros/ListFilesRecursively.txt'' ListFilesRecursively macros. See also: 
 			getFileList and the File functions. <a name=getDirectory> 
-			getDirectory(''Choose a Directory'') - Displays a file open dialog, using the argument as a title, and returns 
-			the path to the directory selected by the user.">
+			
+			getDirectory(''Choose a Directory'') displays a file open dialog, using the argument as a title,
+			          and returns the path to the directory selected by the user.
+			getDirectory(''plugins'') Returns the path to the plugins directory.
+			getDirectory(''macros'') Returns the path to the macros directory.
+			getDirectory(''luts'') Returns the path to the luts directory.
+			getDirectory(''image'') Returns the path to the directory that the active image was loaded from.
+			getDirectory(''imagej'') Returns the path to the ImageJ directory.
+			getDirectory(''startup'') Returns the path to the directory that ImageJ was launched from.
+			getDirectory(''home'') Returns the path to users home directory.
+			getDirectory(''temp'') Returns the path to the temporary directory (/tmp on Linux and Mac OS X).">
 				<Param name="string" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="getDirectory(''Choose a Directory'')" func="no">
-			<Overload retVal="" descr="Displays a file open dialog, using the argument as a title,
-			 and returns the path to the directory selected by the user.">
-			</Overload>
-		</KeyWord>
-		<KeyWord name="getDirectory(''plugins'')" func="no">
-			<Overload retVal="" descr="Returns the path to the plugins directory.">
-			</Overload>
-		</KeyWord>
-		<KeyWord name="getDirectory(''macros'')" func="no">
-			<Overload retVal="" descr="Returns the path to the macros directory.">
-			</Overload>
-		</KeyWord>
-		<KeyWord name="getDirectory(''luts'')" func="no">
-			<Overload retVal="" descr="Returns the path to the luts directory.">
-			</Overload>
-		</KeyWord>
-		<KeyWord name="getDirectory(''image'')" func="no">
-			<Overload retVal="" descr="Returns the path to the directory that the active image was loaded from.">
-			</Overload>
-		</KeyWord>
-		<KeyWord name="getDirectory(''imagej'')" func="no">
-			<Overload retVal="" descr="Returns the path to the ImageJ directory.">
-			</Overload>
-		</KeyWord>
-		<KeyWord name="getDirectory(''startup'')" func="no">
-			<Overload retVal="" descr="Returns the path to the directory that ImageJ was launched from.">
-			</Overload>
-		</KeyWord>
-		<KeyWord name="getDirectory(''home'')" func="no">
-			<Overload retVal="" descr="Returns the path to users home directory.">
-			</Overload>
-		</KeyWord>
-		<KeyWord name="getDirectory(''temp'')" func="no">
-			<Overload retVal="" descr="Returns the path to the temporary directory (/tmp on Linux and Mac OS X).">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getDisplayedArea" func="yes">
@@ -1190,7 +1114,7 @@
 			Note that pixels in RGB images contain red, green and 
 			blue components that need to be extracted using shifting and masking. See the ''
 			http://wsr.imagej.net/macros/tools/ColorPickerTool.txt'' Color Picker Tool macro for an example that shows how to do 
-			this.
+			this. Uses bilinear interpolation if 'x' or 'y' are not integers.
 			Use ''getValue(x,y)'' to get calibrated pixel values from 8 and 16 bit images and intensity values from RGB images.">
 				<Param name="x" />
 				<Param name="y" />
@@ -1391,7 +1315,7 @@
 		</KeyWord>
 		<KeyWord name="getValue(''x,y'')" func="no">
 			<Overload retVal="" descr="Returns the coordinates of the current selection.
-			Requires 1.52p.">
+			Uses bilinear interpolation if 'x' or 'y' are not integers. Requires 1.52p.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getVersion()" func="no">
@@ -1417,22 +1341,12 @@
 			3200%).">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="IJ.currentMemory" func="yes">
-			<Overload retVal="" descr="Returns, as a string, the amount of memory in bytes currently used by ImageJ.">
-			</Overload>
-		</KeyWord>
 		<KeyWord name="IJ.currentMemory()" func="no">
 			<Overload retVal="" descr="Returns, as a string, the amount of memory in bytes currently used by ImageJ.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="IJ.deleteRows" func="yes">
 			<Overload retVal="" descr="Deletes rows index1 through index2 in the results table.">
-				<Param name="index1" />
-				<Param name="index2" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="IJ.deleteRows" func="yes">
-			<Overload retVal="" descr="Returns the ImageJ version and build number as a string (e.g., ''1.52d11'').">
 				<Param name="index1" />
 				<Param name="index2" />
 			</Overload>
@@ -1448,6 +1362,10 @@
 		</KeyWord>
 		<KeyWord name="IJ.getToolName()" func="no">
 			<Overload retVal="" descr="Returns the name of the currently selected tool. See also: setTool.">
+			</Overload>
+		</KeyWord>
+			<KeyWord name="IJ.getVersion" func="yes">
+			<Overload retVal="" descr="Returns the ImageJ version number as a string (e.g., '1.34s'). See also: IJ.getFullVersion..">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="IJ.log" func="yes">
@@ -1473,12 +1391,8 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="IJ.renameResults" func="yes">
-			<Overload retVal="" descr="Changes the title of the ''Results'' table to the string name.">
-				<Param name="name" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="IJ.renameResults" func="yes">
-			<Overload retVal="" descr="Changes the title of a results table from oldName to newName.">
+			<Overload retVal="" descr="Changes the title of a results table from oldName to newName.
+			If renaming the ''Results'' table the 'oldName' is not required">
 				<Param name="oldName" />
 				<Param name="newName" />
 			</Overload>
@@ -1499,16 +1413,9 @@
 		</KeyWord>
 		<KeyWord name="indexOf" func="yes">
 			<Overload retVal="" descr="Returns the index within string of the first occurrence of substring. See also: 
-			lastIndexOf, startsWith, endsWith, 
-			substring, toLowerCase, replace, 
-			matches.">
-				<Param name="string" />
-				<Param name="substring" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="indexOf" func="yes">
-			<Overload retVal="" descr="Returns the index within string of the first occurrence of substring, with the search starting at 
-			fromIndex.">
+			lastIndexOf, startsWith, endsWith, substring, toLowerCase, replace, matchesReturns the index within string of
+			the first occurrence of substring.
+			Optional: ''fromIndex' - the search starts at fromIndex.">
 				<Param name="string" />
 				<Param name="substring" />
 				<Param name="fromIndex" />
@@ -1562,8 +1469,7 @@
 		</KeyWord>
 		<KeyWord name="is(''InvertY'')" func="no">
 			<Overload retVal="" descr="Returns <i>true</i> if the current image has a line selection.
-			
-Requires 1.52m.">
+		Requires 1.52m.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="is(''line'')" func="no">
@@ -1635,10 +1541,6 @@ Requires 1.52m.">
 				<Param name="values" />
 			</Overload>
 		</KeyWord>		
-		<KeyWord name="List.fromArrays()" func="no">
-			<Overload retVal="" descr="Creates the List from keys and values arrays.">
-			</Overload>
-		</KeyWord>
 		<KeyWord name="List.get" func="yes">
 			<Overload retVal="" descr="Returns the string value associated with key, or an empty string if the key is not found.">
 				<Param name="key" />
@@ -1730,16 +1632,8 @@ Requires 1.52m.">
 		<KeyWord name="makeLine" func="yes">
 			<Overload retVal="" descr="Creates a new straight line selection. The origin (0,0) is assumed to be the upper left corner of 
 			the image. Coordinates are in pixels. You can create segmented line selections by specifying more than two coordinate pairs, 
-			for example makeLine(25,34,44,19,69,30,71,56).">
-				<Param name="x1" />
-				<Param name="y1" />
-				<Param name="x2" />
-				<Param name="y2" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="makeLine" func="yes">
-			<Overload retVal="" descr="Creates a straight line selection with the specified width. See also: 
-			getLine.">
+			for example makeLine(25,34,44,19,69,30,71,56).
+			Optional: ''lineWidth'' = Creates a straight line selection with the specified width. See also: getLine.">
 				<Param name="x1" />
 				<Param name="y1" />
 				<Param name="x2" />
@@ -1913,12 +1807,9 @@ Requires 1.52m.">
 			found. Displays a file open dialog box if path is an empty string or if there is no argument. Use the File greater than Open command 
 			with the command recorder running to generate calls to this function. With 1.41k or later, opens images specified by a URL, 
 			for example open(''../../images/clown.gif''). With 1.49v or later, opens a folder of images as a stack. Use 
-			open(''path/to/folder'',''virtual'') to open a folder of images as a virtual stack.">
-				<Param name="path" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="open" func="yes">
-			<Overload retVal="" descr="Opens the n<small>th</small> image in the TIFF stack specified by path. For example, the first 
+			open(''path/to/folder'',''virtual'') to open a folder of images as a virtual stack.
+			
+			Optional: Opens the ''n''th image in the TIFF stack specified by path. For example, the first 
 			image in the stack is opened if n=1 and the tenth is opened if n=10.">
 				<Param name="path" />
 				<Param name="n" />
@@ -1934,29 +1825,14 @@ Requires 1.52m.">
 			updating the display.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Overlay.addSelection" func="no">
-			<Overload retVal="" descr="Adds the current selection to the overlay.">
-			</Overload>
-		</KeyWord>
 		<KeyWord name="Overlay.addSelection" func="yes">
-			<Overload retVal="" descr="Sets the stroke color (''red'', ''green'', ''ff8800'', etc.) of the 
-			current selection and adds it to the overlay.">
-				<Param name="strokeColor" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="Overlay.addSelection" func="yes">
-			<Overload retVal="" descr="Sets the fill color (''red'', ''green'', etc.) of the current selection and adds 
-			it to the overlay.">
-				<Param name="''''" />
-				<Param name="0" />
-				<Param name="fillColor" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="Overlay.addSelection" func="yes">
-			<Overload retVal="" descr="Sets the stroke color (''blue'', ''yellow'', ''ffaa77'' etc.) and stroke 
-			width of the current selection and adds it to the overlay.">
+			<Overload retVal="" descr="Adds the current selection to the overlay.
+			Optional 1: Sets the stroke color (''blue'', ''yellow'', ''ffaa77'' etc.) and adds to the overlay.
+			Optional 2: Sets the stroke width of the current selection and adds to the overlay.
+			Optional 3: Sets the stroke width of the current selection and adds to the overlay.">
 				<Param name="strokeColor" />
 				<Param name="strokeWidth" />
+				<Param name="fillColor" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Overlay.clear" func="no">
@@ -2007,9 +1883,12 @@ Requires 1.52m.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Overlay.drawString" func="yes">
-			<Overload retVal="" descr="Draws text at the specified location and 
-			angle and adds it to the overlay 
-			(''http://wsr.imagej.net/macros/examples/RotatedText.txt'' example).">
+			<Overload retVal="" descr="Draws text at the specified location and adds it to the overlay.
+			The first character is drawn above and to the right of (x,y).
+			Use setFont() to specify the font and setColor to set specify the color 
+			(''http://wsr.imagej.net/macros/examples/OverlayDrawStringDemo.txt'' example).
+			Optional 4th paramenter: rotates text by 'angle', example: 
+			(''http://wsr.imagej.net/macros/examples/RotatedText.txt'').">
 				<Param name="''text''" />
 				<Param name="x" />
 				<Param name="y" />
@@ -2083,13 +1962,9 @@ Requires 1.52m.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Overlay.setPosition" func="yes">
-			<Overload retVal="" descr="Sets the stack position (slice number) of the last item added to the overlay (''
-			http://wsr.imagej.net/macros/examples/StackOverlay.txt'' example).">
-				<Param name="n" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="Overlay.setPosition" func="yes">
-			<Overload retVal="" descr="Sets the hyperstack position (channel, slice, frame) of the last item added to the overlay.">
+			<Overload retVal="" descr="Sets the stack position (slice number) 'c' of the last item added to the overlay
+			example: ''http://wsr.imagej.net/macros/examples/StackOverlay.txt'
+			Optional 'z' and 't': Sets the hyperstack position (channel, slice, frame) of the last item added to the overlay.">
 				<Param name="c" />
 				<Param name="z" />
 				<Param name="t" />
@@ -2142,12 +2017,11 @@ Requires 1.52m.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Plot.add" func="yes">
-			<Overload retVal="" descr="Adds a curve, set of points or error bars to a plot created using Plot.create(). 
+			<Overload retVal="" descr="Adds a curve, set of points or error bars to a plot created using Plot.create().
 			If only one array is specified it is assumed to contain the Y values and a 0..n-1 sequence 
-			is used as the X values. The first argument 
-			(type) can be  ''line'', filled'', ''bars'', ''circles'', ''boxes'', 
-			''triangles'', ''crosses'', ''diamonds'', ''dots'', 
-			''x'', ''connected'', ''error bars'' (in y direction) or ''xerror bars''. 
+			is used as the X values.
+			The first argument (type) can be  ''line'', filled'', ''bars'', ''circles'', ''boxes'', ''triangles'',
+			''crosses'', ''diamonds'', ''dots'', ''x'', ''connected'', ''error bars'' (in y direction) or ''xerror bars''. 
 			In 1.49t or later, error bars (supplied by an optional fourth argument) apply to the last
 			dataset provided by ''Plot.create'' or ''Plot.add''.
 			1.52q adds ''label'' parameter used by ''Plot.showValuesWithLabels''">
@@ -2170,37 +2044,31 @@ Requires 1.52m.">
 			<Overload retVal="" descr="Adds text to the plot at the specified location, where (0,0) is the upper left corner of the the 
 			plot frame and (1,1) is the lower right corner. Call Plot.setJustification() to have the text centered or right justified. 
 			<a name=Plot.setLimits> <b>Plot.setLimits(xMin, xMax, yMin, yMax)</b>">
-				<Param name="''A line of text''" />
+				<Param name="A line of text" />
 				<Param name="x" />
 				<Param name="y" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Plot.create" func="yes">
-			<Overload retVal="" descr="Generates a plot using the specified title, axis labels and X and Y coordinate arrays. If only 
-			one array is specified it is assumed to contain the Y values and a 0..n-1 sequence is used as the X values. It is also 
-			permissible to specify no arrays and use Plot.setLimits() and Plot.add() to generate the plot. Use Plot.show() to display 
-			the plot in a window, or it will be displayed automatically when the macro exits.">
-				<Param name="''Title''" />
-				<Param name="''X-axis Label''" />
-				<Param name="''Y-axis Label''" />
+			<Overload retVal="" descr="Generates a plot using the specified title, axis labels and X and Y coordinate arrays.
+			If only one array is specified it is assumed to contain the Y values and a 0..n-1 sequence is used as the X values.
+			It is also permissible to specify no arrays and use Plot.setLimits() and Plot.add() to generate the plot.
+			Use Plot.show() to display the plot in a window, or it will be displayed automatically when the macro exits.
+			
+			Alternative version: Plot.create('Title', '{cat1,cat2,cat3}, 'Y-axis Label') draws category labels
+			instead of x-axis numbers 0, 1, 2. ">
+				<Param name="Title" />
+				<Param name="X-axis Label" />
+				<Param name="Y-axis Label" />
 				<Param name="xValues" />
 				<Param name="yValues" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="Plot.create" func="yes">
-			<Overload retVal="" descr="Draws category labels instead of x-axis numbers 0, 1, 2. Requires 1.49u.">
-				<Param name="''Title''" />
-				<Param name="''{cat1" />
-				<Param name="cat2" />
-				<Param name="cat3}''" />
-				<Param name="''Y-axis Label''" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Plot.drawBoxes" func="yes">
 			<Overload retVal="" descr="Draws a boxplot, where 'width' is in pixels, array 'x' holds x-positions and arrays 'y1'..'y5' 
 			hold the quartile borders in ascending order. Secondary color will fill the box. For horizontal boxes, use  ''boxesx 
 			width=30'' instead. Requires 1.49u.">
-				<Param name="''boxes width=30''" />
+				<Param name="boxes width=30" />
 				<Param name="x" />
 				<Param name="y1" />
 				<Param name="y2" />
@@ -2233,7 +2101,7 @@ Requires 1.52m.">
 		<KeyWord name="Plot.drawShapes" func="yes">
 			<Overload retVal="" descr="Draws one or more rectangles. The four arguments (values or arrays) hold rectangle 
 			coordinates.Requires 1.49u.">
-				<Param name="''rectangles''" />
+				<Param name="rectangles" />
 				<Param name="lefts" />
 				<Param name="tops" />
 				<Param name="rights" />
@@ -2281,7 +2149,7 @@ Requires 1.52m.">
 			<Overload retVal="" descr="Sets the fort size of the axis labels. The optional second argument can include ''bold'' 
 			and/or ''italic''. Requires 1.49t">
 				<Param name="size" />
-				<Param name="''options''" />
+				<Param name="options" />
 			</Overload>
 		</KeyWord>		
 		<KeyWord name="Plot.setBackgroundColor" func="yes">
@@ -2295,13 +2163,9 @@ Requires 1.52m.">
 			argument can be ''black'', ''blue'', ''cyan'', ''darkGray'', ''gray'', 
 			''green'', ''lightGray'', ''magenta'', ''orange'', ''pink'', ''red'', 
 			''white'', ''yellow'', or a hex value like  Note that the curve specified in 
-			Plot.create() is drawn last.">
-				<Param name="color" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="Plot.setColor" func="yes">
-			<Overload retVal="" descr="This is a two argument version of Plot.setColor, where the second argument is used for filling 
-			symbols or as the line color for connected points. Requires 1.49t.">
+			Plot.create() is drawn last.
+			
+			Optional: 'color2' used for filling symbols or as the line color for connected points. Requires 1.49t.">
 				<Param name="color1" />
 				<Param name="color2" />
 			</Overload>
@@ -2311,7 +2175,7 @@ Requires 1.52m.">
 			for axes labels. Can be also called prior to Plot.addText. The optional second argument can include ''bold'' and/or 
 			''italic''. Requires 1.49t.">
 				<Param name="size" />
-				<Param name="''options''" />
+				<Param name="options" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Plot.setFormatFlags" func="yes">
@@ -2339,8 +2203,8 @@ Requires 1.52m.">
 			contain the legend position (''top-left'', ''top-right'', ''bottom-left'', ''bottom-right''; 
 			default is automatic positioning), ''bottom-to-top'' for reversed sequence of the labels, and 
 			''transparent'' to make the legend background transparent.Requires 1.49t.">
-				<Param name="''label1\tlabel2...''" />
-				<Param name="''options''" />
+				<Param name="label1\tlabel2..." />
+				<Param name="options" />
 			</Overload>
 		</KeyWord>		
 		<KeyWord name="Plot.setLimits" func="yes">
@@ -2380,14 +2244,14 @@ Requires 1.52m.">
 			<Overload retVal="" descr="Set the style of the plot object (curve, label, etc.) with the specified index, using a 
 			comma-delimited string (''color1,color2,line width,symbol''). For an example, run the Help>Examples>Plots>Plot 
 			Styles command. Requires 1.52h.">
-				<Param name="''x Label''" />
-				<Param name="''y Label''" />
+				<Param name="x Label" />
+				<Param name="y Label" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Plot.setXYLabels" func="yes">
 			<Overload retVal="" descr="Sets the axis labels.Requires 1.49t.">
-				<Param name="''x Label''" />
-				<Param name="''y Label''" />
+				<Param name="x Label" />
+				<Param name="y Label" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Plot.show()" func="no">
@@ -2432,23 +2296,13 @@ Requires 1.52m.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="random" func="yes">
-			<Overload retVal="number" descr="Returns a Gaussian (''normally'') distributed pseudorandom 
-			number with mean 0.0 and standard deviation 1.0.
-			random(''seed'', seed): Sets the seed (a whole number) used by the random() and random(''gaussian'') 
-			functions. Set a specific seed to get a reproducible pseudorandom sequence.
-			random - no args: Returns a uniformly distributed pseudorandom number between 0 and 1.">
-				<Param name="''gaussian''" />
-				<Param name="seed" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="random" func="yes">
-			<Overload retVal="number" descr="Sets the seed (a whole number) used by the random() function.">
-				<Param name="''seed''" />
-				<Param name="seed" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="random" func="no">
-			<Overload retVal="number" descr="Returns a uniformly distributed pseudorandom number between 0 and 1.">
+			<Overload retVal="number" descr="Returns a uniformly distributed pseudorandom number between 0 and 1.
+			Optional arguments:
+			random('gaussian') Returns a Gaussian ('normal') distributed pseudorandom number with mean 0.0 and standard deviation 1.0.
+			random('seed', seed) Sets the seed (a whole number) used by the random() and random('gaussian') functions.
+			Set a specific seed to get a reproducible pseudorandom sequence.">
+				<Param name="optional 1" />
+				<Param name="optional 2" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="rename" func="yes">
@@ -2592,15 +2446,11 @@ Requires 1.52m.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Roi.setFillColor" func="yes">
-			<Overload retVal="" descr="Sets the selection fill color, where 'red', 'green' and 'blue' are integers (0-255).">
+			<Overload retVal="" descr="Sets the selection fill color, where 'red', 'green' and 'blue' are integers (0-255).
+			Alternatively: Roi.setFillColor('rgb') where rgb is an integer.">
 				<Param name="red" />
 				<Param name="green" />
 				<Param name="blue" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="Roi.setFillColor" func="yes">
-			<Overload retVal="" descr="Sets the selection fill color, where 'rgb' is an integer.">
-				<Param name="rgb" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Roi.setName" func="yes">
@@ -2630,20 +2480,12 @@ Requires 1.52m.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Roi.setStrokeColor" func="yes">
-			<Overload retVal="" descr="Sets the selection stroke color (''red'', ''5500ff00''. etc.).">
-				<Param name="color" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="Roi.setStrokeColor" func="yes">
-			<Overload retVal="" descr="Sets the selection stroke color, where 'red', 'green' and 'blue' are integers (0-255).">
+			<Overload retVal="" descr="Sets the selection stroke color, where 'red', 'green' and 'blue' are integers (0-255).
+			Alternatively: Single parameter to set the selection stroke color (''red'', ''5500ff00''. etc.)
+			   or single 'rgb' integer">
 				<Param name="red" />
 				<Param name="green" />
 				<Param name="blue" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="Roi.setStrokeColor" func="yes">
-			<Overload retVal="" descr="Sets the selection stroke color, where 'rgb' is an integer.">
-				<Param name="rgb" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Roi.setStrokeWidth" func="yes">
@@ -2654,14 +2496,14 @@ Requires 1.52m.">
 		<KeyWord name="roiManager" func="yes">
 			<Overload retVal="" descr="Renames the selected ROI. 
 			You can get the name of an ROI on the list using call(''ij.plugin.frame.RoiManager.getName'', index).">
-				<Param name="''rename''" />
+				<Param name="rename" />
 				<Param name="name" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="roiManager" func="yes">
 			<Overload retVal="" descr="Opens a .roi file and adds it to the list or opens a ZIP archive (.zip file)
 			and adds all the selections contained in it to the list.">
-				<Param name="''open''" />
+				<Param name="open" />
 				<Param name="file-path" />
 			</Overload>
 		</KeyWord>
@@ -2670,7 +2512,7 @@ Requires 1.52m.">
 			than the value returned by roiManager(''count''). Note that macros that use this function sometimes run orders of 
 			magnitude faster in batch mode. Use roiManager(''deselect'')  to deselect all items on the list. For an example, 
 			refer to the ''http://wsr.imagej.net/macros/ROI_Manager_Stack_Demo.txt'' ROI Manager Stack Demo macro.">
-				<Param name="''select''" />
+				<Param name="select" />
 				<Param name="index" />
 			</Overload>
 		</KeyWord>
@@ -2678,19 +2520,19 @@ Requires 1.52m.">
 			<Overload retVal="" descr="Selects multiple items in the ROI Manager list, where indexes is an array of integers, each of 
 			which must be greater than or equal to 0 and less than the value returned by roiManager(''count''). The selected 
 			ROIs are not highlighted in the ROI Manager list and are no longer selected after the next ROI Manager command is executed.">
-				<Param name="''select''" />
+				<Param name="select" />
 				<Param name="indexes" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="roiManager" func="yes">
 			<Overload retVal="" descr="Saves all the ROIs on the list in a ZIP archive.">
-				<Param name="''save''" />
+				<Param name="save" />
 				<Param name="file-path" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="roiManager" func="yes">
 			<Overload retVal="" descr="Saves the selected ROI as a .roi file.">
-				<Param name="''save selected''" />
+				<Param name="save selected" />
 				<Param name="file-path" />
 			</Overload>
 		</KeyWord>
@@ -2815,23 +2657,15 @@ Requires 1.52m.">
 			With ImageJ 1.43 and later, variables can be passed without using string concatenation by adding ''&'' to the 
 			variable name. For examples, see the 
 			''http://wsr.imagej.net/macros/ArgumentPassingDemo.txt'' ArgumentPassingDemo macro.">
-				<Param name="''command''[" />
-				<Param name="''options'']" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="runMacro" func="yes">
-			<Overload retVal="" descr="Runs the specified macro or script, which is assumed to be in the Image macros folder.
-			A full file path may also be used. Returns any string argument returned by the macro or the last expression evaluated in the 
-			script. For an example, see the ''http://wsr.imagej.net/macros/CalculateMean.txt'' CalculateMean macro.
-			See also: eval.">
-				<Param name="name" />
+				<Param name="command''[" />
+				<Param name="options'']" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="runMacro" func="yes">
 			<Overload retVal="" descr="Runs the specified macro or script, which is assumed to be in the macros folder, or use a full 
-			file path. The string argument 'arg' can be retrieved by the macro or script using the getArgument() function. Returns the 
-			string argument returned by the macro or the last expression evaluated in the script. See also: 
-			getArgument.">
+			file path. The string argument 'arg' can be retrieved by the macro or script.
+			Returns the string argument returned by the macro or the last expression evaluated in the script. See also: getArgument.
+			Optional: 'arg' parameter - using the getArgument() function.">
 				<Param name="name" />
 				<Param name="arg" />
 			</Overload>
@@ -2901,28 +2735,20 @@ Requires 1.52m.">
 			<Overload retVal="" descr="Uses the specified method to set the threshold levels of  the current image. Use the 
 			getList(''threshold.methods'') function to get a list of the available methods. Concatenate '' dark'' to the 
 			method name if the image has a dark background. For an example, see the ''
-			http://wsr.imagej.net/macros/examples/AutoThresholdingDemo.txt'' AutoThresholdingDemo macro.">
+			http://wsr.imagej.net/macros/examples/AutoThresholdingDemo.txt'' AutoThresholdingDemo macro.
+			If NO parameter is set - it uses the ''Default'' method to determine the threshold. It may select dark or bright 
+			areas as thresholded, as was the case with the Image greater than Adjust greater than Threshold ''Auto'' option
+			in ImageJ 1.42o and earlier. See also: setThreshold, getThreshold, resetThreshold.">
 				<Param name="method" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="setAutoThreshold()" func="no">
-			<Overload retVal="" descr="Uses the ''Default'' method to determine the threshold. It may select dark or bright 
-			areas as thresholded, as was the case with the Image greater than Adjust greater than Threshold ''Auto'' option in ImageJ 1.42o and 
-			earlier. See also: setThreshold, getThreshold, resetThreshold.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="setBackgroundColor" func="yes">
 			<Overload retVal="" descr="Sets the background color, where r, g, and b are  greater than = 0 and  less than = 255. See also: 
-			setForegroundColor.">
+			setForegroundColor.
+			Alternatively 'rgb' sets the background color using an RGB pixel value. See also: getValue(''rgb.background'').">
 				<Param name="r" />
 				<Param name="g" />
 				<Param name="b" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="setBackgroundColor" func="yes">
-			<Overload retVal="" descr="Sets the background color, where rgb is an RGB pixel value. See also: 
-			getValue(''rgb.background'').">
-				<Param name="rgb" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="setBatchMode" func="yes">
@@ -2950,24 +2776,17 @@ Requires 1.52m.">
 			sets the color to 0 if r=g=b=0. With 16 and 32 bit images, use setColor(1,0,0) to make the drawing color the same is the 
 			minimum displayed pixel value. SetColor() is faster than setForegroundColor(), and it does 
 			not change the system wide foreground color or repaint the color picker tool icon, but it cannot be used to specify the 
-			color used by commands called from macros, for example run(''Fill'').">
+			color used by commands called from macros, for example run(''Fill'').
+			
+			Alternative Single Parameter: Sets the drawing color, where 'string' can be ''black'', ''blue'', 
+			''cyan'', ''darkGray'', ''gray'', ''green'', ''lightGray'', ''magenta'', 
+			''orange'', ''pink'', ''red'', ''white'', ''yellow'', or a hex value like '#ff0000'
+			Alternatively: Sets the drawing color. For 8 bit images, 0 less than =value less than =255. 
+			For 16 bit images, 0 less than =value less than =65535. For RGB images, use hex constants (e.g., 0xff0000 for red). 
+			This function does not change the foreground color used by run(''Draw'') and run(''Fill'').">
 				<Param name="r" />
 				<Param name="g" />
 				<Param name="b" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="setColor" func="yes">
-			<Overload retVal="" descr="Sets the drawing color. For 8 bit images, 0 less than =value less than =255. 
-			For 16 bit images, 0 less than =value less than =65535. For RGB images, use hex constants (e.g., 0xff0000 for red). 
-			This function does not change the foreground color used by run(''Draw'') and run(''Fill'').">
-				<Param name="value" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="setColor" func="yes">
-			<Overload retVal="" descr="Sets the drawing color, where 'string' can be ''black'', ''blue'', 
-			''cyan'', ''darkGray'', ''gray'', ''green'', ''lightGray'', ''magenta'', 
-			''orange'', ''pink'', ''red'', ''white'', ''yellow'', or a hex value like ">
-				<Param name="string" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="setFont" func="yes">
@@ -2982,22 +2801,17 @@ Requires 1.52m.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="setFont(''user'')" func="no">
-			<Overload retVal="" descr="Sets the font to the one defined in the Edit greater than Options greater than Fonts window. See also: 
-			'getInfo(''font.name''), getValue(''font.size'') and getValue(''font.height'').">
+			<Overload retVal="" descr="Sets the font to the one defined in the Edit greater than Options greater than Fonts window. See also: 'getInfo(''font.name''), getValue(''font.size'') and getValue(''font.height'').">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="setForegroundColor" func="yes">
 			<Overload retVal="" descr="Sets the foreground color, where r, g, and b are  greater than = 0 and  less than = 255. 
-			See also: setColor and setBackgroundColor.">
+			See also: setColor and setBackgroundColor.
+			Alternative Single Parameter: Sets the foreground color, where rgb is an RGB pixel value. 
+			See also: getValue(''rgb.foreground'')">
 				<Param name="r" />
 				<Param name="g" />
 				<Param name="b" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="setForegroundColor" func="yes">
-			<Overload retVal="" descr="Sets the foreground color, where rgb is an RGB pixel value. 
-			See also: getValue(''rgb.foreground'').">
-				<Param name="rgb" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="setJustification(''center'')" func="no">
@@ -3024,15 +2838,11 @@ Requires 1.52m.">
 			<Overload retVal="" descr="Moves the active window to a new location. 
 			Use Table.setLocationAndSize(x,y,width,height,title) to set the location and size of a specified window.
 			Use call('ij.gui.ImageWindow.setNextLocation', x, y) to set the location of the next opened window.
-			See also: getLocationAndSize, screenWidth, screenHeight.">
-				<Param name="x" />
-				<Param name="y" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="setLocation" func="yes">
-			<Overload retVal="" descr="Moves and resizes the active image window. The new location of the top-left corner is
-specified by x and y, and the new size by width and height.
-See also Table.setLocationAndSize.">
+			See also: getLocationAndSize, screenWidth, screenHeight.
+			
+			Optional width and height parameters: Moves and resizes the active image window.
+			The new location of the top-left corner is specified by x and y, and the new size by width and height. 
+			See also Table.setLocationAndSize.">
 				<Param name="x" />
 				<Param name="y" />
 				<Param name="width" />
@@ -3049,31 +2859,20 @@ See also Table.setLocationAndSize.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="setMetadata" func="yes">
-			<Overload retVal="" descr="Assigns the metadata in string to the ''Info'' image property of the current image. This 
-			metadata is displayed by Image greater than Show Info and saved as part of the TIFF header. See also: 
-			getMetadata.">
-				<Param name="''Info''" />
-				<Param name="string" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="setMetadata" func="yes">
-			<Overload retVal="" descr="Sets string as the label of the current image or stack slice. The first 60 characters, or up to 
+			<Overload retVal="" descr="If 'Type' is 'Info': Assigns the metadata in string to the ''Info'' image property of the current image. This metadata is displayed by Image greater than Show Info and saved as part of the TIFF header.
+			See also: getMetadata.
+			If 'Type' is 'Label' sets string as the label of the current image or stack slice. The first 60 characters, or up to 
 			the first newline, of the label are displayed as part of the image subtitle. The labels are saved as part of the TIFF 
 			header. See also: getMetadata.">
-				<Param name="''Label''" />
+				<Param name="Type" />
 				<Param name="string" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="setMinAndMax" func="yes">
 			<Overload retVal="" descr="Sets the minimum and maximum displayed pixel values (display range). 
-			See the ''http://wsr.imagej.net/macros/DisplayRangeMacros.txt'' DisplayRangeMacros for examples.">
-				<Param name="min" />
-				<Param name="max" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="setMinAndMax" func="yes">
-			<Overload retVal="" descr="Sets the display range of specified channels in an RGB image, where 4=red, 2=green, 1=blue, 
-			6=red+green, etc. Note that the pixel data is altered since RGB images, unlike 
+			See the ''http://wsr.imagej.net/macros/DisplayRangeMacros.txt'' DisplayRangeMacros for examples.
+			Optional 3rd parameter: 'channels' - Sets the display range of specified channels in an RGB image,
+			where 4=red, 2=green, 1=blue, 6=red+green, etc. Note that the pixel data is altered since RGB images, unlike 
 			''../../docs/menus/image.html#make-composite''composite color images, do not have a LUT for each channel.">
 				<Param name="min" />
 				<Param name="max" />
@@ -3127,7 +2926,7 @@ See also Table.setLocationAndSize.">
 			setResult(''Label'', row, string) to set the row label. Call updateResults() to display the updated table in the 
 			''Results'' window. For examples, see the ''http://wsr.imagej.net/macros/SineCosineTable.txt'' 
 			SineCosineTable and ''http://wsr.imagej.net/macros/ConvexitySolidarity.txt'' ConvexitySolidarity macros.">
-				<Param name="''Column''" />
+				<Param name="Column" />
 				<Param name="row" />
 				<Param name="value" />
 			</Overload>
@@ -3224,28 +3023,25 @@ See also Table.setLocationAndSize.">
 		<KeyWord name="showMessage" func="yes">
 			<Overload retVal="" descr="Displays ''message'' in a dialog box using ''title'' as the the dialog box 
 			title.  Can display HTML formatted text (''http://wsr.imagej.net/macros/HtmlDialogDemo.txt'' example).">
-				<Param name="''title''" />
-				<Param name="''message''" />
+				<Param name="title" />
+				<Param name="message" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="showMessageWithCancel" func="yes">
 			<Overload retVal="" descr="Displays ''message'' in a dialog box with ''OK'' and ''Cancel'' buttons. 
 			''Title'' (optional) is the dialog box title. The macro exits if the user clicks ''Cancel'' button. See 
 			also: getBoolean.">
-				<Param name="[''title''" />
-				<Param name="]''message''" />
+				<Param name="title" />
+				<Param name="message" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="showProgress" func="yes">
 			<Overload retVal="" descr="Updates the ImageJ progress bar, where 0.0<=progress less than =1.0. The progress bar is not displayed 
 			if the time between the first and second calls to this function is less than 30 milliseconds. It is erased when the macro 
 			terminates or progress is  greater than =1.0. Use negative values to show subordinate progress bars as moving dots (''
-			http://wsr.imagej.net/macros/examples/DualProgressDemo.txt'' example).">
-				<Param name="progress" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="showProgress" func="yes">
-			<Overload retVal="" descr="Updates the progress bar, where the length of the bar is set to currentIndex/finalIndex of the 
+			http://wsr.imagej.net/macros/examples/DualProgressDemo.txt'' example).
+			
+			Optional 2nd parameter: Updates the progress bar, where the length of the bar is set to currentIndex/finalIndex of the 
 			maximum bar length. The bar is erased if currentIndex greater than finalIndex or finalIndex==0.">
 				<Param name="currentIndex" />
 				<Param name="finalIndex" />
@@ -3256,13 +3052,10 @@ See also Table.setLocationAndSize.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="showText" func="yes">
-			<Overload retVal="" descr="Displays a string in a text window using the specified title.">
-				<Param name="''Title''" />
-				<Param name="''string''" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="showText(''string'')" func="no">
-			<Overload retVal="" descr="Displays a string in a text window.">
+			<Overload retVal="" descr="Displays a string in a text window
+			Optional 'Title': Displays a string in a text window using the specified title.">
+				<Param name="Title" />
+				<Param name="string" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="sin" func="yes">
@@ -3478,19 +3271,17 @@ See also Table.setLocationAndSize.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="String.show" func="yes">
-			<Overload retVal="" descr="Displays str in a text window.">
-				<Param name="str" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="String.show" func="yes">
-			<Overload retVal="" descr="Displays str in a text window using title as the title.">
+			<Overload retVal="" descr="Displays str in a text window.
+			Optionally displays str in a text window using title as the title.">
 				<Param name="title" />
 				<Param name="str" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="substring" func="yes">
-			<Overload retVal="" descr="Returns a new string that is a substring of string. 
-			The substring begins at index1 and extends to the character at index2 - 1. See also: indexOf, startsWith, endsWith, replace.">
+			<Overload retVal="" descr="Returns a substring of string that begins at index and extends to the end of string.
+			Returns a new string that is a substring of string. 
+			Optionally: The substring begins at index1 and extends to the character at index2 - 1.
+			See also: indexOf, startsWith, endsWith, replace.">
 				<Param name="string" />
 				<Param name="index1" />
 				<Param name="index2" />
@@ -3677,20 +3468,12 @@ See also Table.setLocationAndSize.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="toScaled" func="yes">
-			<Overload retVal="" descr="Converts (in place) a length in pixels to a scaled length using the properties of the current 
-			image.">
-				<Param name="length" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="toScaled" func="yes">
-			<Overload retVal="" descr="Converts unscaled pixel coordinates to scaled coordinates using the properties of the current 
-			image or plot. Also accepts arrays.">
-				<Param name="x" />
-				<Param name="y" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="toScaled" func="yes">
-			<Overload retVal="" descr="Converts unscaled (x,y,z) pixel coordinates to scaled coordinates.">
+			<Overload retVal="" descr="
+			Single parameter: 'length' converts (in place) a length in pixels to a scaled length using the properties of the current 
+			image.
+			Alternatively: x,y parameters: Converts unscaled pixel coordinates to scaled coordinates using the properties of the current 
+			image or plot.
+			Also accepts arrays.Converts unscaled (x,y,z) pixel coordinates to scaled coordinates.">
 				<Param name="x" />
 				<Param name="y" />
 				<Param name="z" />
@@ -3698,32 +3481,19 @@ See also Table.setLocationAndSize.">
 		</KeyWord>
 		<KeyWord name="toString" func="yes">
 			<Overload retVal="" descr="Returns a decimal string representation of number. 
-			See also: toBinary, toHex, parseFloat and parseInt.">
-				<Param name="number" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="toString" func="yes">
-			<Overload retVal="" descr="Converts number into a string, using the specified number of decimal places.">
+			See also: toBinary, toHex, parseFloat and parseInt.
+			Optional 'decimalPlaces' parameter - Converts number into a string, using the specified number of decimal places.">
 				<Param name="number" />
 				<Param name="decimalPlaces" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="toUnscaled" func="yes">
-			<Overload retVal="" descr="Converts (in place) a scaled length to a length in pixels using the properties of the current 
-			image.">
-				<Param name="length" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="toUnscaled" func="yes">
-			<Overload retVal="" descr="Converts scaled coordinates to unscaled pixel coordinates using the properties of the current 
+			<Overload retVal="" descr="Single parameter (length): converts (in place) a scaled length to a length in pixels
+			using the properties of the current image.
+			Optional xy parameters: Converts scaled coordinates to unscaled pixel coordinates using the properties of the current 
 			image or plot. Also accepts arrays. Refer to the ''http://wsr.imagej.net/macros/examples/AdvancedPlots.txt'' 
-			AdvancedPlots macro set for examples.">
-				<Param name="x" />
-				<Param name="y" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="toUnscaled" func="yes">
-			<Overload retVal="" descr="Converts scaled (x,y,z) pixel coordinates to unscaled (raw) coordinates.">
+			AdvancedPlots macro set for examples.
+			Optional xyz parameters:Converts scaled (x,y,z) pixel coordinates to unscaled (raw) coordinates.">
 				<Param name="x" />
 				<Param name="y" />
 				<Param name="z" />
@@ -3764,12 +3534,9 @@ See also Table.setLocationAndSize.">
 			dialog is open. To display a multi-line message, add newline characters (''\n'') to string.
 			This function is based on Michael Schmid's ''
 			http://imagejdocu.tudor.lu/imagej-documentation-wiki/plugins/wait_for_user'' Wait_For_User plugin.
-			Example: ''http://wsr.imagej.net/macros/WaitForUserDemo.txt'' WaitForUserDemo.">
-				<Param name="string" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="waitForUser" func="yes">
-			<Overload retVal="" descr="This is a two argument version of waitForUser, where title is the dialog box title and message is 
+			Example: ''http://wsr.imagej.net/macros/WaitForUserDemo.txt'' WaitForUserDemo.
+			
+			Optional 'Title': This is a two argument version of waitForUser, where title is the dialog box title and message is 
 			the text displayed in the dialog.">
 				<Param name="title" />
 				<Param name="message" />
