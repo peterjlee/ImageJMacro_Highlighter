@@ -383,7 +383,7 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Dialog.createNonBlocking" func="yes">
-			<Overload retVal="" descr="Creates a non-model dialog box with the specified title.">
+			<Overload retVal="" descr="Creates a non-modal dialog box with the specified title.">
 			 	<Param name="Title" />
 			</Overload>
 		</KeyWord>
@@ -864,8 +864,7 @@
 		</KeyWord>
 		<KeyWord name="getDisplayedArea" func="yes">
 			<Overload retVal="" descr="Returns the pixel coordinates of the actual displayed area of the image canvas. 
-			For an example, see the 
-			''http://wsr.imagej.net/macros/tools/Pixel_Sampler_Tool.txt'' Pixel Sampler Tool.">
+			For an example, see the ''http://wsr.imagej.net/macros/tools/Pixel_Sampler_Tool.txt'' Pixel Sampler Tool.">
 				<Param name="x" />
 				<Param name="y" />
 				<Param name="width" />
@@ -1280,7 +1279,7 @@
 			''Perim.'', ''BX'', ''BY'', ''Width'', ''Height'', ''Major'', ''Minor'', ''Angle'', ''Circ.'',
 			''Feret'', ''IntDen'', ''Median'', ''Skew'', ''Kurt'', ''%Area'', ''RawIntDen'', ''Ch'', ''Slice'',
 			''Frame'', ''FeretX'', ''FeretY'', ''FeretAngle'', ''MinFeret'', ''AR'', ''Round'', ''Solidity'',
-			''MinThr'' or ''MaxThr''.
+			''MinThr'', ''MaxThr'' or ''Length''.
 			Add ''raw'' to the argument to disable calibration, for example getValue(''Mean raw'').
 			Add ''limit'' to the argument to enable the ''limit to threshold'' option. Requires 1.52p.">
 			</Overload>
@@ -2399,6 +2398,13 @@
 			<Overload retVal="string" descr="Returns the selection name or an empty string if the selection does not have a name.">
 			</Overload>
 		</KeyWord>
+		<KeyWord name="Roi.getPosition" func="yes">
+			<Overload retVal="" descr="Returns the selection position. Requires 1.52r.">
+				<Param name="channel" />
+				<Param name="slice" />
+				<Param name="frame" />
+			</Overload>
+		</KeyWord>
 		<KeyWord name="Roi.getProperties" func="no">
 			<Overload retVal="string" descr="Returns all selection properties or an empty string if the selection does not have properties.">
 			</Overload>
@@ -2473,6 +2479,13 @@
 				<Param name="y" />
 			</Overload>
 		</KeyWord>
+		<KeyWord name="Roi.setPosition" func="yes">
+			<Overload retVal="" descr="Sets the selection position. Requires 1.52r.">
+				<Param name="channel" />
+				<Param name="slice" />
+				<Param name="frame" />
+			</Overload>
+		</KeyWord>
 		<KeyWord name="Roi.setProperty" func="yes">
 			<Overload retVal="" descr="Adds the specified key and value pair to the selection properties. 
 			Assumes a value of ''1'' (true) if there is only one argument.">
@@ -2492,49 +2505,6 @@
 		<KeyWord name="Roi.setStrokeWidth" func="yes">
 			<Overload retVal="" descr="Sets the selection stroke width.">
 				<Param name="width" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="roiManager" func="yes">
-			<Overload retVal="" descr="Renames the selected ROI. 
-			You can get the name of an ROI on the list using call(''ij.plugin.frame.RoiManager.getName'', index).">
-				<Param name="rename" />
-				<Param name="name" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="roiManager" func="yes">
-			<Overload retVal="" descr="Opens a .roi file and adds it to the list or opens a ZIP archive (.zip file)
-			and adds all the selections contained in it to the list.">
-				<Param name="open" />
-				<Param name="file-path" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="roiManager" func="yes">
-			<Overload retVal="" descr="Selects an item in the ROI Manager list, where index must be greater than or equal zero and less 
-			than the value returned by roiManager(''count''). Note that macros that use this function sometimes run orders of 
-			magnitude faster in batch mode. Use roiManager(''deselect'')  to deselect all items on the list. For an example, 
-			refer to the ''https://wsr.imagej.net/macros/ROI_Manager_Stack_Demo.txt'' ROI Manager Stack Demo macro.">
-				<Param name="select" />
-				<Param name="index" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="roiManager" func="yes">
-			<Overload retVal="" descr="Selects multiple items in the ROI Manager list, where indexes is an array of integers, each of 
-			which must be greater than or equal to 0 and less than the value returned by roiManager(''count''). The selected 
-			ROIs are not highlighted in the ROI Manager list and are no longer selected after the next ROI Manager command is executed.">
-				<Param name="select" />
-				<Param name="indexes" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="roiManager" func="yes">
-			<Overload retVal="" descr="Saves all the ROIs on the list in a ZIP archive.">
-				<Param name="save" />
-				<Param name="file-path" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name="roiManager" func="yes">
-			<Overload retVal="" descr="Saves the selected ROI as a .roi file.">
-				<Param name="save selected" />
-				<Param name="file-path" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="roiManager(''add'')" func="no">
@@ -2607,12 +2577,40 @@
 			<Overload retVal="" descr="Plots the selected ROIs, or all ROIs if none are selected, on a single graph.">
 			</Overload>
 		</KeyWord>
+		<KeyWord name="roiManager(''open - file-path'')" func="yes">
+			<Overload retVal="" descr="Opens a .roi file and adds it to the list or opens a ZIP archive (.zip file)
+			and adds all the selections contained in it to the list.">
+				<Param name="open" />
+				<Param name="file-path" />
+			</Overload>
+		</KeyWord>
 		<KeyWord name="roiManager(''remove slice info'')" func="no">
 			<Overload retVal="" descr="Displays all the ROIs as an overlay.">
 			</Overload>
 		</KeyWord>
+		<KeyWord name="roiManager(''rename - name'')" func="yes">
+			<Overload retVal="" descr="Renames the selected ROI. 
+			You can get the name of an ROI on the list using call(''ij.plugin.frame.RoiManager.getName'', index).">
+				<Param name="rename" />
+				<Param name="name" />
+			</Overload>
+		</KeyWord>
 		<KeyWord name="roiManager(''reset'')" func="no">
 			<Overload retVal="" descr="Deletes all ROIs on the list.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="roiManager(''save - file-path'')" func="yes">
+			<Overload retVal="" descr="Saves all the ROIs on the list in a ZIP archive or selected ROI as a .roi file.">
+				<Param name="save OR save selected" />
+				<Param name="file-path" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="roiManager(''select - index-es'')" func="yes">
+			<Overload retVal="" descr="Selects multiple items in the ROI Manager list, where indexes is an array of integers, each of 
+			which must be greater than or equal to 0 and less than the value returned by roiManager(''count''). The selected 
+			ROIs are not highlighted in the ROI Manager list and are no longer selected after the next ROI Manager command is executed.">
+				<Param name="select" />
+				<Param name="index OR indexes" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="roiManager(''show all'')" func="no">
@@ -3113,8 +3111,24 @@
 			<Overload retVal="" descr="Returns the frame rate (FPS).">
 			</Overload>
 		</KeyWord>
+		<KeyWord name="Stack.getOrthoViews" func="yes">
+			<Overload retVal="" descr="If an Orthogonal View is active, its crosspoint is returned as x, y, z values.
+			Requires 1.52r.">
+				<Param name="x" />
+				<Param name="y" />
+				<Param name="z" />
+			</Overload>
+		</KeyWord>
 		<KeyWord name="Stack.getOrthoViewsID" func="no">
 			<Overload retVal="" descr="Returns the image ID of the current Orthogonal Views, or zero if none is active.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Stack.getOrthoViewsIDs" func="yes">
+			<Overload retVal="" descr="If an Orthogonal View is active, the three views are returned as XY, YZ, XZ
+			image ID values.. Requires 1.52r.">
+				<Param name="XY" />
+				<Param name="YZ" />
+				<Param name="XZ" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Stack.getPosition" func="yes">
@@ -3209,6 +3223,15 @@
 		<KeyWord name="Stack.setTUnit" func="yes">
 			<Overload retVal="" descr="Sets the time unit.">
 				<Param name="string" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Stack.setUnits" func="yes">
+			<Overload retVal="" descr="Sets the x, y, z, time and value units. Requires 1.52r.">
+				<Param name="X" />
+				<Param name="Y" />
+				<Param name="Z" />
+				<Param name="Time" />
+				<Param name="Value" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Stack.setZUnit" func="yes">
@@ -3528,14 +3551,14 @@
 		</KeyWord>
 		<KeyWord name="waitForUser" func="yes">
 			<Overload retVal="" descr="Halts the macro and displays string in a dialog box. The macro proceeds when the user clicks 
-			''OK''. Unlike  box is not modal, so the user can, for example, create a selection or adjust the threshold while the 
-			dialog is open. To display a multi-line message, add newline characters (''\n'') to string.
-			This function is based on Michael Schmid's ''
-			https://imagejdocu.tudor.lu/imagej-documentation-wiki/plugins/wait_for_user'' Wait_For_User plugin.
+			''OK''. Unlike  box is not modal, so the user can, for example, create a selection or adjust
+			the threshold while the dialog is open. To display a multi-line message, add newline characters
+			(''\n'') to string. This function is based on Michael Schmid's
+			''https://imagejdocu.tudor.lu/imagej-documentation-wiki/plugins/wait_for_user'' Wait_For_User plugin.
 			Example: ''https://wsr.imagej.net/macros/WaitForUserDemo.txt'' WaitForUserDemo.
 			
-			Optional 'Title': This is a two argument version of waitForUser, where title is the dialog box title and message is 
-			the text displayed in the dialog.">
+			Optional 'Title': This is a two argument version of waitForUser, where title is the dialog box title
+			and message is the text displayed in the dialog.">
 				<Param name="title" />
 				<Param name="message" />
 			</Overload>

@@ -286,6 +286,7 @@ Roi.getDefaultColor
 Roi.getFeretPoints
 Roi.getFillColor
 Roi.getName
+Roi.getPosition
 Roi.getProperties
 Roi.getProperty
 Roi.getSplineAnchors
@@ -298,6 +299,7 @@ Roi.setFillColor
 Roi.setName
 Roi.setPolygonSplineAnchors
 Roi.setPolylineSplineAnchors
+Roi.setPosition
 Roi.setProperty
 Roi.setStrokeColor
 Roi.setStrokeWidth
@@ -355,7 +357,9 @@ Stack.getDimensions
 Stack.getDisplayMode
 Stack.getFrameInterval
 Stack.getFrameRate
+Stack.getOrthoViews
 Stack.getOrthoViewsID
+Stack.getOrthoViewsIDs
 Stack.getPosition
 Stack.getStatistics
 Stack.getUnits
@@ -371,6 +375,7 @@ Stack.setOrthoViews
 Stack.setPosition
 Stack.setSlice
 Stack.setTUnit
+Stack.setUnits
 Stack.setZUnit
 Stack.stopOrthoViews
 Stack.swap
