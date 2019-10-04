@@ -3234,6 +3234,16 @@
 				<Param name="Value" />
 			</Overload>
 		</KeyWord>
+		<KeyWord name="Stack.setXUnit" func="yes">
+			<Overload retVal="" descr="Sets the X-dimension unit.">
+				<Param name="string" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Stack.setYUnit" func="yes">
+			<Overload retVal="" descr="Sets the Y-dimension unit.">
+				<Param name="string" />
+			</Overload>
+		</KeyWord>
 		<KeyWord name="Stack.setZUnit" func="yes">
 			<Overload retVal="" descr="Sets the Z-dimension unit.">
 				<Param name="string" />

@@ -376,6 +376,8 @@ Stack.setPosition
 Stack.setSlice
 Stack.setTUnit
 Stack.setUnits
+Stack.setXUnit
+Stack.setYUnit
 Stack.setZUnit
 Stack.stopOrthoViews
 Stack.swap
