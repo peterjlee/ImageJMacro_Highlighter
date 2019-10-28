@@ -354,7 +354,7 @@
 			<Overload retVal="" descr="Adds a slider controlled numeric field to the dialog, 
 			using the specified label, and min, max and default values 
 			(''http://wsr.imagej.net/macros/examples/SliderDemo.txt'' example). 
-			Values with decimal points are used when (max-min)<=5 and min, max or default are non-integer.">
+			Values with decimal points are used when (max-min)&lt;=5 and min, max or default are non-integer.">
 				<Param name="label" />
 				<Param name="min" />
 				<Param name="max" />
@@ -562,7 +562,8 @@
 		</KeyWord>
 		<KeyWord name="File.directory" func="yes">
 			<Overload retVal="" descr="The directory path of the last file opened using a file open dialog, 
-			a file save dialog, drag and drop, open(path) or runMacro(path).">
+			a file save dialog, drag and drop, open(path) or runMacro(path).
+			getDirectory(''downloads'') Returns the path to users downloads directory.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="File.exists" func="yes">
@@ -571,7 +572,13 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="File.getName" func="yes">
-			<Overload retVal="string" descr="Returns the last name in path's name  sequence.">
+			<Overload retVal="string" descr="Returns the file name (e.g., ''blobs.tif'') from the path.">
+				<Param name="path" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="File.getNameWithoutExtension" func="yes">
+			<Overload retVal="string" descr="Returns the file name (e.g., ''blobs.tif'') from the path without the extension.
+			Requires 1.52r.">
 				<Param name="path" />
 			</Overload>
 		</KeyWord>
@@ -847,8 +854,7 @@
 			or aborts the macro if the user cancels the ''choose directory'' dialog box. For examples, see the ''
 			http://wsr.imagej.net/macros/GetDirectoryDemo.txt'' GetDirectoryDemo and ''
 			http://wsr.imagej.net/macros/ListFilesRecursively.txt'' ListFilesRecursively macros. See also: 
-			getFileList and the File functions. <a name=getDirectory> 
-			
+			getFileList and the File functions.
 			getDirectory(''Choose a Directory'') displays a file open dialog, using the argument as a title,
 			          and returns the path to the directory selected by the user.
 			getDirectory(''plugins'') Returns the path to the plugins directory.
@@ -956,6 +962,13 @@
 			This is the line of information displayed above the image and below the title bar.">
 			</Overload>
 		</KeyWord>
+		<KeyWord name="getInfo(''image.title'')" func="no">
+			<Overload retVal="string" descr="Returns the title of the current image. 
+			Same as getTitle.
+			Use File.getName(getInfo(''macro.filepath'')) to get the file name and
+			File.getDirectory(getInfo(''macro.filepath'')) to get the directory.">
+			</Overload>
+		</KeyWord>
 		<KeyWord name="getInfo(''log'')" func="no">
 			<Overload retVal="string" descr="Returns the contents of the Log window, or '''' if the Log window is not open.">
 			</Overload>
@@ -982,7 +995,8 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getInfo(''selection.color'')" func="no">
-			<Overload retVal="string" descr="Returns the color of the current selection.">
+			<Overload retVal="string" descr="Returns the color of the current selection.
+			see also Roi.getStrokeColor">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getInfo(''slice.label'')" func="no">
@@ -998,7 +1012,7 @@
 		</KeyWord>
 		<KeyWord name="getInfo(''threshold.mode'')" func="no">
 			<Overload retVal="string" descr="Returns the current thresholding mode 
-			(''Red'',''B&W'' or''Over/Under'').">
+			(''Red'',''B'n'W'' or''Over/Under'').">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getInfo(''window.contents'')" func="no">
@@ -1109,7 +1123,7 @@
 		</KeyWord>
 		<KeyWord name="getPixel" func="yes">
 			<Overload retVal="" descr="Returns the raw value of the pixel at (x,y).
-			Use value(x,y)</a> to get calibrated pixel values from 8 and 16 bit images and intensity values from RGB images.
+			Use value(x,y) to get calibrated pixel values from 8 and 16 bit images and intensity values from RGB images.
 			Note that pixels in RGB images contain red, green and 
 			blue components that need to be extracted using shifting and masking. See the ''
 			http://wsr.imagej.net/macros/tools/ColorPickerTool.txt'' Color Picker Tool macro for an example that shows how to do 
@@ -1351,7 +1365,7 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="IJ.freeMemory()" func="no">
-			<Overload retVal="string" descr="Returns the memory status string (e.g., ''2971K of 658MB (<1%)'') that is displayed when 
+			<Overload retVal="string" descr="Returns the memory status string (e.g., ''2971K of 658MB (&lt;1%)'') that is displayed when 
 			the users clicks in the ImageJ status bar.">
 			</Overload>
 		</KeyWord>
@@ -1373,8 +1387,8 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="IJ.maxMemory()" func="no">
-			<Overload retVal="string" descr="Returns, as a string, the amount of memory in bytes available to ImageJ. This value (the Java 
-			heap size) is set in the Edit greater than Options greater than Memory & Threads dialog box.">
+			<Overload retVal="string" descr="Returns, as a string, the amount of memory in bytes available to ImageJ.
+			This value (the Java heap size) is set in the Edit greater than Options greater than Memory 'n Threads dialog box.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="IJ.pad" func="yes">
@@ -1422,7 +1436,7 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="is(''animated'')" func="no">
-			<Overload retVal="" descr="Returns <i>true</i> if the current image has an area selection.
+			<Overload retVal="" descr="Returns 'true' if the current image has an area selection.
 			Requires 1.52m.">
 			</Overload>
 		</KeyWord>
@@ -1468,7 +1482,7 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="is(''InvertY'')" func="no">
-			<Overload retVal="" descr="Returns <i>true</i> if the current image has a line selection.
+			<Overload retVal="" descr="Returns 'true' if the current image has a line selection.
 		Requires 1.52m.">
 			</Overload>
 		</KeyWord>
@@ -1621,7 +1635,7 @@
 		</KeyWord>
 		<KeyWord name="makeEllipse" func="yes">
 			<Overload retVal="" descr="Creates an elliptical selection, where x1,y1,x2,y2 specify the major axis of the ellipse and 
-			aspectRatio (<=1.0) is the ratio of the lengths of minor and major axis.">
+			aspectRatio (&lt;=1.0) is the ratio of the lengths of minor and major axis.">
 				<Param name="x1" />
 				<Param name="y1" />
 				<Param name="x2" />
@@ -1713,10 +1727,10 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="makeText" func="yes">
-			<Overload retVal="" descr="Creates a text selection, where <i>x</i> and <i>y</i>
+			<Overload retVal="" descr="Creates a text selection, where 'x' and 'y'
 			 are the coordinates (in pixels) of the upper left corner of the selection.
 			 The selection will use the font and size 
-			specified by the last call to setFont(). The
+			specified by the last call to setFont. The
 			''https://wsr.imagej.net/macros/examples/CreateOverlay.txt''
 			CreateOverlay macro provides an example.">
 				<Param name="string" />
@@ -2043,7 +2057,7 @@
 		<KeyWord name="Plot.addText" func="yes">
 			<Overload retVal="" descr="Adds text to the plot at the specified location, where (0,0) is the upper left corner of the the 
 			plot frame and (1,1) is the lower right corner. Call Plot.setJustification() to have the text centered or right justified. 
-			<a name=Plot.setLimits> <b>Plot.setLimits(xMin, xMax, yMin, yMax)</b>">
+			Plot.setLimits(xMin, xMax, yMin, yMax)">
 				<Param name="A line of text" />
 				<Param name="x" />
 				<Param name="y" />
@@ -2141,7 +2155,7 @@
 		</KeyWord>
 		<KeyWord name="Plot.makeHighResolution" func="yes">
 			<Overload retVal="" descr="Creates a high-resolution image of the plot enlarged by factor. Add the second argument 
-			''disable'' to avoid antialiased text. Requires 1.49t. <a name=Plot.show> Plot.show()">
+			''disable'' to avoid antialiased text. Requires 1.49t.">
 				<Param name="factor" />
 			</Overload>
 		</KeyWord>
@@ -2350,8 +2364,8 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Roi.contains" func="yes">
-			<Overload retVal="" descr="Returns ''1'' if the point x,y is inside the current selection or ''0'' if it is 
-			not. Aborts the macro if there is no selection.
+			<Overload retVal="" descr="Returns ''1'' (true) if the point x,y is inside the current selection or
+			''0'' (false) if it is not. Aborts the macro if there is no selection.
 			Requires 1.49h. See also: selectionContains.">
 				<Param name="x" />
 				<Param name="y" />
@@ -2380,7 +2394,7 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Roi.getDefaultColor" func="no">
-			<Overload retVal="" descr="Returns the current default selection color.">
+			<Overload retVal="string" descr="Returns the current default selection color.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Roi.getFeretPoints" func="yes">
@@ -2391,11 +2405,17 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Roi.getFillColor" func="no">
-			<Overload retVal="" descr="Returns the selection fill color.">
+			<Overload retVal="string" descr="Returns the selection fill color.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Roi.getName" func="no">
 			<Overload retVal="string" descr="Returns the selection name or an empty string if the selection does not have a name.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Roi.getPointPosition" func="yes">
+			<Overload retVal="" descr="Returns the stack position of the point with the specified index in the current point selection.
+			Requires 1.52r.">
+				<Param name="index" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Roi.getPosition" func="yes">
@@ -2423,7 +2443,11 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Roi.getStrokeColor" func="no">
-			<Overload retVal="" descr="Returns the selection stroke color.">
+			<Overload retVal="string" descr="Returns the selection stroke color.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Roi.getStrokeWidth" func="no">
+			<Overload retVal="" descr="Returns the stroke width of the current selection. Requires 1.52r.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Roi.getType" func="no">
@@ -2507,11 +2531,15 @@
 				<Param name="width" />
 			</Overload>
 		</KeyWord>
+		<KeyWord name="Roi.size" func="no">
+			<Overload retVal="" descr="Returns the size of the current selection in points. Requires 1.52r.">
+			</Overload>
+		</KeyWord>
 		<KeyWord name="roiManager(''add'')" func="no">
 			<Overload retVal="" descr="Adds the current selection to the ROI Manager.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager(''add & draw'')" func="no">
+		<KeyWord name="roiManager(''add ampersand draw'')" func="no">
 			<Overload retVal="" descr="Outlines the current selection and adds it to the ROI Manager.">
 			</Overload>
 		</KeyWord>
@@ -2653,7 +2681,7 @@
 			(must be GenericDialog or OpenDialog).
 			Use the Command Recorder (Plugins greater than Macros greater than Record) to generate run() function calls.
 			Use string concatenation to pass a variable as an argument.
-			With ImageJ 1.43 and later, variables can be passed without using string concatenation by adding ''&'' to the 
+			With ImageJ 1.43 and later, variables can be passed without using string concatenation by adding ''ampersand'' to the 
 			variable name. For examples, see the 
 			''https://wsr.imagej.net/macros/ArgumentPassingDemo.txt'' ArgumentPassingDemo macro.">
 				<Param name="command''[" />
@@ -2689,7 +2717,7 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="saveSettings()" func="no">
-			<Overload retVal="" descr="Saves most Edit greater than Options submenu settings so they can be  restored later by calling 
+			<Overload retVal="" descr="Saves most Edit greater than Options sub-menu settings so they can be  restored later by calling 
 			restoreSettings.">
 			</Overload>
 		</KeyWord>
@@ -2709,21 +2737,22 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="selectionContains" func="yes">
-			<Overload retVal="" descr="Returns true if the point x,y is inside the current selection.
-			Aborts the macro if there is no selection.">
+			<Overload retVal="" descr="Returns 'true' if the point x,y is inside the current selection.
+			Aborts the macro if there is no selection. See also ROI.contains">
 				<Param name="x" />
 				<Param name="y" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="selectionName" func="no">
-			<Overload retVal="string" descr="Returns the name of the current selection, or an empty string if the selection does not have a 
-			name. Aborts the macro if there is no selection. See also: setSelectionName and selectionType.">
+			<Overload retVal="string" descr="Returns the name of the current selection, or an empty string if the selection
+			does not have a name. Aborts the macro if there is no selection. See also: Roi.getName and Roi.setName.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="selectionType() " func="no">
 			<Overload retVal="" descr="Returns the selection type, where 0=rectangle, 1=oval, 2=polygon, 3=freehand, 4=traced,  
 			5=straight line, 6=segmented line, 7=freehand line, 8=angle, 9=composite and 10=point. Returns -1 if there is no selection. 
-			For an example, see the ''https://wsr.imagej.net/macros/ShowImageInfo.txt'' ShowImageInfo macro.">
+			For an example, see the ''https://wsr.imagej.net/macros/ShowImageInfo.txt'' ShowImageInfo macro.
+			See also Roi.getType">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="selectWindow(''name'')" func="no">
@@ -2966,7 +2995,7 @@
 		</KeyWord>
 		<KeyWord name="setThreshold" func="yes">
 			<Overload retVal="" descr="Sets the lower and upper threshold levels. There is an optional third argument that can be 
-			''red'', ''black & white'', ''over/under'', ''no color'' or ''raw''. With density 
+			''red'', ''black 'n white'', ''over/under'', ''no color'' or ''raw''. With density 
 			calibrated images, lower and upper must be calibrated values unless the optional third argument is ''raw''. See 
 			also: setAutoThreshold, getThreshold, resetThreshold.">
 				<Param name="lower" />
@@ -3032,10 +3061,10 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="showProgress" func="yes">
-			<Overload retVal="" descr="Updates the ImageJ progress bar, where 0.0<=progress less than =1.0. The progress bar is not displayed 
-			if the time between the first and second calls to this function is less than 30 milliseconds. It is erased when the macro 
-			terminates or progress is  greater than =1.0. Use negative values to show subordinate progress bars as moving dots (''
-			https://wsr.imagej.net/macros/examples/DualProgressDemo.txt'' example).
+			<Overload retVal="" descr="Updates the ImageJ progress bar, where 0.0&lt;= progress less than &lt;=1.0.
+			The progress bar is not displayed if the time between the first and second calls to this function is
+			less than 30 milliseconds. It is erased when the macro terminates or progress is &gt;=1.0. Use negative values
+			to show subordinate progress bars as moving dots (''https://wsr.imagej.net/macros/examples/DualProgressDemo.txt'' example).
 			
 			Optional 2nd parameter: Updates the progress bar, where the length of the bar is set to currentIndex/finalIndex of the 
 			maximum bar length. The bar is erased if currentIndex greater than finalIndex or finalIndex==0.">
