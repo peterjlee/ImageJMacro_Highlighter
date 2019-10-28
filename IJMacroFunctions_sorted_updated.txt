@@ -74,7 +74,9 @@ File.dateLastModified
 File.delete
 File.directory
 File.exists
+File.getDirectory
 File.getName
+File.getNameWithoutExtension
 File.getParent
 File.isDirectory
 File.lastModified
@@ -286,6 +288,7 @@ Roi.getDefaultColor
 Roi.getFeretPoints
 Roi.getFillColor
 Roi.getName
+Roi.getPointPosition
 Roi.getPosition
 Roi.getProperties
 Roi.getProperty
@@ -303,6 +306,7 @@ Roi.setPosition
 Roi.setProperty
 Roi.setStrokeColor
 Roi.setStrokeWidth
+Roi.size
 roiManager
 round
 run
