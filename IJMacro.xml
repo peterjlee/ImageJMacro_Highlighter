@@ -3323,11 +3323,12 @@
 			https://wsr.imagej.net/macros/examples/PrintResults.txt'' Example.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="String.join " func="yes">
-			<Overload retVal="string" descr="Creates a '', '' delimited string from the elements of 'array'.
-			''delimeter'' optional.	See also: ''split''. Requires 1.52s.">
+		
+		<KeyWord name="String.join" func="yes">
+			<Overload retVal="" descr="Creates a comma delimited string from the elements of an array.
+			Delimiter parameter is optional. Requires 1.52s">
 				<Param name="array" />
-				<Param name="delimeter" />
+				<Param name="delimiter" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="String.paste " func="no">
@@ -3346,10 +3347,9 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="String.trim" func="yes">
-			<Overload retVal="" descr="Returns a copy of 'string' that has leading and trailing whitespace omitted.
+			<Overload retVal="" descr="Returns a copy of a string that has leading and trailing whitespace omitted.
 			Requires 1.52s.">
 				<Param name="string" />
-
 			</Overload>
 		</KeyWord>
 		<KeyWord name="substring" func="yes">
