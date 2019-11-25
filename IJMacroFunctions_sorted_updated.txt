@@ -391,9 +391,11 @@ String.buffer
 String.copy
 String.copyResults
 String.getResultsHeadings
+String.join
 String.paste
 String.resetBuffer
 String.show
+String.trim
 substring
 Table.allHeadings
 Table.applyMacro

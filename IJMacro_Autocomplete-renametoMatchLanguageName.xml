@@ -3073,7 +3073,8 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="showStatus(''message'')" func="no">
-			<Overload retVal="" descr="Displays a message in the ImageJ status bar.">
+			<Overload retVal="" descr="Displays a message in the ImageJ status bar.
+			If the message starts with '!', subsequent process messages are suppressed">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="showText" func="yes">
@@ -3322,6 +3323,13 @@
 			https://wsr.imagej.net/macros/examples/PrintResults.txt'' Example.">
 			</Overload>
 		</KeyWord>
+		<KeyWord name="String.join " func="yes">
+			<Overload retVal="string" descr="Creates a '', '' delimited string from the elements of 'array'.
+			''delimeter'' optional.	See also: ''split''. Requires 1.52s.">
+				<Param name="array" />
+				<Param name="delimeter" />
+			</Overload>
+		</KeyWord>
 		<KeyWord name="String.paste " func="no">
 			<Overload retVal="string" descr="Returns the contents of the clipboard.">
 			</Overload>
@@ -3335,6 +3343,13 @@
 			Optionally displays str in a text window using title as the title.">
 				<Param name="title" />
 				<Param name="str" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="String.trim" func="yes">
+			<Overload retVal="" descr="Returns a copy of 'string' that has leading and trailing whitespace omitted.
+			Requires 1.52s.">
+				<Param name="string" />
+
 			</Overload>
 		</KeyWord>
 		<KeyWord name="substring" func="yes">
