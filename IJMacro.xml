@@ -2397,6 +2397,14 @@
 			<Overload retVal="string" descr="Returns the current default selection color.">
 			</Overload>
 		</KeyWord>
+		<KeyWord name="Roi.getDefaultGroup" func="no">
+			<Overload retVal="string" descr="Returns the current default ROI group name. Requires ImageJ 1.52t">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Roi.getDefaultStrokeWidth" func="no">
+			<Overload retVal="integer" descr="Returns the default ROI stroke width.">
+			</Overload>
+		</KeyWord>
 		<KeyWord name="Roi.getFeretPoints" func="yes">
 			<Overload retVal="array" descr="Returns, as two arrays, the x and y coordinates of the pixels at the ends of each Feret axis.
 			Added in ImageJ 1.52m.">
@@ -2406,6 +2414,10 @@
 		</KeyWord>
 		<KeyWord name="Roi.getFillColor" func="no">
 			<Overload retVal="string" descr="Returns the selection fill color.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Roi.getGroup" func="no">
+			<Overload retVal="string" descr="Returns the current ROI group name. Requires ImageJ 1.52t">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Roi.getName" func="no">
@@ -2464,11 +2476,6 @@
 			<Overload retVal="" descr="Deletes the selection, if any, from the active image.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Roi.setFillColor" func="yes">
-			<Overload retVal="" descr="Sets the selection fill color (''red'', ''5500ff00''. etc.).">
-				<Param name="color" />
-			</Overload>
-		</KeyWord>
 		<KeyWord name="Roi.setAntiAlias" func="yes">
 			<Overload retVal="" descr="Controls whether anti-aliasing is used when drawing selections.
 			Example:https://wsr.imagej.net/macros/AntiAliasingDemo.txt
@@ -2476,12 +2483,25 @@
 				<Param name="boolean" />
 			</Overload>
 		</KeyWord>
+		<KeyWord name="Roi.setDefaultGroup" func="yes">
+			<Overload retVal="" descr="Sets the default ROI group name. Requires ImageJ 1.52t">
+				<Param name="group" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Roi.setDefaultStrokeWidth" func="yes">
+			<Overload retVal="" descr="Sets the default ROI Stroke Width. Requires ImageJ 1.52t">
+				<Param name="stroke width" />
+			</Overload>
+		</KeyWord>
 		<KeyWord name="Roi.setFillColor" func="yes">
-			<Overload retVal="" descr="Sets the selection fill color, where 'red', 'green' and 'blue' are integers (0-255).
-			Alternatively: Roi.setFillColor('rgb') where rgb is an integer.">
-				<Param name="red" />
-				<Param name="green" />
-				<Param name="blue" />
+			<Overload retVal="" descr="Sets the selection fill color (''red'', ''5500ff00''. etc.
+				or three integer parameters ''r'',''g'',''b'').">
+				<Param name="color" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Roi.setGroup" func="yes">
+			<Overload retVal="" descr="Sets the ROI group name. Requires ImageJ 1.52t">
+				<Param name="group" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Roi.setName" func="yes">
