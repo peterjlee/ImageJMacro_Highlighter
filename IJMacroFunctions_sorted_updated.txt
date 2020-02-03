@@ -285,8 +285,10 @@ Roi.getBounds
 Roi.getContainedPoints
 Roi.getCoordinates
 Roi.getDefaultColor
+Roi.getDefaultStrokeWidth
 Roi.getFeretPoints
 Roi.getFillColor
+Roi.getGroup
 Roi.getName
 Roi.getPointPosition
 Roi.getPosition
@@ -298,7 +300,10 @@ Roi.getType
 Roi.move
 Roi.remove
 Roi.setAntiAlias
+Roi.setDefaultGroup
+Roi.setDefaultStrokeWidth
 Roi.setFillColor
+Roi.setGroup
 Roi.setName
 Roi.setPolygonSplineAnchors
 Roi.setPolylineSplineAnchors
