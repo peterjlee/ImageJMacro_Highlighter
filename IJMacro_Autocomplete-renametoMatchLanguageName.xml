@@ -571,6 +571,10 @@
 				<Param name="path" />
 			</Overload>
 		</KeyWord>
+		<KeyWord name="File.getDefaultDir" func="yes">
+			<Overload retVal="string" descr="Returns the current working directory. Requires ImageJ 1.52s">
+			</Overload>
+		</KeyWord>
 		<KeyWord name="File.getName" func="yes">
 			<Overload retVal="string" descr="Returns the file name (e.g., ''blobs.tif'') from the path.">
 				<Param name="path" />
@@ -673,6 +677,11 @@
 		</KeyWord>
 		<KeyWord name="File.separator" func="yes">
 			<Overload retVal="" descr="Returns the file name separator character (''/'' or ''\'').">
+			</Overload>
+		</KeyWord>
+?		<KeyWord name="File.setDefaultDir" func="yes">
+			<Overload retVal="" descr="Set the default working directory. Requires ImageJ 1.52s">
+				<Param name="directoryPath" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="fill()" func="no">
@@ -3630,16 +3639,68 @@
 			(''\n'') to string. This function is based on Michael Schmid's
 			''https://imagejdocu.tudor.lu/imagej-documentation-wiki/plugins/wait_for_user'' Wait_For_User plugin.
 			Example: ''https://wsr.imagej.net/macros/WaitForUserDemo.txt'' WaitForUserDemo.
-			
+?   
 			Optional 'Title': This is a two argument version of waitForUser, where title is the dialog box title
-			and message is the text displayed in the dialog.">
+!			and message is the text displayed in the dialog.
+			There is also a no argument version of waitForUser that displays ''Click OK to continue'' in 
+			the dialog box.">
 				<Param name="title" />
 				<Param name="message" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="waitForUser" func="no">
-			<Overload retVal="" descr="This is a no argument version of waitForUser that displays ''Click OK to continue'' in 
-			the dialog box.">
+		<KeyWord name=".charAt" func="yes">
+			<Overload retVal="string" descr="s.charAt(i), returns i'th character from string 's'. Requires 1.52t.">
+				<Param name="i" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name=".contains" func="yes">
+			<Overload retVal="" descr="s.contains(s2), returns 'true'' if string 's' contains string 's2'. Requires 1.52t.">
+				<Param name="s2" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name=".endsWith" func="yes">
+			<Overload retVal="" descr="s.endsWith(s2), returns 'true'' if string 's' ends with string 's2'. Requires 1.52t.">
+				<Param name="s2" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name=".indexOf" func="yes">
+			<Overload retVal="integer" descr="s.indexOf(s2), returns the location of the first occurrence of string s2 in string 's'. Requires 1.52t.">
+				<Param name="s2" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name=".endsWith" func="yes">
+			<Overload retVal="integer" descr=" s.lastIndexOf(s2), returns the location of the last occurrence string s2 in string 's'. Requires 1.52t.">
+				<Param name="s2" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name=".length" func="yes">
+			<Overload retVal="integer" descr=" s.length, returns the length of string 's'. Requires 1.52t.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name=".matches" func="yes">
+			<Overload retVal="integer" descr="s.matches(s2), returns 1.0 if 's' is identical to 's2'. Requires 1.52t.">
+				<Param name="s2" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name=".replace" func="yes">
+			<Overload retVal="string" descr="s.replace(s1,s2), returns the the string 's' with string 's1' replaced with string 's2'. Requires 1.52t.">
+				<Param name="s1" />
+				<Param name="s2" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name=".substring" func="yes">
+			<Overload retVal="string" descr="s.substring(i1,i2), returns the substring of string 's'
+			from i1 to i2 or from i1 to the end of string 's' if only one parameter given. Requires 1.52t.">
+				<Param name="i1" />
+				<Param name="i2" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name=".toLowerCase" func="yes">
+			<Overload retVal="string" descr="s.toLowerCase returns string 's' in lower case. Requires 1.52t.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name=".toUpperCase" func="yes">
+			<Overload retVal="string" descr="s.toUpperCase returns string 's' in upper case. Requires 1.52t.">
 			</Overload>
 		</KeyWord>
 	</AutoComplete>
