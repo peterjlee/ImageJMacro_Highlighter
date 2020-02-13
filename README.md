@@ -1,3 +1,14 @@
+# ImageJ Macro Syntax Highlighter and AutoComplete update
+
+Peter J. Lee NHFML
+
+For the current version of Notepad++ (for Windows) User Defined Language (UDL) files in xml format are placed in:
+%AppData%\Roaming\Notepad++\userDefineLangs
+
+The correspnding AutoComplete file (which also contains function usage information) is placed in the autoCompletion
+subfolder of the installation directory.
+
+
 # ImageJ Macro Syntax Highlighter
 
 Kota Miura (miura@embl.de)
