@@ -2,13 +2,13 @@
 
 Peter J. Lee NHFML
 
-IJMacro_Lang.xml is a "User Defined Language" (UDL) file for highlighting macro functions when editing macro scripts in Notepad++.
+IJMacro_Lang.xml is a &quot;User Defined Language&quot; (UDL) file for highlighting macro functions when editing macro scripts in Notepad++.
 For the current version of Notepad++ (for Windows) User Defined Language (UDL) files in xml format are placed in:
 %AppData%\Roaming\Notepad++\userDefineLangs
 
 The corresponding AutoComplete file (which also contains function usage information that will be dispayed in a pop-up window) is placed in the autoCompletion subfolder of the installation directory. This file must be given the same name as defined in the UDL file line:
- " . . . UserLang name="IJMacro" ext="ijm" udlVersion="2.1" . . . "
-In the case above the autoCompletion file should be renamed "IJMacro.xml".
+<p>&lt;UserLang name=&quot;IJMacro&quot; ext=&quot;ijm&quot;, udlVersion=&quot;2.1&quot;&gt;</p>
+In the case above the autoCompletion file should be renamed &quot;IJMacro.xml&quot;.
 
 # ImageJ Macro Syntax Highlighter
 
