@@ -6,7 +6,9 @@ For the current version of Notepad++ (for Windows) User Defined Language (UDL) f
 %AppData%\Roaming\Notepad++\userDefineLangs
 
 The correspnding AutoComplete file (which also contains function usage information) is placed in the autoCompletion
-subfolder of the installation directory.
+subfolder of the installation directory. This file should be given the same name as defined in the UDL file line:
+ <UserLang name="IJMacro" ext="ijm" udlVersion="2.1">
+In the case above the autoCompletion file should be renamed "IJMacro.xml".
 
 
 # ImageJ Macro Syntax Highlighter
