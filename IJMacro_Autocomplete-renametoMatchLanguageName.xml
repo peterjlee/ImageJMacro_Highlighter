@@ -150,7 +150,10 @@
 		</KeyWord>
 		<KeyWord name="Array.sort" func="yes">
 			<Overload retVal="array" descr="Sorts array, which must contain all numbers
-			or all strings. String sorts are case-insensitive in v1.44i or later.">
+			or all strings. String sorts are case-insensitive in v1.44i or later.
+			In 1.52u or later Array.sort(array1, array2, array3...) sorts multiple arrays,
+			where all the arrays adopt the sort	order of array1
+			Example: ''../../macros/examples/ArraySortDemo.txt''.">
 				<Param name="array" />
 			</Overload>
 		</KeyWord>
@@ -571,10 +574,6 @@
 				<Param name="path" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="File.getDefaultDir" func="yes">
-			<Overload retVal="string" descr="Returns the current working directory. Requires ImageJ 1.52s">
-			</Overload>
-		</KeyWord>
 		<KeyWord name="File.getName" func="yes">
 			<Overload retVal="string" descr="Returns the file name (e.g., ''blobs.tif'') from the path.">
 				<Param name="path" />
@@ -677,11 +676,6 @@
 		</KeyWord>
 		<KeyWord name="File.separator" func="yes">
 			<Overload retVal="" descr="Returns the file name separator character (''/'' or ''\'').">
-			</Overload>
-		</KeyWord>
-?		<KeyWord name="File.setDefaultDir" func="yes">
-			<Overload retVal="" descr="Set the default working directory. Requires ImageJ 1.52s">
-				<Param name="directoryPath" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="fill()" func="no">
@@ -1296,6 +1290,10 @@
 			<Overload retVal="" descr="Returns the size, in points, of the current font.">
 			</Overload>
 		</KeyWord>
+		<KeyWord name="getValue(''image.size'')" func="no">
+			<Overload retVal="" descr="Returns the size of the current image in bytes. Requires 1.52u.">
+			</Overload>
+		</KeyWord>
 		<KeyWord name="getValue(''Measurement'')" func="no">
 			<Overload retVal="" descr="Returns a measurement result, where the argument is
 			''Area'', ''Mean'', ''StdDev'', ''Mode'', ''Min'', ''Max'', ''X'', ''Y'', ''XM'', ''YM'',
@@ -1755,6 +1753,110 @@
 				<Param name="regex" />
 			</Overload>
 		</KeyWord>
+		<KeyWord name="Math.abs" func="yes">
+			<Overload retVal="" descr="Returns the absolute value of n">
+				<Param name="n" />
+			</Overload>
+		</KeyWord>		
+		<KeyWord name="Math.acos" func="yes">
+			<Overload retVal="" descr="Returns the inverse cosine (in radians) of n">
+				<Param name="n" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Math.asin" func="yes">
+			<Overload retVal="" descr="Returns the inverse sine (in radians) of n">
+				<Param name="n" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Math.atan" func="yes">
+			<Overload retVal="" descr="Returns the inverse tangent (arctangent) of n">
+				<Param name="n" />
+			</Overload>
+		</KeyWord>		
+		<KeyWord name="Math.atan2" func="yes">
+			<Overload retVal="" descr="Calculates the inverse tangent of y/x and returns an angle
+			in the range -PI to PI, using the signs of the arguments to determine the quadrant.
+			Multiply the result by 180/PI to convert to degrees.">
+				<Param name="x" />
+				<Param name="y" />
+			</Overload>
+		</KeyWord>		
+		<KeyWord name="Math.ceil" func="yes">
+			<Overload retVal="integer" descr="Returns the smallest (closest to negative infinity) value that
+			is greater than or equal to n and is an integer. ">
+				<Param name="n" />
+			</Overload>
+		</KeyWord>			
+		<KeyWord name="Math.cos" func="yes">
+			<Overload retVal="" descr="Returns the cosine (in radians) of n">
+				<Param name="n" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Math.exp" func="yes">
+			<Overload retVal="" descr="Returns the exponential number e (i.e., 2.718...) raised
+			to the power of n.">
+				<Param name="n" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Math.floor" func="yes">
+			<Overload retVal="integer" descr="Returns the largest value that is not greater than
+			n and is equal to an integer.">
+				<Param name="n" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Math.log" func="yes">
+			<Overload retVal="" descr="Returns the natural logarithm (base e) of n">
+				<Param name="n" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Math.log10" func="yes">
+			<Overload retVal="" descr="Returns the base 10 logarithm of n">
+				<Param name="n" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Math.max" func="yes">
+			<Overload retVal="" descr="Returns the greater of two values.">
+				<Param name="n1" />
+				<Param name="n2" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Math.min" func="yes">
+			<Overload retVal="integer" descr="Returns the smaller of two values.">
+				<Param name="n1" />
+				<Param name="n2" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Math.pow" func="yes">
+			<Overload retVal="" descr="Returns the value of base raised to the power of exponent">
+				<Param name="base" />
+				<Param name="exponent" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Math.round" func="yes">
+			<Overload retVal="integer" descr="Returns the closest integer to n">
+				<Param name="n" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Math.sin" func="yes">
+			<Overload retVal="" descr="Returns the sine (in radians) of n">
+				<Param name="n" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Math.sqr" func="yes">
+			<Overload retVal="" descr="Returns the square of n">
+				<Param name="n" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Math.sqrt" func="yes">
+			<Overload retVal="" descr="Returns the square root of n, or NaN if n is less than zero.">
+				<Param name="n" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Math.tan" func="yes">
+			<Overload retVal="" descr="Returns the tangent of n">
+				<Param name="n" />
+			</Overload>
+		</KeyWord>			
 		<KeyWord name="maxOf" func="yes">
 			<Overload retVal="" descr="Returns the greater of two values.">
 				<Param name="n1" />
@@ -2947,8 +3049,10 @@
 			setOption('ShowRowIndexes', boolean) Enables/disables display of Results table row indexes
 			setOption('CopyHeaders', boolean) Enables/disables the 'Copy column headers' option in the
 			Edit...Options...Input/Output dialog. See 'String.copyResults'.
-			setOption(''CopyHeadings'',boolean).
-			Requires v1.52p.">
+			setOption(''CopyHeadings'',boolean). Requires v1.52p.
+			Measurements options: Display label, Limit to threshold, Area, Mean, Std, Perimeter
+			Stack position, Add to overlay. Also AntialiasedText, CopyHeaders, ScaleConversions
+			and WaitForCompletion (v1.52u)">
 				<Param name="option" />
 				<Param name="boolean" />
 			</Overload>
@@ -3639,68 +3743,16 @@
 			(''\n'') to string. This function is based on Michael Schmid's
 			''https://imagejdocu.tudor.lu/imagej-documentation-wiki/plugins/wait_for_user'' Wait_For_User plugin.
 			Example: ''https://wsr.imagej.net/macros/WaitForUserDemo.txt'' WaitForUserDemo.
-?   
+			
 			Optional 'Title': This is a two argument version of waitForUser, where title is the dialog box title
-!			and message is the text displayed in the dialog.
-			There is also a no argument version of waitForUser that displays ''Click OK to continue'' in 
-			the dialog box.">
+			and message is the text displayed in the dialog.">
 				<Param name="title" />
 				<Param name="message" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name=".charAt" func="yes">
-			<Overload retVal="string" descr="s.charAt(i), returns i'th character from string 's'. Requires 1.52t.">
-				<Param name="i" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name=".contains" func="yes">
-			<Overload retVal="" descr="s.contains(s2), returns 'true'' if string 's' contains string 's2'. Requires 1.52t.">
-				<Param name="s2" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name=".endsWith" func="yes">
-			<Overload retVal="" descr="s.endsWith(s2), returns 'true'' if string 's' ends with string 's2'. Requires 1.52t.">
-				<Param name="s2" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name=".indexOf" func="yes">
-			<Overload retVal="integer" descr="s.indexOf(s2), returns the location of the first occurrence of string s2 in string 's'. Requires 1.52t.">
-				<Param name="s2" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name=".endsWith" func="yes">
-			<Overload retVal="integer" descr=" s.lastIndexOf(s2), returns the location of the last occurrence string s2 in string 's'. Requires 1.52t.">
-				<Param name="s2" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name=".length" func="yes">
-			<Overload retVal="integer" descr=" s.length, returns the length of string 's'. Requires 1.52t.">
-			</Overload>
-		</KeyWord>
-		<KeyWord name=".matches" func="yes">
-			<Overload retVal="integer" descr="s.matches(s2), returns 1.0 if 's' is identical to 's2'. Requires 1.52t.">
-				<Param name="s2" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name=".replace" func="yes">
-			<Overload retVal="string" descr="s.replace(s1,s2), returns the the string 's' with string 's1' replaced with string 's2'. Requires 1.52t.">
-				<Param name="s1" />
-				<Param name="s2" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name=".substring" func="yes">
-			<Overload retVal="string" descr="s.substring(i1,i2), returns the substring of string 's'
-			from i1 to i2 or from i1 to the end of string 's' if only one parameter given. Requires 1.52t.">
-				<Param name="i1" />
-				<Param name="i2" />
-			</Overload>
-		</KeyWord>
-		<KeyWord name=".toLowerCase" func="yes">
-			<Overload retVal="string" descr="s.toLowerCase returns string 's' in lower case. Requires 1.52t.">
-			</Overload>
-		</KeyWord>
-		<KeyWord name=".toUpperCase" func="yes">
-			<Overload retVal="string" descr="s.toUpperCase returns string 's' in upper case. Requires 1.52t.">
+		<KeyWord name="waitForUser" func="no">
+			<Overload retVal="" descr="This is a no argument version of waitForUser that displays ''Click OK to continue'' in 
+			the dialog box.">
 			</Overload>
 		</KeyWord>
 	</AutoComplete>
