@@ -272,12 +272,6 @@
 				<Param name="decimalPlaces" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Dialog.addCheckbox" func="yes">
-			<Overload retVal="" descr="Adds a checkbox to the dialog, using the specified label and default state (true or false).">
-				<Param name="label" />
-				<Param name="default" />
-			</Overload>
-		</KeyWord>
 		<KeyWord name="debug" func="yes">
 			<Overload retVal="" descr="Calls the macro debugger,
 			 where 'arg' is 'break' (the default), 'run', 'trace',
@@ -287,7 +281,6 @@
 				<Param name="arg" />
 			</Overload>
 		</KeyWord>
-
 		<KeyWord name="Dialog.addCheckbox" func="yes">
 			<Overload retVal="" descr="Adds a checkbox to the dialog, using the specified label and default state (true or false).">
 				<Param name="label" />
@@ -295,8 +288,9 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Dialog.addCheckboxGroup" func="yes">
-			<Overload retVal="" descr="Adds a rowsxcolumns grid of checkboxes to the dialog, using the specified labels and default 
-			states ('http://wsr.imagej.net/macros/AddCheckboxGroupDemo.txt' example).">
+			<Overload retVal="" descr="Adds a rows x columns grid of checkboxes to the dialog,
+			using the specified labels and default states
+			('http://wsr.imagej.net/macros/AddCheckboxGroupDemo.txt' example).">
 				<Param name="rows" />
 				<Param name="columns" />
 				<Param name="labels" />
@@ -304,10 +298,26 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Dialog.addChoice" func="yes">
-			<Overload retVal="" descr="Adds a popup menu, where items is a string array containing the choices and default is the default 
-			choice.">
+			<Overload retVal="" descr="Adds a popup menu, where items is a string array
+			containing the choices and default is the default choice.">
 				<Param name="label" />
 				<Param name="items" />
+				<Param name="default" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Dialog.addDirectory" func="yes">
+			<Overload retVal="" descr="Adds a directory field and ''Browse'' button. The field width is determined by the
+			length of 'defaultPath', with a minimum of 25 columns. Use Dialog getString to retrieve the directory path.
+			Requires 1.53d.">
+				<Param name="label" />
+				<Param name="default" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Dialog.addFile" func="yes">
+			<Overload retVal="" descr="Adds a file field and ''Browse'' button. The field width is determined by the length
+			of 'defaultPath', with a minimum of 25 columns. Use Dialog getString to retrieve the file path.
+			Requires 1.53d.">
+				<Param name="label" />
 				<Param name="default" />
 			</Overload>
 		</KeyWord>
@@ -316,6 +326,13 @@
 			used to supply a help page for this dialog or macro. With v1.46b or later, displays an HTML formatted message if 'url' starts 
 			with ' less than html greater than ' ('http://wsr.imagej.net/macros/examples/DialogWithHelp.txt' example).">
 				<Param name="url" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Dialog.addImageChoice" func="yes">
+			<Overload retVal="" descr="Adds a popup menu that lists the currently open images. Use Dialog getImageChoice()
+			to retrieve the title of the selected image.
+			Requires 1.53d.">
+				<Param name="label" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Dialog.addMessage" func="yes">
@@ -398,6 +415,10 @@
 		</KeyWord>
 		<KeyWord name="Dialog.getChoice()" func="no">
 			<Overload retVal="string" descr="Returns the selected item (a string) from the next popup menu.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Dialog.getImageChoice()" func="no">
+			<Overload retVal="string" descr="Returns the title of the image selected in the next image choice popup menu.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Dialog.getNumber()" func="no">
@@ -985,7 +1006,7 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getInfo('micrometer.abbreviation')" func="no">
-			<Overload retVal="string" descr="Returns 'µm', the abbreviation for micrometer.">
+			<Overload retVal="string" descr="Returns 'Âµm', the abbreviation for micrometer.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getInfo('os.name')" func="no">
@@ -1977,6 +1998,14 @@
 			<Overload retVal="" descr="Copies the overlay on the current image to the overlay clipboard.">
 			</Overload>
 		</KeyWord>
+		<KeyWord name="Overlay.cropAndSave" func="yes">
+			<Overload retVal="" descr="Saves the contents of the overlay selections as separate images,
+			where 'dir' is the directory path and 'format' is ''tif'', ''png'' or ''jpg''.
+			Set 'format' to ''show'' and the images will be displayed in a stack  and not saved.
+			Requires 1.53d.">
+				<Param name="dir" />
+				<Param name="format" />
+			</Overload
 		<KeyWord name="Overlay.drawEllipse" func="yes">
 			<Overload retVal="" descr="Draws an ellipse, where (x,y) specifies the upper left corner of the bounding rectangle.">
 				<Param name="x" />
@@ -2537,7 +2566,7 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="replace" func="yes">
-			<Overload retVal="string" descr="Returns the new string that results from replacing all occurrences of old in string with new, 
+			<Overload retVal="string" descr="Returns a string that results from replacing all occurrences of 'old' in 'string' with 'new', 
 			matches the 'https://en.wikipedia.org/wiki/Regular_expression'regular expression old is replaced with new.
 			When doing a simple string replacement, and old contains regular expression metacharacters ('.', '[', ']', '^', '$', etc.), 
 			you must escape them with a '\\'. For example, to replace '[xx]' with 'yy', use 
@@ -2922,20 +2951,26 @@
 			<Overload retVal="" descr="Replaces the selected ROI on the list with the current selection.">
 			</Overload>
 		</KeyWord>
+		<KeyWord name="roiManager.multiCrop" func="yes">
+			<Overload retVal="" descr="If 'options' contains ''save'', saves the contents of the selected ROIs in TIFF format
+			as separate images, where 'dir' is the directory path. Add '' png'' or '' jpg'' to save in PNG or JPEG format.
+			Add ' show' and the images will be displayed in a stack.
+			Requires 1.53d.">
+				<Param name="dir" />
+				<Param name="options" />
+			</Overload>
+		</KeyWord>
 		<KeyWord name="round" func="yes">
 			<Overload retVal="int" descr="Returns the closest integer to n. See also: floor.">
 				<Param name="n" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="run" func="yes">
-			<Overload retVal="" descr="Executes an ImageJ menu command.
-			The optional second argument contains values that are automatically entered into dialog boxes 
-			(must be GenericDialog or OpenDialog).
-			Use the Command Recorder (Plugins greater than Macros greater than Record) to generate run() function calls.
-			Use string concatenation to pass a variable as an argument.
-			With ImageJ 1.43 and later, variables can be passed without using string concatenation by adding 'ampersand' to the 
-			variable name. For examples, see the 
-			'https://wsr.imagej.net/macros/ArgumentPassingDemo.txt' ArgumentPassingDemo macro.">
+			<Overload retVal="" descr="Executes an ImageJ menu command with arguments. The 'options' string -must be GenericDialog or OpenDialog-.
+			Use the Command Recorder Plugins-Macros-Record to generate run function calls. Use string concatenation to pass
+			a variable as an argument. With ImageJ 1.43 and later, variables can be passed without using string concatenation by adding
+			''and;'' to the variable name. For examples, see the ''https://imagej.nih.gov/ij/macros/ArgumentPassingDemo.txt''
+			ArgumentPassingDemo macro. Plugins can directly retrieve the 'options' string by calling Macro.getOptions.">
 				<Param name="command'[" />
 				<Param name="options']" />
 			</Overload>
@@ -3280,7 +3315,7 @@
 		</KeyWord>
 		<KeyWord name="setVoxelSize" func="yes">
 			<Overload retVal="" descr="Defines the voxel dimensions and unit of length ('pixel', 'mm', etc.) for the 
-			current image or stack. A 'um' unit will be converted to 'µm'. The depth argument is ignored if 
+			current image or stack. A 'um' unit will be converted to 'Âµm'. The depth argument is ignored if 
 			the current image is not a stack. See also: getVoxelSize.">
 				<Param name="width" />
 				<Param name="height" />
@@ -3573,12 +3608,18 @@
 			Use SetOption('CopyHeaders',boolean) to programmatically enable/disable this option.">
 			</Overload>
 		</KeyWord>
+		<KeyWord name="String.format" func="yes">
+			<Overload retVal="" descr="Returns a formatted string using the specified 
+			''https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html#syntax'' format and number.">
+				<Param name="format" />
+				<Param name="number" />
+			</Overload>
+		</KeyWord>
 		<KeyWord name="String.getResultsHeadings " func="no">
 			<Overload retVal="string" descr="Returns the Results window headers. '
 			https://wsr.imagej.net/macros/examples/PrintResults.txt' Example.">
 			</Overload>
 		</KeyWord>
-		
 		<KeyWord name="String.join" func="yes">
 			<Overload retVal="" descr="Creates a comma delimited string from the elements of an array.
 			Delimiter parameter is optional. Requires 1.52s">
