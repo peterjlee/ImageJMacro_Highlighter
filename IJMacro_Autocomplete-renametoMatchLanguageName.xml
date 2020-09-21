@@ -38,7 +38,8 @@
 				<Param name="array" />
 				<Param name="value" />
 			</Overload>
-		</KeyWord><KeyWord name="Array.fill" func="yes">
+		</KeyWord>
+		<KeyWord name="Array.fill" func="yes">
 			<Overload retVal="array" descr="Assigns the specified numeric value to each element of array.">
 				<Param name="array" />
 				<Param name="value" />
@@ -281,6 +282,7 @@
 				<Param name="arg" />
 			</Overload>
 		</KeyWord>
+
 		<KeyWord name="Dialog.addCheckbox" func="yes">
 			<Overload retVal="" descr="Adds a checkbox to the dialog, using the specified label and default state (true or false).">
 				<Param name="label" />
@@ -288,9 +290,9 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Dialog.addCheckboxGroup" func="yes">
-			<Overload retVal="" descr="Adds a rows x columns grid of checkboxes to the dialog,
-			using the specified labels and default states
-			('http://wsr.imagej.net/macros/AddCheckboxGroupDemo.txt' example).">
+			<Overload retVal="" descr="Adds a rows x columns grid of checkboxes to the dialog, using the specified labels and
+												
+			default states ('http://wsr.imagej.net/macros/AddCheckboxGroupDemo.txt' example).">
 				<Param name="rows" />
 				<Param name="columns" />
 				<Param name="labels" />
@@ -298,8 +300,8 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Dialog.addChoice" func="yes">
-			<Overload retVal="" descr="Adds a popup menu, where items is a string array
-			containing the choices and default is the default choice.">
+			<Overload retVal="" descr="Adds a popup menu, where items is a string array containing the choices and default
+			is the default choice.">
 				<Param name="label" />
 				<Param name="items" />
 				<Param name="default" />
@@ -329,9 +331,7 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Dialog.addImageChoice" func="yes">
-			<Overload retVal="" descr="Adds a popup menu that lists the currently open images. Use Dialog getImageChoice()
-			to retrieve the title of the selected image.
-			Requires 1.53d.">
+			<Overload retVal="" descr="Adds a popup menu that lists the currently open images. Use Dialog getImageChoice() to retrieve the title of the selected image.	Requires 1.53d.">
 				<Param name="label" />
 			</Overload>
 		</KeyWord>
@@ -948,8 +948,8 @@
 		</KeyWord>
 		<KeyWord name="getImageInfo()" func="no">
 			<Overload retVal="" descr="Returns a string containing the text that would be displayed by 
-			the Image greater than Show Info command. To retrieve the contents of a text window, use getInfo('window.contents').  For an example, see the 
-			'http://wsr.imagej.net/macros/ListDicomTags.txt' ListDicomTags macros. See also: getMetadata.">
+			the Image greater than Show Info command. To retrieve the contents of a text window, use getInfo('window.contents').
+			For an example, see the http://wsr.imagej.net/macros/ListDicomTags.txt' ListDicomTags macros. See also: getMetadata.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getInfo('command.name')" func="no">
@@ -1006,7 +1006,7 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getInfo('micrometer.abbreviation')" func="no">
-			<Overload retVal="string" descr="Returns 'µm', the abbreviation for micrometer.">
+			<Overload retVal="string" descr="Returns the abbreviation for micrometer.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getInfo('os.name')" func="no">
@@ -1959,11 +1959,12 @@
 		<KeyWord name="open" func="yes">
 			<Overload retVal="" descr="Opens and displays a tiff, dicom, fits, pgm, jpeg, bmp, gif, lut, roi, or text file. Displays an 
 			error message and aborts the macro if the specified file is not in one of the supported formats, or if the file is not 
-			found. Displays a file open dialog box if path is an empty string or if there is no argument. Use the File greater than Open command 
-			with the command recorder running to generate calls to this function. With 1.41k or later, opens images specified by a URL, 
+			found. Displays a file open dialog box if path is an empty string or if there is no argument.
+			Use the File greater than Open command with the command recorder running to generate calls to this function.
+			With 1.41k or later, opens images specified by a URL, 
 			for example open('../../images/clown.gif'). With 1.49v or later, opens a folder of images as a stack. Use 
 			open('path/to/folder','virtual') to open a folder of images as a virtual stack.
-			
+   
 			Optional: Opens the 'n'th image in the TIFF stack specified by path. For example, the first 
 			image in the stack is opened if n=1 and the tenth is opened if n=10.">
 				<Param name="path" />
@@ -2005,7 +2006,8 @@
 			Requires 1.53d.">
 				<Param name="dir" />
 				<Param name="format" />
-			</Overload
+			</Overload>
+		</KeyWord>
 		<KeyWord name="Overlay.drawEllipse" func="yes">
 			<Overload retVal="" descr="Draws an ellipse, where (x,y) specifies the upper left corner of the bounding rectangle.">
 				<Param name="x" />
@@ -2243,6 +2245,7 @@
 			If only one array is specified it is assumed to contain the Y values and a 0..n-1 sequence is used as the X values.
 			It is also permissible to specify no arrays and use Plot.setLimits() and Plot.add() to generate the plot.
 			Use Plot.show() to display the plot in a window, or it will be displayed automatically when the macro exits.
+			
 			Alternative version: Plot.create('Title', '{cat1,cat2,cat3}, 'Y-axis Label') draws category labels
 			instead of x-axis numbers 0, 1, 2. ">
 				<Param name="Title" />
@@ -2302,13 +2305,13 @@
 				<Param name="yStarts" />
 				<Param name="xEnds" />
 				<Param name="yEnds" />
-			</Overload>
+			</Overload>	
 		</KeyWord>
 		<KeyWord name="Plot.freeze()" func="no">
 			<Overload retVal="" descr="Freezes or unfreezes the plot. In the frozen state, the plot cannot be resized
-			or updated. In the unfrozen state, the plot cannot be tiled.>
+			or updated. In the unfrozen state, the plot cannot be tiled.">
 			</Overload>
-		</KeyWord>	
+		</KeyWord>
 		<KeyWord name="Plot.getFrameBounds" func="yes">
 			<Overload retVal="" descr="Returns the plot frame bounds.">
 				<Param name="x" />
@@ -2318,7 +2321,8 @@
 			</Overload>
 		</KeyWord>	
 		<KeyWord name="Plot.getLimits" func="yes">
-			<Overload retVal="" descr="Returns the current axis limits. Note that min greater than max if the axis is reversed. Requires 1.49t.">
+			<Overload retVal="" descr="Returns the current axis limits. Note that min greater than max if the axis is reversed.
+			Requires 1.49t.">
 				<Param name="xMin" />
 				<Param name="xMax" />
 				<Param name="yMin" />
@@ -2534,9 +2538,10 @@
 		</KeyWord>
 		<KeyWord name="Property.set" func="yes">
 			<Overload retVal="" descr="Adds a key-value pair to the property list of the current image.
-			key must be a string but property can be either a string or a number. The key-value pair is removed if property is an empty string.
-			Add a 'ShowInfo' property (e.g. Property.set('ShowInfo','true')) and the property list will be displayed by the Image>Show Info command 
-			(requires 1.53b). The property list is persistent when the image is saved in TIFF format.">
+			key must be a string but property can be either a string or a number. The key-value pair is
+			removed if property is an empty string.Add a 'ShowInfo' property (e.g. Property.set('ShowInfo','true'))
+			and the property list will be displayed by the Image>Show Info command (requires 1.53b).
+			The property list is persistent when the image is saved in TIFF format.">
 				<Param name="key" />
 				<Param name="property" />
 			</Overload>
@@ -2570,7 +2575,7 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="replace" func="yes">
-			<Overload retVal="string" descr="Returns a string that results from replacing all occurrences of 'old' in 'string' with 'new', 
+			<Overload retVal="string" descr="Returns the new string that results from replacing all occurrences of old in string with new, 
 			matches the 'https://en.wikipedia.org/wiki/Regular_expression'regular expression old is replaced with new.
 			When doing a simple string replacement, and old contains regular expression metacharacters ('.', '[', ']', '^', '$', etc.), 
 			you must escape them with a '\\'. For example, to replace '[xx]' with 'yy', use 
@@ -2959,6 +2964,7 @@
 			<Overload retVal="" descr="Replaces the selected ROI on the list with the current selection.">
 			</Overload>
 		</KeyWord>
+
 		<KeyWord name="roiManager.multiCrop" func="yes">
 			<Overload retVal="" descr="If 'options' contains ''save'', saves the contents of the selected ROIs in TIFF format
 			as separate images, where 'dir' is the directory path. Add '' png'' or '' jpg'' to save in PNG or JPEG format.
@@ -2970,20 +2976,24 @@
 		</KeyWord>
 		<KeyWord name="RoiManager.selected" func="yes">
 			<Overload retVal="" descr="Returns the number of selected ROIs in the ROI Manager list.
-			Requires 1.53e. See also: ''https://imagej.nih.gov/ij/developer/macro/functions.html#RoiManager.size'' RoiManager.size">
+			Requires 1.53e.
+			See also: ''https://imagej.nih.gov/ij/developer/macro/functions.html#RoiManager.size'' RoiManager.size">
 			</Overload>
-		</KeyWord>
+		</KeyWord>		
 		<KeyWord name="round" func="yes">
 			<Overload retVal="int" descr="Returns the closest integer to n. See also: floor.">
 				<Param name="n" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="run" func="yes">
-			<Overload retVal="" descr="Executes an ImageJ menu command with arguments. The 'options' string -must be GenericDialog or OpenDialog-.
-			Use the Command Recorder Plugins-Macros-Record to generate run function calls. Use string concatenation to pass
-			a variable as an argument. With ImageJ 1.43 and later, variables can be passed without using string concatenation by adding
-			''and;'' to the variable name. For examples, see the ''https://imagej.nih.gov/ij/macros/ArgumentPassingDemo.txt''
-			ArgumentPassingDemo macro. Plugins can directly retrieve the 'options' string by calling Macro.getOptions.">
+			<Overload retVal="" descr="Executes an ImageJ menu command.
+			The optional second argument contains values that are automatically entered into dialog boxes 
+			(must be GenericDialog or OpenDialog).
+			Use the Command Recorder (Plugins greater than Macros greater than Record) to generate run() function calls.
+			Use string concatenation to pass a variable as an argument.
+			With ImageJ 1.43 and later, variables can be passed without using string concatenation by adding
+			'ampersand' to the variable name. For examples, see the 
+			'https://wsr.imagej.net/macros/ArgumentPassingDemo.txt' ArgumentPassingDemo macro.">																			   
 				<Param name="command'[" />
 				<Param name="options']" />
 			</Overload>
@@ -3328,7 +3338,7 @@
 		</KeyWord>
 		<KeyWord name="setVoxelSize" func="yes">
 			<Overload retVal="" descr="Defines the voxel dimensions and unit of length ('pixel', 'mm', etc.) for the 
-			current image or stack. A 'um' unit will be converted to 'µm'. The depth argument is ignored if 
+			current image or stack. A 'um' unit will be converted to the micro symbol+m. The depth argument is ignored if 
 			the current image is not a stack. See also: getVoxelSize.">
 				<Param name="width" />
 				<Param name="height" />
