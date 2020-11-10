@@ -45,6 +45,13 @@
 				<Param name="value" />
 			</Overload>
 		</KeyWord>
+		<KeyWord name="Array.filter" func="yes">
+			<Overload retVal="array" descr="Returns an array containing the elements of 'array' that contain 'filter'.
+			Enclose the filter in parans to do regular expression matching. Requires 1.53f.">
+				<Param name="array" />
+				<Param name="filter" />
+			</Overload>
+		</KeyWord>
 		<KeyWord name="Array.findMaxima" func="yes">
 			<Overload retVal="array" descr="Returns an array holding the peak positions
 			 (sorted with descending strength). 'Tolerance' is the minimum amplitude difference
@@ -1321,7 +1328,7 @@
 		</KeyWord>
 		<KeyWord name="getValue('Measurement')" func="no">
 			<Overload retVal="" descr="Returns a measurement result, where the argument is
-			'Area', 'Mean', 'StdDev', 'Mode', 'Min', 'Max', 'X', 'Y', 'XM', 'YM',
+			'Area', 'Mean', 'Mean limit','Mean raw','StdDev', 'Mode', 'Min', 'Max', 'X', 'Y', 'XM', 'YM',
 			'Perim.', 'BX', 'BY', 'Width', 'Height', 'Major', 'Minor', 'Angle', 'Circ.',
 			'Feret', 'IntDen', 'Median', 'Skew', 'Kurt', '%Area', 'RawIntDen', 'Ch', 'Slice',
 			'Frame', 'FeretX', 'FeretY', 'FeretAngle', 'MinFeret', 'AR', 'Round', 'Solidity',
@@ -1441,6 +1448,23 @@
 			If renaming the 'Results' table the 'oldName' is not required">
 				<Param name="oldName" />
 				<Param name="newName" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Image.copy" func="yes">
+			<Overload retVal="" descr="Copies the contents of the current selection, or the entire image if there is no selection,
+			to the internal clipboard.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Image.height" func="no">
+			<Overload retVal="integer" descr="The height of the active image in pixels.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Image.paste" func="yes">
+			<Overload retVal="" descr="Inserts the contents of the internal clipboard at the specified location in the active image.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Image.width" func="no">
+			<Overload retVal="" descr="The width of the active image in pixels.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="imageCalculator" func="yes">
@@ -1883,10 +1907,22 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Math.tan" func="yes">
-			<Overload retVal="" descr="Returns the tangent of n">
+			<Overload retVal="" descr="Returns the tangent of an angle (in radians)">
 				<Param name="n" />
 			</Overload>
-		</KeyWord>			
+		</KeyWord>
+		<KeyWord name="Math.toDegrees" func="yes">
+			<Overload retVal="" descr="Converts an angle in radians to an equivalent angle in degrees.
+			Requires 1.53f.">
+				<Param name="degrees" />
+			</Overload>
+		</KeyWord>	
+		<KeyWord name="Math.toRadians" func="yes">
+			<Overload retVal="" descr="Converts an angle in degrees to an equivalent angle in radians.
+			Requires 1.53f.">
+				<Param name="degrees" />
+			</Overload>
+		</KeyWord>	
 		<KeyWord name="maxOf" func="yes">
 			<Overload retVal="" descr="Returns the greater of two values.">
 				<Param name="n1" />
