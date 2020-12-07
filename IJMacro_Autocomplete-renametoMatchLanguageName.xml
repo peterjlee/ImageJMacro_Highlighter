@@ -3686,6 +3686,14 @@
 				<Param name="delimiter" />
 			</Overload>
 		</KeyWord>
+		<KeyWord name="String.pad" func="yes">
+			<Overload retVal="" descr="Pads 'n' with leading zeros so that it is 'length' characters wide and returns the result.
+			Note: 'n' can be either a number or a string. For an example, run the Help...Examples...Macro...Stack Overlay command.
+			Requires 1.53g">
+				<Param name="n" />
+				<Param name="length" />
+			</Overload>
+		</KeyWord>
 		<KeyWord name="String.paste " func="no">
 			<Overload retVal="string" descr="Returns the contents of the clipboard.">
 			</Overload>
