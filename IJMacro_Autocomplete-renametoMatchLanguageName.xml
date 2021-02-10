@@ -266,6 +266,54 @@
 				<Param name="pattern" />
 			</Overload>
 		</KeyWord>
+		<KeyWord name="Color.getLut" func="yes">
+			<Overload retVal="string" descr="Returns three arrays containing the red, green and blue intensity values
+			from the current lookup table. See the 'https://imagej.nih.gov/ij/macros/LookupTables.txt'
+			LookupTables macros for examples.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Color.set" func="yes">
+			<Overload retVal="" descr="Sets the drawing color, where 'string' is 'red', 'blue', etc.,
+			or a hex value like '#ff0000'. Color.set(value) Sets the drawing color.
+			For 8 bit images, 0<=value<=255. For 16 bit images, 0<=value<=65535.
+			With RGB images, use hex constants (e.g., 0xff0000 for red).">
+				<Param name="color_string_or_hex_value" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Color.setBackground" func="yes">
+			<Overload retVal="" descr="Sets the background color, where 'string' is 
+			'red', 'blue', etc., or a hex value like '#ff0000'
+			or (r, g, b) where r, g, and b are >= 0 and <= 255.">
+				<Param name="color_string_or_hex_value_or_RGB" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Color.setForeground" func="yes">
+			<Overload retVal="" descr="Sets the foreground color, where 'string' is
+			'red', 'blue', etc., or a hex value like '#ff0000'
+			or (r, g, b) where r, g, and b are >= 0 and <= 255.">
+				<Param name="color_string_or_hex_value_or_RGB" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Color.setLut" func="yes">
+			<Overload retVal="string" descr="Creates a new lookup table and assigns it to the current image.
+			Three input arrays are required, each containing 256 intensity values.">
+				<Param name="Reds" />
+				<Param name="Greens" />
+				<Param name="Blues" />	
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Color.toArray" func="yes">
+			<Overload retVal="string" descr="Converts a color (e.g., 'red' or '#ff0000') to a three element array.">
+				<Param name="color_string_or_hex_value" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Color.toString" func="yes">
+			<Overload retVal="string" descr="Converts an r,g,b color to a string.">
+				<Param name="R" />
+				<Param name="G" />
+				<Param name="B" />				
+			</Overload>
+		</KeyWord>
 		<KeyWord name="cos" func="yes">
 			<Overload retVal="" descr="Returns the cosine of an angle (in radians).">
 				<Param name="angle" />
@@ -625,6 +673,11 @@
 				<Param name="path" />
 			</Overload>
 		</KeyWord>
+		<KeyWord name="File.isFile" func="yes">
+			<Overload retVal="" descr="Returns '1' (true) if the specified file is not a directory">
+				<Param name="path" />
+			</Overload>
+		</KeyWord>
 		<KeyWord name="File.lastModified" func="yes">
 			<Overload retVal="" descr="Returns the time the specified file was last modified 
 			as the number of milliseconds since January 1, 1970.">
@@ -878,6 +931,11 @@
 				<Param name="channels" />
 				<Param name="slices" />
 				<Param name="frames" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="getDir" func="yes">
+			<Overload retVal="string" descr="getDirectory('cwd') returns the path to the current working directory.">
+				<Param name="string" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getDirectory" func="yes">
@@ -1461,6 +1519,10 @@
 		</KeyWord>
 		<KeyWord name="Image.paste" func="yes">
 			<Overload retVal="" descr="Inserts the contents of the internal clipboard at the specified location in the active image.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Image.title" func="no">
+			<Overload retVal="" descr="The title of the active image. Requires 1.53h.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Image.width" func="no">
@@ -2096,6 +2158,13 @@
 				<Param name="angle" />
 			</Overload>
 		</KeyWord>
+		<KeyWord name="Overlay.fill" func="yes">
+			<Overload retVal="" descr="Fills all the selections in the overlay with 'color'.
+			Overlay.fill(color1, color2) Fills all the selections in the overlay with 'color1'
+			after clearing the the image to 'color2'. Requires 1.53h.">
+				<Param name="color" />
+			</Overload>
+		</KeyWord>
 		<KeyWord name="Overlay.flatten" func="no">
 			<Overload retVal="" descr="Creates a new RGB image that has the overlay rendered as pixel data.">
 			</Overload>
@@ -2214,6 +2283,12 @@
 		</KeyWord>
 		<KeyWord name="Overlay.useNamesAsLabels" func="yes">
 			<Overload retVal="" descr="Controls whether ROI names or index numbers are used as labels (boolean). Requires 1.52v.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Overlay.xor" func="yes">
+			<Overload retVal="" descr="Creates a selection that is the result of XORing all the selections
+			in the overlay that have an index in 'array'. Requires 1.53h.">
+				<Param name="array" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="parseFloat" func="yes">
@@ -2702,6 +2777,14 @@
 			<Overload retVal="string" descr="Returns the selection fill color.">
 			</Overload>
 		</KeyWord>
+		<KeyWord name="Roi.getFloatBounds" func="yes">
+			<Overload retVal="" descr="Returns the location and size of the selection's bounding rectangle as real numbers.">
+				<Param name="x" />
+				<Param name="y" />
+				<Param name="width" />
+				<Param name="height" />
+			</Overload>
+		</KeyWord>
 		<KeyWord name="Roi.getGroup" func="no">
 			<Overload retVal="string" descr="Returns the current ROI group name. Requires ImageJ 1.52t">
 			</Overload>
@@ -3177,6 +3260,14 @@
 		<KeyWord name="setFont('user')" func="no">
 			<Overload retVal="" descr="Sets the font to the one defined in the Edit greater than Options greater than Fonts window.
 			See also: 'getInfo('font.name'), getValue('font.size') and getValue('font.height').">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="setForeground" func="yes">
+			<Overload retVal="" descr="Sets the foreground color,
+			(r, g, b) where r, g, and b are >= 0 and <= 255.">
+				<Param name=">= 0 R <= 255" />
+				<Param name=">= 0 G <= 255" />
+				<Param name=">= 0 B <= 255" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="setForegroundColor" func="yes">
