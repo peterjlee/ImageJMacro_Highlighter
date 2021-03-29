@@ -258,11 +258,14 @@
 			 For example, close('Histo*') could be used to dispose all histogram windows.
 			 Non-image windows like 'Roi Manager'
 			 have to be specified without wildcards. For text windows, wildcards
-			 are allowed if 'pattern' ends with '.txt' , '.ijm', '.js' etc. Use close('*')
+			 are allowed if 'pattern' ends with ''.txt'' , ''.ijm'', ''.js'' etc. Use close(''*'')
 			 to close all image windows. Use close(pattern, 'keep') to not close
-			 text or image windows with changes. If 'pattern' is '\\Others', all
-			 images except the front image are closed. The most recent macro
-			 window is never closed.">
+			 text or image windows with changes. close(''*.csv'') closes those tables.
+			 With the 1.53i19 daily build, close(''*.tsv'') also works.
+			 If 'pattern' is '\\Others', all images except the front image are closed.
+			 The most recent macro window is never closed.
+			 Alternatively 'close()' closes the active image ONLY and does not close the 'Log' or 
+			'Results'. Use run('Close') to close non-image windows.">
 				<Param name="pattern" />
 			</Overload>
 		</KeyWord>
@@ -323,6 +326,7 @@
 			<Overload retVal="" descr="Converts the number n into a string using the specified
 			 number of decimal places.
 			 Uses scientific notation if 'decimalPlaces is negative.
+			 This looks nicer: toLowerCase(d2s(yourDecimalNumber, -yourDecimalPlaces ))
 			 Note that d2s stands for 'double to string'.">
 				<Param name="n" />
 				<Param name="decimalPlaces" />
@@ -403,6 +407,7 @@
 		<KeyWord name="Dialog.addNumber" func="yes">
 			<Overload retVal="" descr="Adds a numeric field, using the specified 'label' and 'default' value.
 			Optional: 'decimalPlaces' specifies the number of digits to right of decimal point.
+			           Uses scientific notation if you provide a negative number.
 			Optional: 'columns' specifies the the field width in characters.
 			Optional: 'units' is a string that is displayed to the right of the field.">
 				<Param name="label" />
@@ -1361,6 +1366,15 @@
 			<Overload retVal="string" descr="Returns the title of the current image.">
 			</Overload>
 		</KeyWord>
+		<KeyWord name="getValue" func="yes">
+			<Overload retVal="" descr="Returns the value of the pixel at (x,y).
+			For 8 and 16 bit images, it is the calibrated value.
+			For RGB images, it is the intensity value.
+			Use getPixel(x,y) to get raw pixel value. Requires 1.52p.">
+				<Param name="x" />
+				<Param name="y" />
+			</Overload>
+		</KeyWord>
 		<KeyWord name="getValue('color.foreground')" func="no">
 			<Overload retVal="" descr="Returns the current foreground color as a value that can be passed to the 
 			setColor(value) function. The value returned is the pixel value used by the Edit greater than Fill command and by 
@@ -1421,11 +1435,6 @@
 		</KeyWord>
 		<KeyWord name="getValue('selection.width')" func="no">
 			<Overload retVal="" descr="Returns the stroke width of the current selection.">
-			</Overload>
-		</KeyWord>
-		<KeyWord name="getValue('x,y')" func="no">
-			<Overload retVal="" descr="Returns the coordinates of the current selection.
-			Uses bilinear interpolation if 'x' or 'y' are not integers. Requires 1.52p.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getVersion()" func="no">
@@ -2279,6 +2288,12 @@
 		<KeyWord name="Overlay.size" func="no">
 			<Overload retVal="integer" descr="Returns the size (selection count) of the current overlay.
 			Returns zero if the image does not have an overlay.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Overlay.update" func="yes">
+			<Overload retVal="" descr="Replaces the overlay selection at 'index' with the current selection.
+			Analogous to roiManager(''update''). Requires 1.53i">
+				<Param name="index" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Overlay.useNamesAsLabels" func="yes">
@@ -3512,9 +3527,16 @@
 				<Param name="finalIndex" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="showStatus('message')" func="no">
+		<KeyWord name="showStatus" func="no">
 			<Overload retVal="" descr="Displays a message in the ImageJ status bar.
-			If the message starts with '!', subsequent process messages are suppressed">
+			If the message starts with '!', subsequent process messages are suppressed in ImageJ 1.53i.
+			The 'options' array in the macro contains seven example 'options' strings. The default delay
+			is 500ms, or 100ms if the image is flashed. The default color is white, or black if the image flashed.
+			The colors recognized in the 'options' string are  'red', 'green', 'blue', 'magenta', 'cyan', 'yellow',
+			'orange', 'black', 'white','gray' and 'pink'.
+			Examples: 'flash', 'flash pink', 'flash 1000ms','flash yellow 2000ms', 'flash image', 'flash image orange 500ms'">
+				<Param name="message" />
+				<Param name="options" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="showText" func="yes">
@@ -4041,15 +4063,6 @@
 			<Overload retVal="" descr="Call this function to update the 
 			'Results' window after the results table has been modified by 
 			calls to the setResult() function.">
-			</Overload>
-		</KeyWord>
-		<KeyWord name="value" func="yes">
-			<Overload retVal="" descr="Returns the value of the pixel at (x,y).
-			For 8 and 16 bit images, it is the calibrated value.
-			For RGB images, it is the intensity value.
-			Use getPixel(x,y) to get raw pixel values. Requires 1.52p.">
-				<Param name="x" />
-				<Param name="y" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="wait" func="yes">
