@@ -269,6 +269,14 @@
 				<Param name="pattern" />
 			</Overload>
 		</KeyWord>
+		<KeyWord name="Color.background" func="yes">
+			<Overload retVal="string" descr="Returns the background color as a string, for example 'cyan' or '#00ffff'.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Color.foreground" func="yes">
+			<Overload retVal="string" descr="Returns the foreground color as a string, for example 'red' or '#00ffff'.">
+			</Overload>
+		</KeyWord>
 		<KeyWord name="Color.getLut" func="yes">
 			<Overload retVal="string" descr="Returns three arrays containing the red, green and blue intensity values
 			from the current lookup table. See the 'https://imagej.nih.gov/ij/macros/LookupTables.txt'
@@ -290,11 +298,21 @@
 				<Param name="color_string_or_hex_value_or_RGB" />
 			</Overload>
 		</KeyWord>
+		<KeyWord name="Color.setBackgroundValue" func="yes">
+			<Overload retVal="" descr="Sets the background color, where 'value' is a number.">
+				<Param name="number" />
+			</Overload>
+		</KeyWord>
 		<KeyWord name="Color.setForeground" func="yes">
 			<Overload retVal="" descr="Sets the foreground color, where 'string' is
 			'red', 'blue', etc., or a hex value like '#ff0000'
 			or (r, g, b) where r, g, and b are >= 0 and <= 255.">
 				<Param name="color_string_or_hex_value_or_RGB" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Color.setForegroundValue" func="yes">
+			<Overload retVal="" descr="Sets the foreground color, where 'value' is a number.">
+				<Param name="number" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Color.setLut" func="yes">
@@ -811,6 +829,19 @@
 				<Param name="equation" />
 				<Param name="xpoints" />
 				<Param name="ypoints" />
+				<Param name="initialGuesses" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Fit.doWeightedFit" func="yes">
+			<Overload retVal="" descr="Fits the specified equation to the points defined by 'xpoints', 'ypoints',
+			with the weight of each data point given by the 'weights' array. If the error bars of the individual
+			data points are known, the weights should be proportional to 1/error^2.
+			The sum of squared residuals is calculated by multiplying each individual (y - fit)^2 value with the
+			corresponding weight. The 'initialGuesses' array is optional.">
+				<Param name="equation" />
+				<Param name="xpoints" />
+				<Param name="ypoints" />
+				<Param name="weights" />
 				<Param name="initialGuesses" />
 			</Overload>
 		</KeyWord>
@@ -1460,6 +1491,13 @@
 			3200%).">
 			</Overload>
 		</KeyWord>
+		<KeyWord name="IJ.checksum" func="yes">
+			<Overload retVal="" descr="Returns the MD5 (or SHA-256) checksum from a file.
+			If 'filepath' is a directory or invalid, '0' is returned.">
+				<Param name="MD5 string" />
+				<Param name="string or filepath" />
+			</Overload>
+		</KeyWord>
 		<KeyWord name="IJ.currentMemory()" func="no">
 			<Overload retVal="string" descr="Returns, as a string, the amount of memory in bytes currently used by ImageJ.">
 			</Overload>
@@ -1471,8 +1509,8 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="IJ.freeMemory()" func="no">
-			<Overload retVal="string" descr="Returns the memory status string (e.g., '2971K of 658MB (&lt;1%)') that is displayed when 
-			the users clicks in the ImageJ status bar.">
+			<Overload retVal="string" descr="Returns the memory status string (e.g., '2971K of 658MB')
+			that is displayed when the users clicks in the ImageJ status bar.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="IJ.getFullVersion" func="yes">
@@ -1527,7 +1565,12 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Image.paste" func="yes">
-			<Overload retVal="" descr="Inserts the contents of the internal clipboard at the specified location in the active image.">
+			<Overload retVal="" descr="Inserts the contents of the internal clipboard at x,y
+			Optional: uses the specified transfer 'mode' ('Copy', 'Blend', 'Average', 'Difference', 'Transparent', 'Transparent2',
+			'AND', 'OR', 'XOR', 'Add', 'Subtract', 'Multiply', or 'Divide').">
+				<Param name="x" />
+				<Param name="y" />
+				<Param name="mode" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Image.title" func="no">
@@ -2466,6 +2509,13 @@
 			<Overload retVal="" descr="Creates a high-resolution image of the plot enlarged by factor. Add the second argument 
 			'disable' to avoid antialiased text. Requires 1.49t.">
 				<Param name="factor" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Plot.removeNaNs" func="yes">
+			<Overload retVal="" descr="Removes NaN values from the plot. This has two effects: 
+			a) Numerical output via 'List' or macro will be free of NaNs;
+			b) Line plots that were interrupted by NaNs are now connected.
+			Requires 1.53j.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Plot.replace" func="yes">
