@@ -220,6 +220,7 @@ IJ.renameResults
 Image.copy
 Image.height
 Image.paste
+Image.removeScale
 Image.title
 Image.width
 imageCalculator
@@ -386,6 +387,7 @@ resetMinAndMax
 resetThreshold
 restoreSettings
 Roi.contains
+Roi.copy
 Roi.getBounds
 Roi.getContainedPoints
 Roi.getCoordinates
@@ -405,6 +407,7 @@ Roi.getSplineAnchors
 Roi.getStrokeColor
 Roi.getType
 Roi.move
+Roi.paste
 Roi.remove
 Roi.setAntiAlias
 Roi.setDefaultGroup

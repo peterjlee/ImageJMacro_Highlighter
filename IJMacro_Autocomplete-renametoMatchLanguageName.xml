@@ -196,11 +196,11 @@
 				<Param name="boolean" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="beep()" func="no">
+		<KeyWord name="beep()" func="yes">
 			<Overload retVal="" descr="Emits an audible beep.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="bitDepth() " func="no">
+		<KeyWord name="bitDepth() " func="yes">
 			<Overload retVal="" descr="Returns the bit depth of the active image: 8, 16, 24 (RGB) or 32 (float).">
 			</Overload>
 		</KeyWord>
@@ -244,7 +244,7 @@
 				<Param name="index" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="close()" func="no">
+		<KeyWord name="close()" func="yes">
 			<Overload retVal="" descr="Closes the active image.
 			This function has the advantage of not closing the 'Log' or 
 			'Results' window when you meant to close the active image. 
@@ -466,7 +466,7 @@
 				<Param name="columns" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Dialog.addToSameRow()" func="no">
+		<KeyWord name="Dialog.addToSameRow()" func="yes">
 			<Overload retVal="" descr="Makes the next item added appear on the same row as the previous item. 
 			May be used for addNumericField, addSlider, addChoice, addCheckbox, addStringField, addMessage, addPanel, 
 			and before the showDialog() method. In the latter case, the buttons appear to the right of the previous item. 
@@ -486,27 +486,27 @@
 			 	<Param name="Title" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Dialog.getCheckbox()" func="no">
+		<KeyWord name="Dialog.getCheckbox()" func="yes">
 			<Overload retVal="" descr="Returns the state (true or false) of the next checkbox.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Dialog.getChoice()" func="no">
+		<KeyWord name="Dialog.getChoice()" func="yes">
 			<Overload retVal="string" descr="Returns the selected item (a string) from the next popup menu.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Dialog.getImageChoice()" func="no">
+		<KeyWord name="Dialog.getImageChoice()" func="yes">
 			<Overload retVal="string" descr="Returns the title of the image selected in the next image choice popup menu.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Dialog.getNumber()" func="no">
+		<KeyWord name="Dialog.getNumber()" func="yes">
 			<Overload retVal="" descr="Returns the contents of the next numeric field.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Dialog.getRadioButton()" func="no">
+		<KeyWord name="Dialog.getRadioButton()" func="yes">
 			<Overload retVal="string" descr="Returns the selected item (a string) from the next radio button group.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Dialog.getString()" func="no">
+		<KeyWord name="Dialog.getString()" func="yes">
 			<Overload retVal="string" descr="Returns a string containing the contents of the next text field.">
 			</Overload>
 		</KeyWord>
@@ -523,12 +523,12 @@
 				<Param name="y" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Dialog.show()" func="no">
+		<KeyWord name="Dialog.show()" func="yes">
 			<Overload retVal="" descr="Displays the dialog and waits until the user clicks 'OK' or 'Cancel'. The 
 			macro terminates if the user clicks 'Cancel'.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="doCommand('Command')" func="no">
+		<KeyWord name="doCommand('Command')" func="yes">
 			<Overload retVal="" descr="Runs an ImageJ menu command in a separate thread and returns immediately. As an example,  
 			doCommand('Start Animation') starts animating the current stack in a separate thread and the macro continues to 
 			execute. Use run('Start Animation') and the macro hangs until the user stops the animation.">
@@ -590,7 +590,7 @@
 				<Param name="background" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="dump()" func="no">
+		<KeyWord name="dump()" func="yes">
 			<Overload retVal="" descr="Writes the contents of the symbol table,
 			the tokenized macro code and the variable stack to the 
 			'Log' window.">
@@ -622,7 +622,7 @@
 				<Param name="string or strings" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="exit('error message')" func="no">
+		<KeyWord name="exit('error message')" func="yes">
 			<Overload retVal="" descr="Terminates execution of the macro.
 			Optional: displays an 'error message'.">
 			</Overload>
@@ -790,7 +790,7 @@
 			<Overload retVal="" descr="Returns the file name separator character ('/' or '\').">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="fill()" func="no">
+		<KeyWord name="fill()" func="yes">
 			<Overload retVal="" descr="Fills the image or selection with the current drawing color.">
 			</Overload>
 		</KeyWord>
@@ -918,7 +918,7 @@
 				<Param name="valueN" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getArgument()" func="no">
+		<KeyWord name="getArgument()" func="yes">
 			<Overload retVal="string" descr="Returns the string argument passed to macros called by runMacro(macro, arg), 
 			eval(macro), IJ.runMacro(macro, arg) or IJ.runMacroFile(path, arg).">
 			</Overload>
@@ -1019,12 +1019,12 @@
 				<Param name="directory" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getFontList()" func="no">
+		<KeyWord name="getFontList()" func="yes">
 			<Overload retVal="array" descr="Returns an array containing the names of available system fonts
  			('http://wsr.imagej.net/macros/Fonts.txt' example).">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getHeight()" func="no">
+		<KeyWord name="getHeight()" func="yes">
 			<Overload retVal="" descr="Returns the height in pixels of the current image.">
 			</Overload>
 		</KeyWord>
@@ -1048,19 +1048,19 @@
 				<Param name="histMax]" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getImageID()" func="no">
+		<KeyWord name="getImageID()" func="yes">
 			<Overload retVal="" descr="Returns the unique ID (a negative number) of the active image.
 			 Use the selectImage(id), isOpen(id) and isActive(id) functions to activate an image or 
 			to determine if it is open or active.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getImageInfo()" func="no">
+		<KeyWord name="getImageInfo()" func="yes">
 			<Overload retVal="" descr="Returns a string containing the text that would be displayed by 
 			the Image &gt; Show Info command. To retrieve the contents of a text window, use getInfo('window.contents').
 			For an example, see the http://wsr.imagej.net/macros/ListDicomTags.txt' ListDicomTags macros. See also: getMetadata.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getInfo('command.name')" func="no">
+		<KeyWord name="getInfo('command.name')" func="yes">
 			<Overload retVal="" descr="Returns the name of the most recently invoked command. The names of commands invoked using 
 			keyboard shortcuts are preceded by '^' 
 			('http://wsr.imagej.net/macros/examples/GetCommandNameDemo.txt'
@@ -1074,84 +1074,84 @@
 				<Param name="DICOM_TAG" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getInfo('font.name')" func="no">
+		<KeyWord name="getInfo('font.name')" func="yes">
 			<Overload retVal="string" descr="Returns the name of the current font.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getInfo('image.description')" func="no">
+		<KeyWord name="getInfo('image.description')" func="yes">
 			<Overload retVal="string" descr="Returns the TIFF image description tag, or an empty string if this is not a TIFF image or the 
 			image description is not available.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getInfo('image.directory')" func="no">
+		<KeyWord name="getInfo('image.directory')" func="yes">
 			<Overload retVal="string" descr="Returns the directory that the current image was loaded from, 
 			or an empty string if the directory is not available.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getInfo('image.filename')" func="no">
+		<KeyWord name="getInfo('image.filename')" func="yes">
 			<Overload retVal="string" descr="Returns the name of the file that the current image was loaded from, 
 			or an empty string if the file name is not available.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getInfo('image.subtitle')" func="no">
+		<KeyWord name="getInfo('image.subtitle')" func="yes">
 			<Overload retVal="string" descr="Returns the subtitle of the current image. 
 			This is the line of information displayed above the image and below the title bar.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getInfo('image.title')" func="no">
+		<KeyWord name="getInfo('image.title')" func="yes">
 			<Overload retVal="string" descr="Returns the title of the current image. 
 			Same as getTitle.
 			Use File.getName(getInfo('macro.filepath')) to get the file name and
 			File.getDirectory(getInfo('macro.filepath')) to get the directory.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getInfo('log')" func="no">
+		<KeyWord name="getInfo('log')" func="yes">
 			<Overload retVal="string" descr="Returns the contents of the Log window, or '' if the Log window is not open.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getInfo('macro.filepath')" func="no">
+		<KeyWord name="getInfo('macro.filepath')" func="yes">
 			<Overload retVal="string" descr="Returns the filepath of the most recently loaded macro or script.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getInfo('micrometer.abbreviation')" func="no">
+		<KeyWord name="getInfo('micrometer.abbreviation')" func="yes">
 			<Overload retVal="string" descr="Returns the abbreviation for micrometer.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getInfo('os.name')" func="no">
+		<KeyWord name="getInfo('os.name')" func="yes">
 			<Overload retVal="string" descr="Returns the OS name ('Mac OS X', 'Linux' or 'Windows').">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getInfo('overlay')" func="no">
+		<KeyWord name="getInfo('overlay')" func="yes">
 			<Overload retVal="string" descr="Returns information about the current image's overlay.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getInfo('selection.name')" func="no">
+		<KeyWord name="getInfo('selection.name')" func="yes">
 			<Overload retVal="string" descr="Returns the name of the current selection, or '' if there is no selection or the 
 			selection does not have a name. The argument can also be 'roi.name'.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getInfo('selection.color')" func="no">
+		<KeyWord name="getInfo('selection.color')" func="yes">
 			<Overload retVal="string" descr="Returns the color of the current selection.
 			see also Roi.getStrokeColor">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getInfo('slice.label')" func="no">
+		<KeyWord name="getInfo('slice.label')" func="yes">
 			<Overload retVal="string" descr="Return the label of the current stack slice. 
 			This is the string that appears in parentheses in the subtitle, 
 			the line of information above the image. Returns an empty string if the 
 			current image is not a stack or the current slice does not have a label.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getInfo('threshold.method')" func="no">
+		<KeyWord name="getInfo('threshold.method')" func="yes">
 			<Overload retVal="string" descr="Returns the current thresholding method ('IsoData', 'Otsu', etc).">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getInfo('threshold.mode')" func="no">
+		<KeyWord name="getInfo('threshold.mode')" func="yes">
 			<Overload retVal="string" descr="Returns the current thresholding mode 
 			('Red','B'n'W' or'Over/Under').">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getInfo('window.contents')" func="no">
+		<KeyWord name="getInfo('window.contents')" func="yes">
 			<Overload retVal="string" descr="If the front window is a text window, 
 			returns the contents of that window. If the front window is 
 			an image, returns a string containing the text that would be displayed by Image &gt; Show Info.  Note that 
@@ -1159,11 +1159,11 @@
 			split(getInfo(),'\n') to break the string returned by this function into separate lines. Replaces the getInfo() function.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getInfo('window.title')" func="no">
+		<KeyWord name="getInfo('window.title')" func="yes">
 			<Overload retVal="string" descr="Returns the title of the front-most window.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getInfo('window.type')" func="no">
+		<KeyWord name="getInfo('window.type')" func="yes">
 			<Overload retVal="string" descr="Returns the type ('Image', 'Text', 'ResultsTable', 
 			'Editor', 'Plot', 'Histogram', etc.) of the front window.">
 			</Overload>
@@ -1176,7 +1176,7 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getLine" func="yes">
-			<Overload retVal="" descr="Returns the starting coordinates, ending coordinates and width of the current straight line 
+			<Overload retVal="int" descr="Returns the starting coordinates, ending coordinates and width of the current straight line 
 			selection. The coordinates and line width are in pixels. Sets x1 = -1 if there is no line selection. Refer to the '
 			http://wsr.imagej.net/macros/GetLineDemo.txt' GetLineDemo macro for an example.">
 				<Param name="x1" />
@@ -1186,34 +1186,34 @@
 				<Param name="lineWidth" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getList('image.titles')" func="no">
+		<KeyWord name="getList('image.titles')" func="yes">
 			<Overload retVal="array" descr="Returns a list (array) of image window titles. For an example, see the '
 			http://wsr.imagej.net/macros/DisplayWindowTitles.txt' DisplayWindowTitles macro.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getList('window.titles')" func="no">
+		<KeyWord name="getList('window.titles')" func="yes">
 			<Overload retVal="array" descr="Returns a list (array) of non-image window titles. For an example, see the '
 			http://wsr.imagej.net/macros/DisplayWindowTitles.txt' DisplayWindowTitles macro.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getList('java.properties')" func="no">
+		<KeyWord name="getList('java.properties')" func="yes">
 			<Overload retVal="array" descr="Returns a list (array) of Java property keys. For an example, see the '
 			http://wsr.imagej.net/macros/DisplayJavaProperties.txt' DisplayJavaProperties macro. See also: 
 			getInfo(key).">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getList('threshold.methods')" func="no">
-			<Overload retVal="" descr="Returns a list of the available automatic thresholding methods 
+		<KeyWord name="getList('threshold.methods')" func="yes">
+			<Overload retVal="list" descr="Returns a list of the available automatic thresholding methods 
 			('http://wsr.imagej.net/macros/examples/AutoThresholdingDemo.txt' example).">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getList('LUTs')" func="no">
+		<KeyWord name="getList('LUTs')" func="yes">
 			<Overload retVal="array" descr="Returns, as an array, a list of the LUTs in the Image &gt; Lookup Tables menu ('
 			http://wsr.imagej.net/macros/Time-Lapse_Color_Coder.txt' example).">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getLocationAndSize" func="yes">
-			<Overload retVal="" descr="Returns the location and size, in screen coordinates, of the active image window. Use 
+			<Overload retVal="int" descr="Returns the location and size, in screen coordinates, of the active image window. Use 
 			getWidth and getHeight to get the width and height, in image coordinates, of the 
 			active image. See also: setLocation,">
 				<Param name="x" />
@@ -1230,19 +1230,20 @@
 				<Param name="blues" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getMetadata('Info')" func="no">
+		<KeyWord name="getMetadata('Info')" func="yes">
 			<Overload retVal="string" descr="Returns the metadata (a string) from the 'Info' property of the current image. With 
 			DICOM images, this is the information (tags) in the DICOM header. See also: setMetadata.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getMetadata('Label')" func="no">
+		<KeyWord name="getMetadata('Label')" func="yes">
 			<Overload retVal="string" descr="Returns the current slice label. The first line of the this label (up to 60 characters) is 
 			display as part of the image subtitle. With DICOM stacks, returns the metadata from the DICOM header. See also: 
 			setMetadata.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getMinAndMax" func="yes">
-			<Overload retVal="" descr="Returns the minimum and maximum displayed pixel values (display range). See the '
+			<Overload retVal="int" descr="Returns the minimum and maximum displayed pixel values (display range).
+			getMinAndMax('a','b') returns variables with the names 'a' and 'b' with the min and max values.
 			http://wsr.imagej.net/macros/DisplayRangeMacros.txt' DisplayRangeMacros for examples.">
 				<Param name="min" />
 				<Param name="max" />
@@ -1258,7 +1259,7 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getPixel" func="yes">
-			<Overload retVal="" descr="Returns the raw value of the pixel at (x,y).
+			<Overload retVal="int" descr="Returns the raw value of the pixel at (x,y).
 			Use value(x,y) to get calibrated pixel values from 8 and 16 bit images and intensity values from RGB images.
 			Note that pixels in RGB images contain red, green and 
 			blue components that need to be extracted using shifting and masking. See the '
@@ -1278,7 +1279,7 @@
 				<Param name="pixelHeight" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getProfile()" func="no">
+		<KeyWord name="getProfile()" func="yes">
 			<Overload retVal="" descr="Runs Analyze &gt; Plot Profile (without displaying the plot) 
 			and returns the intensity values as an array. For an example, see the 
 			'http://wsr.imagej.net/macros/GetProfileExample.txt' GetProfileExample macro. See 
@@ -1346,8 +1347,8 @@
 				<Param name="ypoints" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getSliceNumber()" func="no">
-			<Overload retVal="" descr="Returns the number of the currently displayed stack image, an integer between 1 and 
+		<KeyWord name="getSliceNumber()" func="yes">
+			<Overload retVal="int" descr="Returns the number of the currently displayed stack image, an integer between 1 and 
 			nSlices.  Returns 1 if the active image is not a stack. See also: setSlice, Stack.getPosition.">
 			</Overload>
 		</KeyWord>
@@ -1392,7 +1393,7 @@
 				<Param name="upper" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getTime()" func="no">
+		<KeyWord name="getTime()" func="yes">
 			<Overload retVal="" descr="Returns the current time in milliseconds. 
 			The granularity of the time varies considerably from 
 			one platform to the next.  On Windows NT, 2K, XP it is about 10ms.  
@@ -1400,7 +1401,7 @@
 			many Unix platforms, including Mac OS X,  it actually is 1ms. See also: getDateAndTime.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getTitle()" func="no">
+		<KeyWord name="getTitle()" func="yes">
 			<Overload retVal="string" descr="Returns the title of the current image.">
 			</Overload>
 		</KeyWord>
@@ -1413,30 +1414,30 @@
 				<Param name="y" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getValue('color.foreground')" func="no">
+		<KeyWord name="getValue('color.foreground')" func="yes">
 			<Overload retVal="" descr="Returns the current foreground color as a value that can be passed to the 
 			setColor(value) function. The value returned is the pixel value used by the Edit &gt; Fill command and by 
 			drawing tools.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getValue('color.background')" func="no">
+		<KeyWord name="getValue('color.background')" func="yes">
 			<Overload retVal="" descr="Returns the current background color as a value that can be passed to the 
 			setColor(value) function. The value returned is the pixel value used by the Edit &gt; Clear command.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getValue('font.height')" func="no">
+		<KeyWord name="getValue('font.height')" func="yes">
 			<Overload retVal="" descr="Returns the height, in pixels, of the current font.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getValue('font.size')" func="no">
+		<KeyWord name="getValue('font.size')" func="yes">
 			<Overload retVal="" descr="Returns the size, in points, of the current font.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getValue('image.size')" func="no">
+		<KeyWord name="getValue('image.size')" func="yes">
 			<Overload retVal="" descr="Returns the size of the current image in bytes. Requires 1.52u.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getValue('Measurement')" func="no">
+		<KeyWord name="getValue('Measurement')" func="yes">
 			<Overload retVal="" descr="Returns a measurement result, where the argument is
 			'Area', 'Mean', 'Mean limit','Mean raw','StdDev', 'Mode', 'Min', 'Max', 'X', 'Y', 'XM', 'YM',
 			'Perim.', 'BX', 'BY', 'Width', 'Height', 'Major', 'Minor', 'Angle', 'Circ.',
@@ -1447,35 +1448,35 @@
 			Add 'limit' to the argument to enable the 'limit to threshold' option. Requires 1.52p.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getValue('results.count')" func="no">
+		<KeyWord name="getValue('results.count')" func="yes">
 			<Overload retVal="" descr="Returns the number of lines in the current results table. Unlike nResults, 
 			works with tables that are not named 'Results'. Requires 1.49t.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getValue('rgb.background')" func="no">
+		<KeyWord name="getValue('rgb.background')" func="yes">
 			<Overload retVal="" descr="Returns the current background color as an RGB pixel value.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getValue('rgb.foreground')" func="no">
+		<KeyWord name="getValue('rgb.foreground')" func="yes">
 			<Overload retVal="" descr="Returns the current foreground color as an RGB pixel value ('
 			http://wsr.imagej.net/macros/examples/ForegroundBackgroundColors.txt' example).">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getValue('rotation.angle')" func="no">
+		<KeyWord name="getValue('rotation.angle')" func="yes">
 			<Overload retVal="" descr="Returns the current Image...Transform...Rotate angle.
 			Requires 1.52p.">
 			</Overload>
 		</KeyWord>		
-		<KeyWord name="getValue('selection.size')" func="no">
+		<KeyWord name="getValue('selection.size')" func="yes">
 			<Overload retVal="" descr="Returns the number of points in the current selection,
 			or 0 if there is no selection. Requires 1.52p.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getValue('selection.width')" func="no">
+		<KeyWord name="getValue('selection.width')" func="yes">
 			<Overload retVal="" descr="Returns the stroke width of the current selection.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getVersion()" func="no">
+		<KeyWord name="getVersion()" func="yes">
 			<Overload retVal="string" descr="Returns the ImageJ version number as a string 
 			(e.g., '1.34s'). See also: IJ.getFullVersion.">
 			</Overload>
@@ -1489,11 +1490,11 @@
 				<Param name="unit" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getWidth()" func="no">
+		<KeyWord name="getWidth()" func="yes">
 			<Overload retVal="" descr="Returns the width in pixels of the current image.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="getZoom()" func="no">
+		<KeyWord name="getZoom()" func="yes">
 			<Overload retVal="" descr="Returns the magnification of the active image, a number in the range 0.03125 to 32.0 (3.1% to 
 			3200%).">
 			</Overload>
@@ -1505,7 +1506,7 @@
 				<Param name="string or filepath" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="IJ.currentMemory()" func="no">
+		<KeyWord name="IJ.currentMemory()" func="yes">
 			<Overload retVal="string" descr="Returns, as a string, the amount of memory in bytes currently used by ImageJ.">
 			</Overload>
 		</KeyWord>
@@ -1515,7 +1516,7 @@
 				<Param name="index2" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="IJ.freeMemory()" func="no">
+		<KeyWord name="IJ.freeMemory()" func="yes">
 			<Overload retVal="string" descr="Returns the memory status string (e.g., '2971K of 658MB')
 			that is displayed when the users clicks in the ImageJ status bar.">
 			</Overload>
@@ -1524,7 +1525,7 @@
 			<Overload retVal="string" descr="Returns the ImageJ version and build number as a string (e.g., '1.52d11').">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="IJ.getToolName()" func="no">
+		<KeyWord name="IJ.getToolName()" func="yes">
 			<Overload retVal="string" descr="Returns the name of the currently selected tool. See also: setTool.">
 			</Overload>
 		</KeyWord>
@@ -1537,7 +1538,7 @@
 				<Param name="string" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="IJ.maxMemory()" func="no">
+		<KeyWord name="IJ.maxMemory()" func="yes">
 			<Overload retVal="string" descr="Returns, as a string, the amount of memory in bytes available to ImageJ.
 			This value (the Java heap size) is set in the Edit &gt; Options &gt; Memory 'n Threads dialog box.">
 			</Overload>
@@ -1550,7 +1551,7 @@
 				<Param name="length" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="IJ.redirectErrorMessages()" func="no">
+		<KeyWord name="IJ.redirectErrorMessages()" func="yes">
 			<Overload retVal="" descr="Causes next image opening error to be redirected to the Log window and prevents the macro from 
 			being aborted ('https://wsr.imagej.net/macros/examples/BatchMeasureWithRedirectedErrors.txt' example).">
 			</Overload>
@@ -1567,8 +1568,8 @@
 			to the internal clipboard.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Image.height" func="no">
-			<Overload retVal="integer" descr="The height of the active image in pixels.">
+		<KeyWord name="Image.height" func="yes">
+			<Overload retVal="int" descr="The height of the active image in pixels.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Image.paste" func="yes">
@@ -1580,11 +1581,15 @@
 				<Param name="mode" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Image.title" func="no">
-			<Overload retVal="" descr="The title of the active image. Requires 1.53h.">
+		<KeyWord name="Image.removeScale" func="yes">
+			<Overload retVal="" descr="Removes the scale from the active image. Requires 1.53u41.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Image.width" func="no">
+		<KeyWord name="Image.title" func="yes">
+			<Overload retVal="" descr="Returns the title of the active image. Requires 1.53h.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Image.width" func="yes">
 			<Overload retVal="" descr="The width of the active image in pixels.">
 			</Overload>
 		</KeyWord>
@@ -1612,66 +1617,72 @@
 				<Param name="fromIndex" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="is('animated')" func="no">
+		<KeyWord name="is('animated')" func="yes">
 			<Overload retVal="" descr="Returns 'true' if the current image has an area selection.
 			Requires 1.52m.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="is('applet')" func="no">
+		<KeyWord name="is('applet')" func="yes">
 			<Overload retVal="" descr="Returns true if ImageJ is running as an applet.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="is('area')" func="no">
+		<KeyWord name="is('area')" func="yes">
 			<Overload retVal="" descr="Returns true if an area is selected - requires and open image.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="is('Batch Mode')" func="no">
+		<KeyWord name="is('Batch Mode')" func="yes">
 			<Overload retVal="" descr="Returns true if the macro interpreter is running in batch mode.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="is('binary')" func="no">
+		<KeyWord name="is('binary')" func="yes">
 			<Overload retVal="" descr="Returns true if the current image is binary (8-bit with only 0 and 255 values).">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="is('Caps Lock Set')" func="no">
+		<KeyWord name="is('Caps Lock Set')" func="yes">
 			<Overload retVal="" descr="Returns true if the caps lock key is set. Always return false on some platforms.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="is('changes')" func="no">
+		<KeyWord name="is('changes')" func="yes">
 			<Overload retVal="" descr="Returns true if the current image's 'changes' flag is set.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="is('composite')" func="no">
+		<KeyWord name="is('composite')" func="yes">
 			<Overload retVal="" descr="Returns true if the current image is a a multi-channel stack that uses the CompositeImage class.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="is('global scale')" func="no">
+		<KeyWord name="is('FFT')" func="yes">
+			<Overload retVal="" descr="Returns 'true' if the current image is a Fourier transform image, an 8-bit image showing
+			the logarithm of the power spectrum, with the full Fourier transform data in the background (so you can do an inverse transform).
+			Requires 1.53t">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="is('global scale')" func="yes">
 			<Overload retVal="" descr="Returns true if there is global spatial calibration.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="is('grayscale')" func="no">
+		<KeyWord name="is('grayscale')" func="yes">
 			<Overload retVal="" descr="Returns true if the current image is grayscale, or an RGB image with identical R, G and B 
 			channels.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="is('Inverting LUT')" func="no">
+		<KeyWord name="is('Inverting LUT')" func="yes">
 			<Overload retVal="" descr="Returns true if the current image is using an inverting (monotonically decreasing) lookup table.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="is('InvertY')" func="no">
+		<KeyWord name="is('InvertY')" func="yes">
 			<Overload retVal="" descr="Returns 'true' if the current image has a line selection.
 		Requires 1.52m.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="is('line')" func="no">
+		<KeyWord name="is('line')" func="yes">
 			<Overload retVal="" descr="Returns true if the 'invertY' property of the active image is enabled.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="is('locked')" func="no">
+		<KeyWord name="is('locked')" func="yes">
 			<Overload retVal="" descr="Returns true if the current image is locked.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="is('Virtual Stack')" func="no">
+		<KeyWord name="is('Virtual Stack')" func="yes">
 			<Overload retVal="" descr="Returns true if the current image is a virtual stack.">
 			</Overload>
 		</KeyWord>
@@ -1699,7 +1710,7 @@
 				<Param name="id" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="isOpen('Title')" func="no">
+		<KeyWord name="isOpen('Title')" func="yes">
 			<Overload retVal="" descr="Returns true if the window with the specified title is open.">
 			</Overload>
 		</KeyWord>
@@ -1722,7 +1733,7 @@
 				<Param name="y" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="List.clear()" func="no">
+		<KeyWord name="List.clear()" func="yes">
 			<Overload retVal="" descr="Resets the list.">
 			</Overload>
 		</KeyWord>
@@ -1737,7 +1748,7 @@
 				<Param name="key" />
 			</Overload>
 		</KeyWord>		
-		<KeyWord name="List.getList" func="no">
+		<KeyWord name="List.getList" func="yes">
 			<Overload retVal="string" descr="Returns the list as a string.">
 			</Overload>
 		</KeyWord>		
@@ -1759,7 +1770,7 @@
 				<Param name="value" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="List.setCommands" func="no">
+		<KeyWord name="List.setCommands" func="yes">
 			<Overload retVal="" descr="Loads the ImageJ menu commands (as keys) and the plugins that implement them (as values).">
 			</Overload>
 		</KeyWord>
@@ -1768,7 +1779,7 @@
 				<Param name="list" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="List.setMeasurements" func="no">
+		<KeyWord name="List.setMeasurements" func="yes">
 			<Overload retVal="void" descr="Measures the current image or selection and loads the resulting keys (Results table column 
 			headings) and values into the list. Use List.setMeasurements('limit') to measure using the 'Limit to 
 			threshold' option. All parameters listed in the Analyze &gt; Set Measurements dialog box are measured, including those 
@@ -1776,11 +1787,11 @@
 			https://wsr.imagej.net/macros/DrawEllipse.txt' DrawEllipse macro for an example.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="List.setMeasurements('limit')" func="no">
+		<KeyWord name="List.setMeasurements('limit')" func="yes">
 			<Overload retVal="" descr="This is a version of List.setMeasurements that enables the 'Limit to threshold' option.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="List.size" func="no">
+		<KeyWord name="List.size" func="yes">
 			<Overload retVal="" descr="Returns the size of the list.">
 			</Overload>
 		</KeyWord>
@@ -1952,7 +1963,7 @@
 			</Overload>
 		</KeyWord>		
 		<KeyWord name="Math.ceil" func="yes">
-			<Overload retVal="integer" descr="Returns the smallest (closest to negative infinity) value that
+			<Overload retVal="int" descr="Returns the smallest (closest to negative infinity) value that
 			is &gt;= to n and is an integer.">
 				<Param name="n" />
 			</Overload>
@@ -1974,7 +1985,7 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Math.floor" func="yes">
-			<Overload retVal="integer" descr="Returns the largest value that is not &gt;
+			<Overload retVal="int" descr="Returns the largest value that is not &gt;
 			n and is equal to an integer.">
 				<Param name="n" />
 			</Overload>
@@ -1996,7 +2007,7 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Math.min" func="yes">
-			<Overload retVal="integer" descr="Returns the smaller of two values.">
+			<Overload retVal="int" descr="Returns the smaller of two values.">
 				<Param name="n1" />
 				<Param name="n2" />
 			</Overload>
@@ -2008,7 +2019,7 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Math.round" func="yes">
-			<Overload retVal="integer" descr="Returns the closest integer to n">
+			<Overload retVal="int" descr="Returns the closest integer to n">
 				<Param name="n" />
 			</Overload>
 		</KeyWord>
@@ -2098,16 +2109,16 @@
 				<Param name="stringArray" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="nImages" func="no">
+		<KeyWord name="nImages" func="yes">
 			<Overload retVal="" descr="Returns number of open images. The parentheses '()' are optional.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="nResults" func="no">
+		<KeyWord name="nResults" func="yes">
 			<Overload retVal="" descr="Returns the current measurement counter value. The parentheses '()' are optional.See 
 			also: getValue('results.count').">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="nSlices" func="no">
+		<KeyWord name="nSlices" func="yes">
 			<Overload retVal="" descr="Returns the number of images in the current stack. Returns 1 if the current image is not a stack. 
 			The parentheses '()' are optional.See also: getSliceNumber, 
 			getDimensions.">
@@ -2133,7 +2144,7 @@
 				<Param name="index" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Overlay.add" func="no">
+		<KeyWord name="Overlay.add" func="yes">
 			<Overload retVal="" descr="Adds the drawing created by Overlay.lineTo(), Overlay.drawLine(), etc. to the overlay without 
 			updating the display.">
 			</Overload>
@@ -2148,11 +2159,11 @@
 				<Param name="fillColor" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Overlay.clear" func="no">
+		<KeyWord name="Overlay.clear" func="yes">
 			<Overload retVal="" descr="Resets the overlay without updating the display.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Overlay.copy" func="no">
+		<KeyWord name="Overlay.copy" func="yes">
 			<Overload retVal="" descr="Copies the overlay on the current image to the overlay clipboard.">
 			</Overload>
 		</KeyWord>
@@ -2224,7 +2235,7 @@
 				<Param name="color" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Overlay.flatten" func="no">
+		<KeyWord name="Overlay.flatten" func="yes">
 			<Overload retVal="" descr="Creates a new RGB image that has the overlay rendered as pixel data.">
 			</Overload>
 		</KeyWord>
@@ -2238,11 +2249,11 @@
 				<Param name="height" />				
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Overlay.hidden" func="no">
+		<KeyWord name="Overlay.hidden" func="yes">
 			<Overload retVal="" descr="Returns true if the active image has an overlay and it is hidden.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Overlay.hide" func="no">
+		<KeyWord name="Overlay.hide" func="yes">
 			<Overload retVal="" descr="Hides the current overlay.">
 			</Overload>
 		</KeyWord>	
@@ -2259,7 +2270,7 @@
 				<Param name="y" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Overlay.measure" func="no">
+		<KeyWord name="Overlay.measure" func="yes">
 			<Overload retVal="" descr="Measures all the selections in the current overlay.">
 			</Overload>
 		</KeyWord>
@@ -2276,11 +2287,11 @@
 				<Param name="y" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Overlay.paste" func="no">
+		<KeyWord name="Overlay.paste" func="yes">
 			<Overload retVal="" descr="Copies the overlay on the overlay clipboard to the current image.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Overlay.remove" func="no">
+		<KeyWord name="Overlay.remove" func="yes">
 			<Overload retVal="" descr="Removes the current overlay.">
 			</Overload>
 		</KeyWord>	
@@ -2331,12 +2342,12 @@
 				<Param name="width" />
 			</Overload>
 		</KeyWord>		
-		<KeyWord name="Overlay.show" func="no">
+		<KeyWord name="Overlay.show" func="yes">
 			<Overload retVal="" descr="Displays the current overlay.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Overlay.size" func="no">
-			<Overload retVal="integer" descr="Returns the size (selection count) of the current overlay.
+		<KeyWord name="Overlay.size" func="yes">
+			<Overload retVal="int" descr="Returns the size (selection count) of the current overlay.
 			Returns zero if the image does not have an overlay.">
 			</Overload>
 		</KeyWord>
@@ -2370,7 +2381,7 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="parseInt" func="yes">
-			<Overload retVal="" descr="Converts string to an integer and returns it. The optional second argument (radix) specifies the 
+			<Overload retVal="int" descr="Converts string to an integer and returns it. The optional second argument (radix) specifies the 
 			base of the number contained in the string. The radix must be an integer between 2 and 36. For radixes above 10, the letters 
 			of the alphabet indicate numerals &gt; 9. Set radix to 16 to parse hexadecimal numbers.Returns NaN if the string 
 			cannot be converted into a integer. 
@@ -2379,7 +2390,7 @@
 				<Param name="radix" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="PI" func="no">
+		<KeyWord name="PI" func="yes">
 			<Overload retVal="" descr="Returns the constant pi (3.14159265), the ratio of the circumference to the diameter of a circle.">
 			</Overload>
 		</KeyWord>
@@ -2444,7 +2455,7 @@
 				<Param name="y5" />
 			</Overload>
 		</KeyWord>		
-		<KeyWord name="Plot.drawGrid()" func="no">
+		<KeyWord name="Plot.drawGrid()" func="yes">
 			<Overload retVal="" descr="Redraws the grid above previous plots. Requires 1.49u.">
 			</Overload>
 		</KeyWord>		
@@ -2483,7 +2494,7 @@
 				<Param name="yEnds" />
 			</Overload>	
 		</KeyWord>
-		<KeyWord name="Plot.freeze()" func="no">
+		<KeyWord name="Plot.freeze()" func="yes">
 			<Overload retVal="" descr="Freezes or unfreezes the plot. In the frozen state, the plot cannot be resized
 			or updated. In the unfrozen state, the plot cannot be tiled.">
 			</Overload>
@@ -2581,7 +2592,7 @@
 				<Param name="height" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Plot.setJustification('center')" func="no">
+		<KeyWord name="Plot.setJustification('center')" func="yes">
 			<Overload retVal="" descr="Specifies the justification used by Plot.addText(). The argument can be 'left', 
 			'right' or 'center'. The default is 'left'.">
 			</Overload>
@@ -2605,7 +2616,7 @@
 				<Param name="yMax" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Plot.setLimitsToFit()" func="no">
+		<KeyWord name="Plot.setLimitsToFit()" func="yes">
 			<Overload retVal="" descr="Sets the range of the x and y axes to fit all data. Requires 1.49t.">
 			</Overload>
 		</KeyWord>
@@ -2654,27 +2665,27 @@
 				<Param name="y Label" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Plot.show()" func="no">
+		<KeyWord name="Plot.show()" func="yes">
 			<Overload retVal="" descr="Displays the plot generated by Plot.create(), Plot.add(), etc. in a window. This function is 
 			automatically called when a macro exits.">
 			</Overload>
 		</KeyWord>		
-		<KeyWord name="Plot.showValues()" func="no">
+		<KeyWord name="Plot.showValues()" func="yes">
 			<Overload retVal="" descr="Displays the plot values in the Results window. Must be preceded by Plot.show.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Plot.showValuesWithLabels()" func="no">
+		<KeyWord name="Plot.showValuesWithLabels()" func="yes">
 			<Overload retVal="" descr="Displays the plot values in the Results window using the dataset labels,
 			for example the labels supplied by 'Plot.setLegend'. Must be preceded by 'Plot.show'.
 			Requires 1.52q.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Plot.update()" func="no">
+		<KeyWord name="Plot.update()" func="yes">
 			<Overload retVal="" descr="Draws the plot generated by Plot.create(), Plot.add(), etc. in an existing plot window. 
 			Equivalent to Plot.show if no plot window is open.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Plot.useTemplate('plot name' id)" func="no">
+		<KeyWord name="Plot.useTemplate('plot name' id)" func="yes">
 			<Overload retVal="" descr="Transfers the formatting of an open plot window to the current plot. Requires 1.49t.">
 			</Overload>
 		</KeyWord>
@@ -2702,21 +2713,21 @@
 				<Param name="key" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Property.getInfo" func="no">
+		<KeyWord name="Property.getInfo" func="yes">
 			<Overload retVal="" descr="Returns the image 'info' property string (e.g. DICOM tags or Bio-Formats metadata),
 			or an empty string if there is no 'Info' property">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Property.getList" func="no">
+		<KeyWord name="Property.getList" func="yes">
 			<Overload retVal="" descr="Returns the properties as a string (e.g. 'key1=value1\nkey2=value2'). Requires 1.53b.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Property.getNumber" func="no">
+		<KeyWord name="Property.getNumber" func="yes">
 			<Overload retVal="" descr="Returns the image property associated with key, as a number,
 			or returns NaN if key is not found or the property cannot be converted into a number. Requires 1.53b.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Property.getSliceLabel" func="no">
+		<KeyWord name="Property.getSliceLabel" func="yes">
 			<Overload retVal="" descr="Returns the current slice label. The first line of the label (up to 60 characters)
 			is displayed as part of the image subtitle. With DICOM stacks, returns the DICOM header metadata (tags).">
 			</Overload>
@@ -2731,7 +2742,7 @@
 				<Param name="property" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Property.setList" func="no">
+		<KeyWord name="Property.setList" func="yes">
 			<Overload retVal="" descr="Sets the properties from the key/value pairs in 'string'. Requires 1.53b.">
 				<Param name="string" />
 			</Overload>
@@ -2776,24 +2787,24 @@
 				<Param name="version number and letter" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="reset" func="no">
+		<KeyWord name="reset" func="yes">
 			<Overload retVal="" descr="Restores the backup image created by the snapshot function.
 			Note that reset() and run('Undo') are basically the same, so only one run() call can be reset.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="resetMinAndMax" func="no">
+		<KeyWord name="resetMinAndMax" func="yes">
 			<Overload retVal="" descr="With 16-bit and 32-bit images, resets the minimum and maximum displayed pixel values (display 
 			range) to be the same as the current image's minimum and maximum pixel values. With 8-bit images, sets the display range to 
 			0-255. With RGB images, does nothing. See the 'https://wsr.imagej.net/macros/DisplayRangeMacros.txt' 
 			DisplayRangeMacros for examples.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="resetThreshold" func="no">
+		<KeyWord name="resetThreshold" func="yes">
 			<Overload retVal="" descr="Disables thresholding. See also: setThreshold, 
 			setAutoThreshold, getThreshold.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="restoreSettings" func="no">
+		<KeyWord name="restoreSettings" func="yes">
 			<Overload retVal="" descr="Restores Edit&gt;Options submenu settings saved by the saveSettings 
 			function.">
 			</Overload>
@@ -2804,6 +2815,11 @@
 			Requires 1.49h. See also: selectionContains.">
 				<Param name="x" />
 				<Param name="y" />
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Roi.copy" func="yes">
+			<Overload retVal="" descr="Copies the selection on the active image to the selection clipboard.
+			Requires 1.53u.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Roi.getBounds" func="yes">
@@ -2828,16 +2844,16 @@
 				<Param name="ypoints" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Roi.getDefaultColor" func="no">
+		<KeyWord name="Roi.getDefaultColor" func="yes">
 			<Overload retVal="string" descr="Returns the current default selection color.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Roi.getDefaultGroup" func="no">
+		<KeyWord name="Roi.getDefaultGroup" func="yes">
 			<Overload retVal="string" descr="Returns the current default ROI group name. Requires ImageJ 1.52t">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Roi.getDefaultStrokeWidth" func="no">
-			<Overload retVal="integer" descr="Returns the default ROI stroke width.">
+		<KeyWord name="Roi.getDefaultStrokeWidth" func="yes">
+			<Overload retVal="int" descr="Returns the default ROI stroke width.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Roi.getFeretPoints" func="yes">
@@ -2847,7 +2863,7 @@
 				<Param name="ypoints" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Roi.getFillColor" func="no">
+		<KeyWord name="Roi.getFillColor" func="yes">
 			<Overload retVal="string" descr="Returns the selection fill color.">
 			</Overload>
 		</KeyWord>
@@ -2859,15 +2875,15 @@
 				<Param name="height" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Roi.getGroup" func="no">
+		<KeyWord name="Roi.getGroup" func="yes">
 			<Overload retVal="string" descr="Returns the current ROI group name. Requires ImageJ 1.52t">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Roi.getGroupNames" func="no">
+		<KeyWord name="Roi.getGroupNames" func="yes">
 			<Overload retVal="string" descr="Returns the group names as a comma-delimited string. Requires 1.53b.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Roi.getName" func="no">
+		<KeyWord name="Roi.getName" func="yes">
 			<Overload retVal="string" descr="Returns the selection name or an empty string if the selection does not have a name.">
 			</Overload>
 		</KeyWord>
@@ -2884,7 +2900,7 @@
 				<Param name="frame" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Roi.getProperties" func="no">
+		<KeyWord name="Roi.getProperties" func="yes">
 			<Overload retVal="string" descr="Returns all selection properties or an empty string if the selection does not have properties.">
 			</Overload>
 		</KeyWord>		
@@ -2901,15 +2917,15 @@
 				<Param name="y" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Roi.getStrokeColor" func="no">
+		<KeyWord name="Roi.getStrokeColor" func="yes">
 			<Overload retVal="string" descr="Returns the selection stroke color.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Roi.getStrokeWidth" func="no">
+		<KeyWord name="Roi.getStrokeWidth" func="yes">
 			<Overload retVal="" descr="Returns the stroke width of the current selection. Requires 1.52r.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Roi.getType" func="no">
+		<KeyWord name="Roi.getType" func="yes">
 			<Overload retVal="string" descr="Returns, as a string, the type of the current selection.">
 			</Overload>
 		</KeyWord>
@@ -2919,7 +2935,12 @@
 				<Param name="y" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Roi.remove" func="no">
+		<KeyWord name="Roi.paste" func="yes">
+			<Overload retVal="" descr="Copies the selection on the selection clipboard to the active image.
+			Requires 1.53u.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Roi.remove" func="yes">
 			<Overload retVal="" descr="Deletes the selection, if any, from the active image.">
 			</Overload>
 		</KeyWord>
@@ -2935,29 +2956,29 @@
 				<Param name="group" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Roi.setDefaultStrokeWidth" func="no">
+		<KeyWord name="Roi.setDefaultStrokeWidth" func="yes">
 			<Overload retVal="" descr="Sets the default ROI Stroke Width. Requires ImageJ 1.52t">
 				<Param name="stroke width" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Roi.setFillColor" func="no">
+		<KeyWord name="Roi.setFillColor" func="yes">
 			<Overload retVal="" descr="Sets the selection fill color ('red', '5500ff00'. etc.
 				or three integer parameters 'r','g','b').">
 				<Param name="color" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Roi.setFontSize" func="no">
+		<KeyWord name="Roi.setFontSize" func="yes">
 			<Overload retVal="" descr="Sets the font size (in points) of the current text selection.
 			Requires 1.53b.">
 				<Param name="size" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Roi.setGroup" func="no">
+		<KeyWord name="Roi.setGroup" func="yes">
 			<Overload retVal="" descr="Sets the ROI group name. Requires ImageJ 1.52t">
 				<Param name="group" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Roi.setGroupNames" func="no">
+		<KeyWord name="Roi.setGroupNames" func="yes">
 			<Overload retVal="" descr="Sets the group names from a comma-delimited string.Requires 1.53b.">
 			</Overload>
 		</KeyWord>
@@ -3021,77 +3042,77 @@
 				<Param name="width" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Roi.size" func="no">
+		<KeyWord name="Roi.size" func="yes">
 			<Overload retVal="" descr="Returns the size of the current selection in points. Requires 1.52r.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('add')" func="no">
+		<KeyWord name="roiManager('add')" func="yes">
 			<Overload retVal="" descr="Adds the current selection to the ROI Manager.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('add ampersand draw')" func="no">
+		<KeyWord name="roiManager('add ampersand draw')" func="yes">
 			<Overload retVal="" descr="Outlines the current selection and adds it to the ROI Manager.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('and')" func="no">
+		<KeyWord name="roiManager('and')" func="yes">
 			<Overload retVal="" descr="Uses the conjunction operator on the selected ROIs, 
 			or all ROIs if none are selected, to create a composite selection.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('combine')" func="no">
+		<KeyWord name="roiManager('combine')" func="yes">
 			<Overload retVal="" descr="Uses the union operator on the selected ROIs 
 			to create a composite selection. Combines all ROIs if none are selected.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('count')" func="no">
+		<KeyWord name="roiManager('count')" func="yes">
 			<Overload retVal="" descr="Returns the number of ROIs in the ROI Manager list.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('delete')" func="no">
+		<KeyWord name="roiManager('delete')" func="yes">
 			<Overload retVal="" descr="Deletes the selected ROIs from the list, or deletes all ROIs if none are selected.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('deselect')" func="no">
+		<KeyWord name="roiManager('deselect')" func="yes">
 			<Overload retVal="" descr="Deselects all ROIs in the list. When ROIs are deselected, subsequent ROI Manager commands are 
 			applied to all ROIs.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('draw')" func="no">
+		<KeyWord name="roiManager('draw')" func="yes">
 			<Overload retVal="" descr="Draws the selected ROIs, or all ROIs if none are selected, using the equivalent of the 
 			Edit &gt; Draw command.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('fill')" func="no">
+		<KeyWord name="roiManager('fill')" func="yes">
 			<Overload retVal="" descr="Fills the selected ROIs, or all ROIs if none are selected, using the equivalent of the 
 			Edit &gt; Fill command.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('index')" func="no">
+		<KeyWord name="roiManager('index')" func="yes">
 			<Overload retVal="" descr="Returns the index of the currently selected ROI on the list,
 			or -1 if the list is empty or no ROIs are selected.
 			Returns the index of the first selected ROI if more than one is selected">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('measure')" func="no">
+		<KeyWord name="roiManager('measure')" func="yes">
 			<Overload retVal="" descr="Measures the selected ROIs, or if none is selected, all ROIs on the list.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('multi measure')" func="no">
+		<KeyWord name="roiManager('multi measure')" func="yes">
 			<Overload retVal="" descr="Measures all the ROIs on all slices in the stack, creating a Results Table with one row per 
 			slice.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('multi-measure append')" func="no">
+		<KeyWord name="roiManager('multi-measure append')" func="yes">
 			<Overload retVal="" descr="Measures all the ROIs on all slices in the stack, appending the measurements to the Results 
 			Table, with one row per slice.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('multi-measure one')" func="no">
+		<KeyWord name="roiManager('multi-measure one')" func="yes">
 			<Overload retVal="" descr="Measures all the ROIs on all slices in the stack, creating a Results Table with one row per 
 			measurement.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('multi plot')" func="no">
+		<KeyWord name="roiManager('multi plot')" func="yes">
 			<Overload retVal="" descr="Plots the selected ROIs, or all ROIs if none are selected, on a single graph.">
 			</Overload>
 		</KeyWord>
@@ -3102,7 +3123,7 @@
 				<Param name="file-path" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('remove slice info')" func="no">
+		<KeyWord name="roiManager('remove slice info')" func="yes">
 			<Overload retVal="" descr="Displays all the ROIs as an overlay.">
 			</Overload>
 		</KeyWord>
@@ -3113,7 +3134,7 @@
 				<Param name="name" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('reset')" func="no">
+		<KeyWord name="roiManager('reset')" func="yes">
 			<Overload retVal="" descr="Deletes all ROIs on the list.">
 			</Overload>
 		</KeyWord>
@@ -3131,36 +3152,36 @@
 				<Param name="index OR indexes" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('show all')" func="no">
+		<KeyWord name="roiManager('show all')" func="yes">
 			<Overload retVal="" descr="Displays all the ROIs as an overlay.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('show all with labels')" func="no">
+		<KeyWord name="roiManager('show all with labels')" func="yes">
 			<Overload retVal="" descr="Displays all the ROIs as an overlay, with labels">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('show all without labels')" func="no">
+		<KeyWord name="roiManager('show all without labels')" func="yes">
 			<Overload retVal="" descr="Displays all the ROIs as an overlay, without labels.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('show none')" func="no">
+		<KeyWord name="roiManager('show none')" func="yes">
 			<Overload retVal="" descr="Removes the ROI Manager overlay.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('size')" func="no">
+		<KeyWord name="roiManager('size')" func="yes">
 			<Overload retVal="" descr="Returns the number of ROIs in the ROI Manager list">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('sort')" func="no">
+		<KeyWord name="roiManager('sort')" func="yes">
 			<Overload retVal="" descr="Sorts the ROI list in alphanumeric order.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('split')" func="no">
+		<KeyWord name="roiManager('split')" func="yes">
 			<Overload retVal="" descr="Splits the current selection (it must be a composite selection) into its component parts and adds 
 			them to the ROI Manager.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="roiManager('update')" func="no">
+		<KeyWord name="roiManager('update')" func="yes">
 			<Overload retVal="" descr="Replaces the selected ROI on the list with the current selection.">
 			</Overload>
 		</KeyWord>
@@ -3174,12 +3195,34 @@
 				<Param name="options" />
 			</Overload>
 		</KeyWord>
+		<KeyWord name="RoiManager.rotate" func="yes">
+			<Overload retVal="" descr="Rotates the selected selections by 'angle'. Optionally: around 'xcenter' and 'ycenter'.
+			Requires 1.53s.">
+				<Param name="angle" />
+				<Param name="xcenter" />
+				<Param name="ycenter" />				
+			</Overload>
+		</KeyWord>
+		<KeyWord name="RoiManager.scale" func="yes">
+			<Overload retVal="" descr="Scales the selected selections by 'xscale' and 'yscale'. Uses the center of the image
+			as the origin if 'centered' is true. Requires 1.53s.">
+				<Param name="xscale" />
+				<Param name="yscale" />
+				<Param name="centered" />				
+			</Overload>
+		</KeyWord>
 		<KeyWord name="RoiManager.selected" func="yes">
 			<Overload retVal="" descr="Returns the number of selected ROIs in the ROI Manager list.
 			Requires 1.53e.
 			See also: ''https://imagej.nih.gov/ij/developer/macro/functions.html#RoiManager.size'' RoiManager.size">
 			</Overload>
-		</KeyWord>		
+		</KeyWord>
+		<KeyWord name="RoiManager.translate" func="yes">
+			<Overload retVal="" descr="Translates the selected selections by 'dx' and 'dy'. Requires 1.53s.">
+				<Param name="dx" />
+				<Param name="dy" />
+			</Overload>
+		</KeyWord>
 		<KeyWord name="round" func="yes">
 			<Overload retVal="int" descr="Returns the closest integer to n. See also: floor.">
 				<Param name="n" />
@@ -3226,16 +3269,16 @@
 				<Param name="path" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="saveSettings()" func="no">
+		<KeyWord name="saveSettings()" func="yes">
 			<Overload retVal="" descr="Saves most Edit&gt;Options sub-menu settings so they can be  restored later by calling 
 			restoreSettings.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="screenHeight" func="no">
+		<KeyWord name="screenHeight" func="yes">
 			<Overload retVal="" descr="Returns the screen height in pixels. See also: getLocationAndSize, setLocation.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="screenWidth" func="no">
+		<KeyWord name="screenWidth" func="yes">
 			<Overload retVal="" descr="Returns the screen width in pixels.">
 			</Overload>
 		</KeyWord>
@@ -3253,19 +3296,19 @@
 				<Param name="y" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="selectionName" func="no">
+		<KeyWord name="selectionName" func="yes">
 			<Overload retVal="string" descr="Returns the name of the current selection, or an empty string if the selection
 			does not have a name. Aborts the macro if there is no selection. See also: Roi.getName and Roi.setName.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="selectionType() " func="no">
+		<KeyWord name="selectionType() " func="yes">
 			<Overload retVal="" descr="Returns the selection type, where 0=rectangle, 1=oval, 2=polygon, 3=freehand, 4=traced,  
 			5=straight line, 6=segmented line, 7=freehand line, 8=angle, 9=composite and 10=point. Returns -1 if there is no selection. 
 			For an example, see the 'https://wsr.imagej.net/macros/ShowImageInfo.txt' ShowImageInfo macro.
 			See also Roi.getType">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="selectWindow('name')" func="no">
+		<KeyWord name="selectWindow('name')" func="yes">
 			<Overload retVal="" descr="Activates the window with the title 'name'.">
 			</Overload>
 		</KeyWord>
@@ -3297,15 +3340,15 @@
 				<Param name="arg" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="setBatchMode('exit and display')" func="no">
+		<KeyWord name="setBatchMode('exit and display')" func="yes">
 			<Overload retVal="" descr="Exits batch mode and displays all hidden images.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="setBatchMode('show')" func="no">
+		<KeyWord name="setBatchMode('show')" func="yes">
 			<Overload retVal="" descr="Displays the active hidden image, while batch mode remains in same state.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="setBatchMode('hide')" func="no">
+		<KeyWord name="setBatchMode('hide')" func="yes">
 			<Overload retVal="" descr="Enters (or remains in) batch mode and hides the active image">
 			</Overload>
 		</KeyWord>
@@ -3338,7 +3381,7 @@
 				<Param name="style]" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="setFont('user')" func="no">
+		<KeyWord name="setFont('user')" func="yes">
 			<Overload retVal="" descr="Sets the font to the one defined in the Edit &gt; Options &gt; Fonts window.
 			See also: 'getInfo('font.name'), getValue('font.size') and getValue('font.height').">
 			</Overload>
@@ -3361,7 +3404,7 @@
 				<Param name="b" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="setJustification('center')" func="no">
+		<KeyWord name="setJustification('center')" func="yes">
 			<Overload retVal="" descr="Specifies the justification used by drawString() and Plot.addText(). The argument can be 
 			'left', 'right' or 'center'. The default is 'left'.">
 			</Overload>
@@ -3538,7 +3581,7 @@
 				<Param name="name or id" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="setupUndo()" func="no">
+		<KeyWord name="setupUndo()" func="yes">
 			<Overload retVal="" descr="Call this function before drawing on an image to allow the user the option of later restoring the 
 			original image using Edit/Undo. Note that setupUndo() may not work as intended with macros that call the run() function. For 
 			an example, see the 'https://wsr.imagej.net/macros/tools/DrawingTools.txt' DrawingTools tool set.">
@@ -3561,7 +3604,7 @@
 				<Param name="z" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="showMessage('message')" func="no">
+		<KeyWord name="showMessage('message')" func="yes">
 			<Overload retVal="" descr="Displays 'message' in a dialog box. Can display HTML formatted text ('
 			https://wsr.imagej.net/macros/HtmlDialogDemo.txt' example).">
 			</Overload>
@@ -3593,7 +3636,7 @@
 				<Param name="finalIndex" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="showStatus" func="no">
+		<KeyWord name="showStatus" func="yes">
 			<Overload retVal="" descr="Displays a message in the ImageJ status bar.
 			If the message starts with '!', subsequent process messages are suppressed in ImageJ 1.53i.
 			The 'options' array in the macro contains seven example 'options' strings. The default delay
@@ -3617,7 +3660,7 @@
 				<Param name="angle" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="snapshot()" func="no">
+		<KeyWord name="snapshot()" func="yes">
 			<Overload retVal="" descr="Creates a backup copy of the current image that can be later restored using the 
 			reset function. For examples, see the 'https://wsr.imagej.net/macros/ImageRotator.txt' 
 			ImageRotator and 'https://wsr.imagej.net/macros/BouncingBar.txt' BouncingBar macros.">
@@ -3661,11 +3704,11 @@
 				<Param name="mode" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Stack.getFrameInterval()" func="no">
+		<KeyWord name="Stack.getFrameInterval()" func="yes">
 			<Overload retVal="" descr="Returns the frame interval in time (T) units.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Stack.getFrameRate()" func="no">
+		<KeyWord name="Stack.getFrameRate()" func="yes">
 			<Overload retVal="" descr="Returns the frame rate (FPS).">
 			</Overload>
 		</KeyWord>
@@ -3677,7 +3720,7 @@
 				<Param name="z" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Stack.getOrthoViewsID" func="no">
+		<KeyWord name="Stack.getOrthoViewsID" func="yes">
 			<Overload retVal="" descr="Returns the image ID of the current Orthogonal Views, or zero if none is active.">
 			</Overload>
 		</KeyWord>
@@ -3714,7 +3757,7 @@
 				<Param name="Value" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Stack.isHyperstack" func="no">
+		<KeyWord name="Stack.isHyperstack" func="yes">
 			<Overload retVal="" descr="Returns true if the current image is a hyperstack.">
 			</Overload>
 		</KeyWord>
@@ -3807,7 +3850,7 @@
 				<Param name="string" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Stack.stopOrthoViews" func="no">
+		<KeyWord name="Stack.stopOrthoViews" func="yes">
 			<Overload retVal="" descr="Stops the current Orthogonal Views and closes the 'YZ' and 'XZ' windows.">
 			</Overload>
 		</KeyWord>
@@ -3830,7 +3873,7 @@
 				<Param name="string" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="String.buffer" func="no">
+		<KeyWord name="String.buffer" func="yes">
 			<Overload retVal="string" descr="Returns the contents of the buffer.">
 			</Overload>
 		</KeyWord>
@@ -3839,7 +3882,7 @@
 				<Param name="str" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="String.copyResults" func="no">
+		<KeyWord name="String.copyResults" func="yes">
 			<Overload retVal="" descr="Copies the Results table, or selected rows in the Results table (1.47i or later), to the 
 			clipboard.
 			Column headers are included if the 'Copy column headers' option in the Edit...Options...Input/Output dialog is enabled.
@@ -3848,14 +3891,23 @@
 		</KeyWord>
 		<KeyWord name="String.format" func="yes">
 			<Overload retVal="" descr="Returns a formatted string using the specified 
-			''https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html#syntax'' format and number.">
+			''https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html#syntax'' format and number.
+			From 1.53t accepts a variable number of numeric arguments">
 				<Param name="format" />
 				<Param name="number" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="String.getResultsHeadings " func="no">
+		<KeyWord name="String.getResultsHeadings " func="yes">
 			<Overload retVal="string" descr="Returns the Results window headers. '
 			https://wsr.imagej.net/macros/examples/PrintResults.txt' Example.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="String.format" func="yes">
+			<Overload retVal="" descr="Returns a formatted string using the specified String.format(format, n1, n2, ...)
+			'https://docs.oracle.com/javase/7/docs/api/java/util/Formatter.html#syntax' format and numbers">
+				<Param name="format" />
+				<Param name="n1" />
+				<Param name="n2" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="String.join" func="yes">
@@ -3873,11 +3925,11 @@
 				<Param name="length" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="String.paste " func="no">
+		<KeyWord name="String.paste " func="yes">
 			<Overload retVal="string" descr="Returns the contents of the clipboard.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="String.resetBuffer" func="no">
+		<KeyWord name="String.resetBuffer" func="yes">
 			<Overload retVal="" descr="Resets (clears) the buffer.">
 			</Overload>
 		</KeyWord>
@@ -3910,7 +3962,7 @@
 				<Param name="index" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Table.allHeadings" func="no">
+		<KeyWord name="Table.allHeadings" func="yes">
 			<Overload retVal="string" descr="All 38 default measurement headings as a space-delimited string.">
 			</Overload>
 		</KeyWord>
@@ -3949,12 +4001,12 @@
 				<Param name="columnName" />
 			</Overload>
 		</KeyWord>		
-		<KeyWord name="Table.getSelectionEnd" func="no">
+		<KeyWord name="Table.getSelectionEnd" func="yes">
 			<Overload retVal="" descr="Returns the index of the last selected row in the current table,
 			or -1 if there is no selection.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Table.getSelectionStart" func="no">
+		<KeyWord name="Table.getSelectionStart" func="yes">
 			<Overload retVal="" descr="Returns the index of the first selected row in the current table,
 			or - 1 if there is no selection.">
 			</Overload>
@@ -3965,7 +4017,7 @@
 				<Param name="rowIndex" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Table.headings" func="no">
+		<KeyWord name="Table.headings" func="yes">
 			<Overload retVal="string" descr="The column headings as a tab-delimited string.">
 			</Overload>
 		</KeyWord>
@@ -4044,19 +4096,19 @@
 				<Param name="boolean" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Table.size" func="no">
+		<KeyWord name="Table.size" func="yes">
 			<Overload retVal="" descr="The number of rows in the current table.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Table.sort" func="no">
+		<KeyWord name="Table.sort" func="yes">
 			<Overload retVal="" descr="Sorts the table on the specified column (https://wsr.imagej.net/macros/LabelParticlesBySize.txt).">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Table.title" func="no">
+		<KeyWord name="Table.title" func="yes">
 			<Overload retVal="string" descr="The title 'name' of the current table.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="Table.update" func="no">
+		<KeyWord name="Table.update" func="yes">
 			<Overload retVal="" descr="Updates the window displaying the current table.">
 			</Overload>
 		</KeyWord>
@@ -4080,7 +4132,7 @@
 				<Param name="string" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="toolID" func="no">
+		<KeyWord name="toolID" func="yes">
 			<Overload retVal="" descr="Returns the ID of the currently selected tool. See also: setTool, IJ.getToolName.">
 			</Overload>
 		</KeyWord>
@@ -4121,11 +4173,11 @@
 				<Param name="string" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="updateDisplay()" func="no">
+		<KeyWord name="updateDisplay()" func="yes">
 			<Overload retVal="" descr="Redraws the active image.">
 			</Overload>
 		</KeyWord>
-		<KeyWord name="updateResults()" func="no">
+		<KeyWord name="updateResults()" func="yes">
 			<Overload retVal="" descr="Call this function to update the 
 			'Results' window after the results table has been modified by 
 			calls to the setResult() function.">
@@ -4149,7 +4201,7 @@
 				<Param name="message" />
 			</Overload>
 		</KeyWord>
-		<KeyWord name="waitForUser" func="no">
+		<KeyWord name="waitForUser" func="yes">
 			<Overload retVal="" descr="This is a no argument version of waitForUser that displays 'Click OK to continue' in 
 			the dialog box.">
 			</Overload>
