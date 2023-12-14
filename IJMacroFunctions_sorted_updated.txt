@@ -99,6 +99,7 @@ Dialog.createNonBlocking
 Dialog.getCheckbox
 Dialog.getChoice
 Dialog.getImageChoice
+Dialog.getLocation
 Dialog.getNumber
 Dialog.getRadioButton
 Dialog.getString
@@ -342,7 +343,7 @@ Plot.drawLine
 Plot.drawNormalizedLine
 Plot.drawShapes
 Plot.drawVectors
-Plot.eneableLive
+Plot.enableLive
 Plot.freeze
 Plot.getFrameBounds
 Plot.getLimits
@@ -441,6 +442,7 @@ RoiManager.selected
 RoiManager.selectGroup
 RoiManager.selectPosition
 RoiManager.setGroup
+RoiManager.setPosition
 RoiManager.translate
 round
 run

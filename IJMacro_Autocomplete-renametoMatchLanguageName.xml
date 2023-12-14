@@ -95,8 +95,8 @@
 		<KeyWord name="Array.getVertexAngles" func="yes">
 			<Overload retVal="array" descr="From a closed contour given by 'xArr', 'yArr',
 			an array is returned holding vertex angles in degrees (straight=0, convex = positive if contour is clockwise).
-			Set 'arm'=1 to calculate the angle from the closest vertex points left and right,
-			or use arm greater than 1 for more distant neighbors and smoother results.
+			Set 'arm'=1 to calculate the angle from the closest vertex points left and right, or use arm greater than 1
+			for more distant neighbors and smoother results.
 			Requires 1.51n. 'http://wsr.imagej.net/macros/examples/VertexAngles.txt' ">
 				<Param name="xArr" />
 				<Param name="yArr" />
@@ -409,8 +409,10 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Dialog.addImage" func="yes">
-			<Overload retVal="" descr="Adds an image to the dialog. Requires 1.53v18.">
-				<Param name="image_path" />
+			<Overload retVal="" descr="Adds an image to the dialog.
+			The 'image_path_or_URL' argument can be a file path (e.g., ''/Users/wayne/Downloads/blobs.tif'').
+			Remember to use appropriate File.separator.	Requires 1.53v18.">
+				<Param name="image_path_or_URL" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Dialog.addImageChoice" func="yes">
@@ -508,6 +510,12 @@
 		</KeyWord>
 		<KeyWord name="Dialog.getImageChoice()" func="yes">
 			<Overload retVal="string" descr="Returns the title of the image selected in the next image choice popup menu.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Dialog.getLocation()" func="yes">
+			<Overload retVal="string" descr="Returns the screen location of this dialog. Requires 1.54g30">
+				<Param name="x" />
+				<Param name="y" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Dialog.getNumber()" func="yes">
@@ -808,6 +816,13 @@
 			<Overload retVal="" descr="Returns the file name separator character ('/' or '\').">
 			</Overload>
 		</KeyWord>
+		<KeyWord name="File.setDefaultDir" func="yes">
+			<Overload retVal="" descr="Sets the default directory that will be used when the user clicks on 'Browse'.
+			Remember to use the appropriate File.separator in the path string.
+			Requires 1.53d.">
+				<Param name="path" />
+			</Overload>
+		</KeyWord>
 		<KeyWord name="fill()" func="yes">
 			<Overload retVal="" descr="Fills the image or selection with the current drawing color.">
 			</Overload>
@@ -994,7 +1009,9 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getDir" func="yes">
-			<Overload retVal="string" descr="getDirectory('cwd') returns the path to the current working directory.">
+			<Overload retVal="string" descr="An alias of 'getDirectory' since 1.49q. Displays a 'choose directory' dialog and returns the
+			selected directory, or returns the path to a specified directory, such as 'plugins', 'home', etc. The returned path ends with
+			the file separator (either '/' or '\' depending on the OS). Not functioning in 1.54g9">
 				<Param name="string" />
 			</Overload>
 		</KeyWord>
@@ -2431,7 +2448,11 @@
 		</KeyWord>
 		<KeyWord name="parseFloat" func="yes">
 			<Overload retVal="" descr="Converts the string argument to a number and returns it. Returns NaN (Not a Number) if the string 
-			cannot be converted into a number. Use the isNaN() function to test for NaN. For examples, see '
+			cannot be converted into a number. Use the isNaN() function to test for NaN.
+			parseFloat('Infinity') returns the special floating point value representing +Infinity.
+			parseFloat('-Infinity') returns the special floating point value representing -Infinity.
+			parseFloat('NaN') returns the special floating point value representing NaN (not a number).
+			For examples, see '
 			https://wsr.imagej.net/macros/ParseFloatIntExamples.txt' ParseFloatIntExamples.">
 				<Param name="string" />
 			</Overload>
@@ -2921,8 +2942,10 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Roi.getFeretPoints" func="yes">
-			<Overload retVal="array" descr="Returns, as two arrays, the x and y coordinates of the pixels at the ends of each Feret axis.
-			Added in ImageJ 1.52m.">
+			<Overload retVal="array" descr="Returns, as two arrays, the x and y coordinates of the pixels at the ends of each Feret axis
+			i.e. the end points of the MaxFeret are in array elements [0], [1] and MinFeret in [2], [3].
+			These points are uncalibrated (pixel coordinates, but not necessarily integer). See https://wsr.imagej.net/macros/DrawFeret.txt
+			Requires ImageJ 1.52m28.">
 				<Param name="xpoints" />
 				<Param name="ypoints" />
 			</Overload>
@@ -3226,6 +3249,13 @@
 				<Param name="index OR indexes" />
 			</Overload>
 		</KeyWord>
+		<KeyWord name="roiManager('setPosition')" func="yes">
+			<Overload retVal="" descr="Sets ROI position in stack. Requires 1.54g33">
+				<Param name="c" />
+				<Param name="z" />
+				<Param name="t" />
+			</Overload>
+		</KeyWord>
 		<KeyWord name="roiManager('show all')" func="yes">
 			<Overload retVal="" descr="Displays all the ROIs as an overlay.">
 			</Overload>
@@ -3294,6 +3324,21 @@
 			<Overload retVal="" descr="Selects all ROIs in the ROI Manager that are at the specified position.
 			As an example, to select all ROIs in a stack positioned at slice 5, use RoiManager.selectPosition(0,5,0).
 			Requires 1.54d.">
+				<Param name="c" />
+				<Param name="z" />
+				<Param name="t" />				
+			</Overload>
+		</KeyWord>
+		<KeyWord name="RoiManager.setGroup" func="yes">
+			<Overload retVal="" descr="Sets the group of the selected ROIs.
+			See also: Roi.setGroup, Roi.getGroup, Roi.setDefaultGroup and Roi.getDefaultGroup..">
+				<Param name="group" />
+			</Overload>
+		</KeyWord>		
+		<KeyWord name="RoiManager.setPosition" func="yes">
+			<Overload retVal="" descr="Sets the position of the ROI. The c, z and t arguments (channel, slice and frame) are one
+			based indices and ‘0’ is a special value that specifies that the ROI is not tied to a specific c, z or t.
+			Requires 1.54g.">
 				<Param name="c" />
 				<Param name="z" />
 				<Param name="t" />				
@@ -3395,10 +3440,11 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="setAutoThreshold" func="yes">
-			<Overload retVal="" descr="Uses the specified method to set the threshold levels of the current image. Use the 
-			getList('threshold.methods') function to get a list of the available methods. Concatenate ' dark' to the 
-			method name if the image has a dark background. For an example, see the '
-			https://wsr.imagej.net/macros/examples/AutoThresholdingDemo.txt' AutoThresholdingDemo macro.
+			<Overload retVal="" descr="Uses the specified method to set the threshold levels of  the current image.
+			Use the getList('threshold.methods') function to get a list of the available methods. Add 'dark' to the method name
+			if the image has a dark background. Add '16-bit' to use the full 16-bit histogram when calculating the threshold of
+			16-bit images. Add 'stack' to use the histogram of the entire stack when calculating the threshold. For an example, see the
+			'https://wsr.imagej.net/macros/examples/AutoThresholdingDemo.txt' AutoThresholdingDemo macro.
 			If NO parameter is set - it uses the 'Default' method to determine the threshold. It may select dark or bright 
 			areas as thresholded, as was the case with the Image...Adjust...Threshold 'Auto' option
 			in ImageJ 1.42o and earlier. See also: setThreshold, getThreshold, resetThreshold.">
