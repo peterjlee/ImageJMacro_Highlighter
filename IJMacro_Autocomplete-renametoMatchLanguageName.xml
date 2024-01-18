@@ -386,19 +386,21 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Dialog.addDirectory" func="yes">
-			<Overload retVal="" descr="Adds a directory field and ''Browse'' button. The field width is determined by the
-			length of 'defaultPath', with a minimum of 25 columns. Use Dialog getString to retrieve the directory path.
-			Requires 1.53d.">
+			<Overload retVal="" descr="Adds a directory field and ''Browse'' button. 1.54i6 adds the 'columns' parameter:
+			If 'columns' not specified the field width is determined by the length of 'defaultPath', with a minimum of 25
+			columns (and maximum of 60 for 1.54i6).	Use Dialog getString to retrieve the directory path. Requires 1.53d.">
 				<Param name="label" />
 				<Param name="default" />
+				<Param name="columns" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Dialog.addFile" func="yes">
-			<Overload retVal="" descr="Adds a file field and ''Browse'' button. The field width is determined by the length
-			of 'defaultPath', with a minimum of 25 columns. Use Dialog getString to retrieve the file path.
-			Requires 1.53d.">
+			<Overload retVal="" descr="Adds a file field and ''Browse'' button. 1.54i6 adds the 'columns' parameter:
+			If 'columns' not specified the field width is determined by the length of 'defaultPath', with a minimum	of 25
+			columns (and maximum of 60 for 1.54i6).	Use Dialog getString to retrieve the file path.	Requires 1.53d.">
 				<Param name="label" />
-				<Param name="default" />
+				<Param name="default path" />
+				<Param name="columns" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Dialog.addHelp" func="yes">
