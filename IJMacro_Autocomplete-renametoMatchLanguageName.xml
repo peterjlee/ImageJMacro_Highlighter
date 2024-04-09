@@ -390,7 +390,7 @@
 			If 'columns' not specified the field width is determined by the length of 'defaultPath', with a minimum of 25
 			columns (and maximum of 60 for 1.54i6).	Use Dialog getString to retrieve the directory path. Requires 1.53d.">
 				<Param name="label" />
-				<Param name="default" />
+				<Param name="defaultPath" />
 				<Param name="columns" />
 			</Overload>
 		</KeyWord>
@@ -399,7 +399,7 @@
 			If 'columns' not specified the field width is determined by the length of 'defaultPath', with a minimum	of 25
 			columns (and maximum of 60 for 1.54i6).	Use Dialog getString to retrieve the file path.	Requires 1.53d.">
 				<Param name="label" />
-				<Param name="default path" />
+				<Param name="defaultpath" />
 				<Param name="columns" />
 			</Overload>
 		</KeyWord>
@@ -1299,10 +1299,11 @@
 			<Overload retVal="integer" descr="Returns the raw value of the pixel at (x,y).
 			Use value(x,y) to get calibrated pixel values from 8 and 16 bit images and intensity values from RGB images.
 			Note that pixels in RGB images contain red, green and 
-			blue components that need to be extracted using shifting and masking. See the '
-			http://wsr.imagej.net/macros/tools/ColorPickerTool.txt' Color Picker Tool macro for an example that shows how to do 
-			this. Uses bilinear interpolation if 'x' or 'y' are not integers.
-			Use 'getValue(x,y)' to get calibrated pixel values from 8 and 16 bit images and intensity values from RGB images.">
+			blue components that need to be extracted using shifting and masking. See the
+			'http://wsr.imagej.net/macros/tools/ColorPickerTool.txt' Color Picker Tool macro
+			for an example that shows how to do this. Uses bilinear interpolation if 'x' or 'y' are not integers.
+			Use 'getValue(x,y)' to get calibrated pixel values from 8 and 16 bit images and intensity values from RGB images.
+			Note: The getPixel() function returns zero for locations outside the image whereas getValue() returns NaN.">
 				<Param name="x" />
 				<Param name="y" />
 			</Overload>
@@ -3601,19 +3602,21 @@
 		<KeyWord name="setOption" func="yes">
 			<Overload retVal="" descr="Enables or disables an ImageJ option, 
 			where option is one of the following options and boolean is either true or false.
-			('AutoContrast' boolean) enables/disables the Edit...Options...Appearance
-			('Auto contrast stacks' boolean). You can also have newly displayed stack slices 
+			('AntialiasedText' . . 'CopyHeaders' . . 'ScaleConversions' . . . and 'WaitForCompletion')
+			('AutoContrast', boolean) enables/disables the Edit...Options...Appearance
+			('Auto contrast stacks', boolean). You can also have newly displayed stack slices 
 			contrast enhanced by holding the shift key down when navigating stacks.
 			('CalibrateConversions',true) to have conversions to 8-bit and 16-bit density calibrated.  Conversions to 8-bit
 				and 16-bit are density calibrated when this option is enabled, so results from measurements stay the same.
 			('CopyHeaders', boolean) Enables/disables the 'Copy column headers' option in the
 					Edit...Options...Input/Output dialog. See 'String.copyResults'.
-			('measurement', boolean) Measurements options: Display label, Limit to threshold, Area, Mean, Std, Perimeter
-					Stack position, Add to overlay.
-			('AntialiasedText' . . 'CopyHeaders' . . 'ScaleConversions' . . . and 'WaitForCompletion')
 			('FlipFitsImages',boolean) Controls whether images are flipped vertically by the FITS reader.
 			('FullRange16bitInversions',boolean) Set to have 16-bit images inverted using the full range (0-65535). Requires 1.54d.
 			('InterpolateLines',boolean) Sets/resets the 'Interpolate line profiles' option in Edit...Options...Plots.
+			('measurement', boolean) Measurements options: Display label, Limit to threshold, Area, Mean, Std, Perimeter
+					Stack position, Add to overlay.
+			('MonospacedText', boolean) Enables/disables monospaced text in the Log window. Requires 1.54c.
+			('OpenGrayscaleJpegsAsRGB', boolean) Enable to open grayscale RGB JPEGs as RGB images. Requires 1.54i.
 			('ScaleConversions', boolean) Enables/disables the 'Scale when converting' option in the
 					Edit...Options...Conversions dialog. When this option is enabled (the default),
 					commands in the Image...Type...sub-menu scale from the min and max displayed pixel value to 0-255
@@ -3985,6 +3988,10 @@
 		</KeyWord>
 		<KeyWord name="Stack.stopOrthoViews" func="yes">
 			<Overload retVal="" descr="Stops the current Orthogonal Views and closes the 'YZ' and 'XZ' windows.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Stack.startOrthoViews" func="yes">
+			<Overload retVal="" descr="Enables Orthogonal Views. Requires 1.54i.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Stack.swap" func="yes">

@@ -519,6 +519,7 @@ Stack.setUnits
 Stack.setXUnit
 Stack.setYUnit
 Stack.setZUnit
+Stack.startOrthoViews
 Stack.stopOrthoViews
 Stack.swap
 startsWith
