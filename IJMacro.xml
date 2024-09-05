@@ -15,7 +15,7 @@
 		<KeyWord name="Array.concat" func="yes">
 			<Overload retVal="array" descr="Returns a new array created by joining two
 			 or more arrays or values
-			http://wsr.imagej.net/macros/examples/ArrayConcatExamples.txt">
+			https://imagej.net/macros/examples/ArrayConcatExamples.txt">
 				<Param name="array1" />
 				<Param name="array2" />
 			</Overload>
@@ -34,7 +34,7 @@
 		</KeyWord>
 		<KeyWord name="Array.deleteValue" func="yes">
 			<Overload retVal="array" descr="Deletes all numeric or string elements in the array that contain the value.
-			Requires 1.52o. Example: http://wsr.imagej.net/macros/examples/ArrayDeleteDemo.txt">
+			Requires 1.52o. Example: https://imagej.net/macros/examples/ArrayDeleteDemo.txt">
 				<Param name="array" />
 				<Param name="value" />
 			</Overload>
@@ -57,7 +57,7 @@
 			 (sorted with descending strength). 'Tolerance' is the minimum amplitude difference
 			 needed to separate two peaks. With v1.51n and later, there is an optional
 			 'edgeMode' argument: 0=include edges, 1=exclude edges(default), 2=circular array.
-			 ' https://wsr.imagej.net/macros/examples/FindMaxima1D.txt ' ">
+			 ' https://imagej.net/macros/examples/FindMaxima1D.txt ' ">
 				<Param name="array" />
 				<Param name="tolerance[" />
 				<Param name="edgemode]" />
@@ -73,7 +73,7 @@
 			<Overload retVal="array" descr="Calculates and returns the Fourier amplitudes of array.
 			 WindowType can be 'none', 'Hamming', 'Hann',
 			 or 'flat-top', or may be omitted (meaning 'none'). 
-			 See the ' https://wsr.imagej.net/macros/examples/TestArrayFourier.txt ' TestArrayFourier macro for an example and 
+			 See the ' https://imagej.net/macros/examples/TestArrayFourier.txt ' TestArrayFourier macro for an example and 
 			 more documentation. Requires 1.49i.">
 				<Param name="array" />
 				<Param name="windowType" />
@@ -98,7 +98,7 @@
 			an array is returned holding vertex angles in degrees (straight=0, convex = positive if contour is clockwise).
 			Set 'arm'=1 to calculate the angle from the closest vertex points left and right, or use arm greater than 1
 			for more distant neighbors and smoother results.
-			Requires 1.51n. ' https://wsr.imagej.net/macros/examples/VertexAngles.txt ' ">
+			Requires 1.51n. ' https://imagej.net/macros/examples/VertexAngles.txt ' ">
 				<Param name="xArr" />
 				<Param name="yArr" />
 				<Param name="arm" />
@@ -111,7 +111,7 @@
 		</KeyWord>
 		<KeyWord name="Array.rankPositions" func="yes">
 			<Overload retVal="array" descr="Returns, as an array, the rank position indexes of array, starting with the index of the 
-			smallest value (' https://wsr.imagej.net/macros/examples/ArraySortingDemo.txt ' example).">
+			smallest value (' https://imagej.net/macros/examples/ArraySortingDemo.txt ' example).">
 				<Param name="array" />
 			</Overload>
 		</KeyWord>
@@ -129,14 +129,14 @@
 		<KeyWord name="Array.rotate" func="yes">
 			<Overload retVal="array" descr="Rotates the array elements by 'd' steps (positive 'd' = rotate right). 
 			i.e. rotatating (0,1,2,three,4,5,6,7,8,9) by d=3 becomes (7,8,9,0,1,2,three,4,5,6)
-			Requires 1.51n. ' https://wsr.imagej.net/macros/examples/RotateArray.txt ' ">
+			Requires 1.51n. ' https://imagej.net/macros/examples/RotateArray.txt ' ">
 				<Param name="array" />
 				<Param name="d" />
 			</Overload>
 		</KeyWord>		
 		<KeyWord name="Array.show" func="yes">
 			<Overload retVal="array" descr="Displays one or more arrays in a Results window
-			 (' https://wsr.imagej.net/macros/examples/ShowArrayDemo.txt ' ).
+			 (' https://imagej.net/macros/examples/ShowArrayDemo.txt ' ).
 			 Without option the form is arrayShow('arrayName').
 			 If title (optional) is 'Results', the window will be the active Results
 			 window, otherwise, it will be a dormant Results window
@@ -151,7 +151,7 @@
 		</KeyWord>
 		<KeyWord name="Array.slice" func="yes">
 			<Overload retVal="array" descr="Extracts a part of an array and returns it.
-			 (' https://wsr.imagej.net/macros/examples/ArraySliceExamples.txt ' ).">
+			 (' https://imagej.net/macros/examples/ArraySliceExamples.txt ' ).">
 				<Param name="array" />
 				<Param name="start" />
 				<Param name="end" />
@@ -216,7 +216,7 @@
 		<KeyWord name="call" func="yes">
 			<Overload retVal="" descr="Calls a public static method in a Java class, passing an arbitrary number
 			of string arguments, and returning a string. Refer to the 
-			' https://wsr.imagej.net/macros/CallJavaDemo.txt ' CallJavaDemo 
+			' https://imagej.net/macros/CallJavaDemo.txt ' CallJavaDemo 
 			macro and the '../../plugins/imp-props.html'ImpProps plugin 
 			for examples. Note that the call() function does not work when ImageJ is 
 			running as an unsigned applet.
@@ -274,7 +274,7 @@
 		</KeyWord>
 		<KeyWord name="Color.getLut" func="yes">
 			<Overload retVal="string" descr="Returns three arrays containing the red, green and blue intensity values
-			from the current lookup table. See the ' https://imagej.nih.gov/ij/macros/LookupTables.txt'
+			from the current lookup table. See the ' https://imagej.net/macros/LookupTables.txt'
 			LookupTables macros for examples.">
 			</Overload>
 		</KeyWord>
@@ -373,7 +373,7 @@
 		</KeyWord>
 		<KeyWord name="Dialog.addCheckboxGroup" func="yes">
 			<Overload retVal="" descr="Adds a rows x columns grid of checkboxes to the dialog, using the specified labels and
-			default states (' https://wsr.imagej.net/macros/AddCheckboxGroupDemo.txt ' example).">
+			default states (' https://imagej.net/macros/AddCheckboxGroupDemo.txt ' example).">
 				<Param name="rows" />
 				<Param name="columns" />
 				<Param name="labels" />
@@ -409,7 +409,7 @@
 		<KeyWord name="Dialog.addHelp" func="yes">
 			<Overload retVal="" descr="Adds a 'Help' button that opens the specified URL in the default browser. This can be 
 			used to supply a help page for this dialog or macro. With v1.46b or later, displays an HTML formatted message if 'url' starts 
-			with the html tag (' https://wsr.imagej.net/macros/examples/DialogWithHelp.txt ' example).">
+			with the html tag (' https://imagej.net/macros/examples/DialogWithHelp.txt ' example).">
 				<Param name="url" />
 			</Overload>
 		</KeyWord>
@@ -433,7 +433,7 @@
 			<Overload retVal="" descr="Adds a message to the dialog. The message can be broken into 
 			multiple lines by inserting new line characters ('\n') into the string.
 			For versions later than 1.52q a font size and color can be optionally specified:
-			' https://wsr.imagej.net//macros/examples/DialogMessageDemo.txt'.">
+			' https://imagej.net//macros/examples/DialogMessageDemo.txt'.">
 				<Param name="string[" />
 				<Param name="fontSize" />
 				<Param name="fontColor]" />
@@ -457,7 +457,7 @@
 			where 'label' is the group label, 'items' is an array 
 			containing the button labels, 'rows' and 'columns' specify the grid size, 
 			and 'default' is the label of the default button. 
-			(' https://wsr.imagej.net/macros/examples/RadioButtonDemo.txt ' example).">
+			(' https://imagej.net/macros/examples/RadioButtonDemo.txt ' example).">
 				<Param name="label" />
 				<Param name="items" />
 				<Param name="rows" />
@@ -468,7 +468,7 @@
 		<KeyWord name="Dialog.addSlider" func="yes">
 			<Overload retVal="" descr="Adds a slider controlled numeric field to the dialog, 
 			using the specified label, and min, max and default values 
-			(' https://wsr.imagej.net/macros/examples/SliderDemo.txt ' example). 
+			(' https://imagej.net/macros/examples/SliderDemo.txt ' example). 
 			Values with decimal points are used when (max-min) less than or equal to 5 and min, max or default are non-integer.">
 				<Param name="label" />
 				<Param name="min" />
@@ -609,12 +609,12 @@
 			Call setFont() to specify the font. Call setJustification()
 			to have the text centered or right justified.
 			Call getStringWidth() to get the width of the text in pixels.
-			Refer to the ' https://wsr.imagej.net/macros/TextDemo.txt'
+			Refer to the ' https://imagej.net/macros/TextDemo.txt'
 			TextDemo macro for examples and to
-			 ' https://wsr.imagej.net/macros/examples/DrawTextWithBackground.txt'
+			 ' https://imagej.net/macros/examples/DrawTextWithBackground.txt'
 			DrawTextWithBackground to see how to draw text with a background.
 			Optional: fill with 'background'
-			Example: http://wsr.imagej.net/macros/examples/DrawTextWithBackground.txt ' ).">
+			Example: https://imagej.net/macros/examples/DrawTextWithBackground.txt ' ).">
 				<Param name="'text'" />
 				<Param name="x" />
 				<Param name="y[" />
@@ -636,7 +636,7 @@
 		</KeyWord>
 		<KeyWord name="eval" func="yes">
 			<Overload retVal="" descr="Evaluates (runs) one or more lines of macro code. 
-			See also: ' https://wsr.imagej.net/macros/EvalDemo.txt ' EvalDemo macro and runMacro function.
+			See also: ' https://imagej.net/macros/EvalDemo.txt ' EvalDemo macro and runMacro function.
 			Options: if 'language' is 'macro' no script type is required but an optional
 			second argument can be used to pass a string to the macro being evaluated. 
 			'language' can be 'script' or 'js' for javascript, 'bsh' or 'python'
@@ -762,7 +762,7 @@
 			To write to the file, pass the file variable to the print function. 
 			Displays a file save dialog box if path is an empty string. The 
 			file is closed when the macro exits. Currently, only one file can be open at a time. 
-			For an example, refer to the ' https://wsr.imagej.net/macros/SaveTextFileDemo.txt ' SaveTextFileDemo macro.">
+			For an example, refer to the ' https://imagej.net/macros/SaveTextFileDemo.txt ' SaveTextFileDemo macro.">
 				<Param name="path" />
 			</Overload>
 		</KeyWord>
@@ -770,8 +770,8 @@
 			<Overload retVal="string" descr="Opens a file:
 			If no 'count' option: returns up to the first 5,000 bytes as a string. Returns all the bytes in the 
 			file if the name ends with '.txt ' . Refer to the '
-			http://wsr.imagej.net/macros/First10Bytes.txt ' First10Bytes and '
-			http://wsr.imagej.net/macros/ZapGremlins.txt ' ZapGremlins macros for examples.
+			https://imagej.net/macros/First10Bytes.txt ' First10Bytes and '
+			https://imagej.net/macros/ZapGremlins.txt ' ZapGremlins macros for examples.
 			Option: Opens a file and returns up to the first 'count' bytes as a string">
 				<Param name="path" />
 				<Param name="count" />
@@ -786,7 +786,7 @@
 		</KeyWord>
 		<KeyWord name="File.openDialog" func="yes">
 			<Overload retVal="string" descr="Displays a file open dialog and returns the path to the file chosen by the user ('
-			http://wsr.imagej.net/macros/OpenDialogDemo.txt ' example). The macro exits if the user cancels the dialog.">
+			https://imagej.net/macros/OpenDialogDemo.txt ' example). The macro exits if the user cancels the dialog.">
 				<Param name="title" />
 			</Overload>
 		</KeyWord>
@@ -856,7 +856,7 @@
 			Equation can be either the equation name or an index. 
 			The equation names are shown in the drop down menu in the Analyze...Tools...Curve Fitting 
 			window. With ImageJ 1.42f or later, equation can be a string containing a user-defined equation 
-			(' https://wsr.imagej.net/macros/examples/UserDefinedCurveFits.txt ' example).">
+			(' https://imagej.net/macros/examples/UserDefinedCurveFits.txt ' example).">
 				<Param name="equation" />
 				<Param name="xpoints" />
 				<Param name="ypoints" />
@@ -867,10 +867,10 @@
 			Equation can be either the equation name or an index. 
 			The equation names are shown in the drop down menu in the Analyze...Tools...Curve Fitting 
 			window. With ImageJ 1.42f or later, equation can be a string containing a user-defined equation 
-			(' https://wsr.imagej.net/macros/examples/UserDefinedCurveFits.txt ' example).
+			(' https://imagej.net/macros/examples/UserDefinedCurveFits.txt ' example).
 			Option: Uses initial parameter values contained in 'initialGuesses', an array equal in length
 			to the number of parameters in equation, example:
-			(' https://wsr.imagej.net/macros/examples/RodbardSigmoidFit.txt').">
+			(' https://imagej.net/macros/examples/RodbardSigmoidFit.txt').">
 				<Param name="equation" />
 				<Param name="xpoints" />
 				<Param name="ypoints" />
@@ -892,7 +892,7 @@
 		</KeyWord>
 		<KeyWord name="Fit.f" func="yes">
 			<Overload retVal="" descr="Returns the y value at x('
-			http://wsr.imagej.net/macros/examples/PlotSigmoidDerivatives.txt ' example).">
+			https://imagej.net/macros/examples/PlotSigmoidDerivatives.txt ' example).">
 				<Param name="x" />
 			</Overload>
 		</KeyWord>
@@ -939,7 +939,7 @@
 			and the same color as, the pixel at (x, y). Does 8-connected filling if 
 			there is an optional string argument containing '8', for example 
 			floodFill(x, y, '8-connected'). This function is used to implement the 
-			' https://wsr.imagej.net/macros/tools/FloodFillTool.txt ' flood fill (paint bucket) macro tool.">
+			' https://imagej.net/macros/tools/FloodFillTool.txt ' flood fill (paint bucket) macro tool.">
 				<Param name="x" />
 				<Param name="y[" />
 				<Param name="8-connected]" />
@@ -985,8 +985,8 @@
 		<KeyWord name="getCursorLoc" func="yes">
 			<Overload retVal="" descr="Returns the cursor location in pixels and the mouse event modifier flags. The z coordinate is zero 
 			for 2D images. For stacks, it is one less than the slice number. Use toScaled(x,y) to scale the coordinates.
-			For examples, see the ' https://wsr.imagej.net/macros//GetCursorLocDemo.txt ' GetCursorLocDemo and the 
-			' https://wsr.imagej.net/macros/tools/GetCursorLocDemoTool.txt ' GetCursorLocDemoTool macros.">
+			For examples, see the ' https://imagej.net/macros//GetCursorLocDemo.txt ' GetCursorLocDemo and the 
+			' https://imagej.net/macros/tools/GetCursorLocDemoTool.txt ' GetCursorLocDemoTool macros.">
 				<Param name="x" />
 				<Param name="y" />
 				<Param name="z" />
@@ -995,7 +995,7 @@
 		</KeyWord>
 		<KeyWord name="getDateAndTime" func="yes">
 			<Overload retVal="" descr="Returns the current date and time. Note that 'month' and 'dayOfWeek' are zero-based indexes. For 
-			an example, refer to the ' https://wsr.imagej.net/macros/GetDateAndTime.txt ' GetDateAndTime macro. See also: 
+			an example, refer to the ' https://imagej.net/macros/GetDateAndTime.txt ' GetDateAndTime macro. See also: 
 			getTime.">
 				<Param name="year" />
 				<Param name="month" />
@@ -1029,8 +1029,8 @@
 			The returned path ends with a file separator, either '\' (Windows) or '/'. 
 			Returns an empty string if the specified directory is not found 
 			or aborts the macro if the user cancels the 'choose directory' dialog box. For examples, see the '
-			http://wsr.imagej.net/macros/GetDirectoryDemo.txt ' GetDirectoryDemo and '
-			http://wsr.imagej.net/macros/ListFilesRecursively.txt ' ListFilesRecursively macros. See also: 
+			https://imagej.net/macros/GetDirectoryDemo.txt ' GetDirectoryDemo and '
+			https://imagej.net/macros/ListFilesRecursively.txt ' ListFilesRecursively macros. See also: 
 			getFileList and the File functions.
 			getDirectory('Choose a Directory') displays a file open dialog, using the argument as a title,
 			     and returns the path to the directory selected by the user.			
@@ -1048,7 +1048,7 @@
 		</KeyWord>
 		<KeyWord name="getDisplayedArea" func="yes">
 			<Overload retVal="" descr="Returns the pixel coordinates of the actual displayed area of the image canvas. 
-			For an example, see the ' https://wsr.imagej.net/macros/tools/Pixel_Sampler_Tool.txt ' Pixel Sampler Tool.">
+			For an example, see the ' https://imagej.net/macros/tools/Pixel_Sampler_Tool.txt ' Pixel Sampler Tool.">
 				<Param name="x" />
 				<Param name="y" />
 				<Param name="width" />
@@ -1058,13 +1058,13 @@
 		<KeyWord name="getFileList" func="yes">
 			<Overload retVal="array" descr="Returns an array containing the names of the files in the specified directory path. 
 			The names of subdirectories have a '/' appended. For an example, see the '
-			http://wsr.imagej.net/macros/ListFilesRecursively.txt ' ListFilesRecursively macro.">
+			https://imagej.net/macros/ListFilesRecursively.txt ' ListFilesRecursively macro.">
 				<Param name="directory" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getFontList()" func="yes">
 			<Overload retVal="array" descr="Returns an array containing the names of available system fonts
- 			(' https://wsr.imagej.net/macros/Fonts.txt ' example).">
+ 			(' https://imagej.net/macros/Fonts.txt ' example).">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getHeight()" func="yes">
@@ -1080,10 +1080,10 @@
 			and RGB image, or an integer greater than zero for 16 and 32 bit images. With 16-bit images, 
 			the Values argument is ignored 
 			if nBins is 65536. With 16-bit and 32-bit images, the histogram range can be specified using optional histMin and histMax 
-			arguments. See also: getStatistics, ' https://wsr.imagej.net/macros/HistogramLister.txt ' 
-			HistogramLister, ' https://wsr.imagej.net/macros/HistogramPlotter.txt ' HistogramPlotter, '
-			http://wsr.imagej.net/macros/StackHistogramLister.txt ' StackHistogramLister and '
-			http://wsr.imagej.net/macros/CustomHistogram.txt ' CustomHistogram.">
+			arguments. See also: getStatistics, ' https://imagej.net/macros/HistogramLister.txt ' 
+			HistogramLister, ' https://imagej.net/macros/HistogramPlotter.txt ' HistogramPlotter, '
+			https://imagej.net/macros/StackHistogramLister.txt ' StackHistogramLister and '
+			https://imagej.net/macros/CustomHistogram.txt ' CustomHistogram.">
 				<Param name="values" />
 				<Param name="counts" />
 				<Param name="nBins[" />
@@ -1100,13 +1100,13 @@
 		<KeyWord name="getImageInfo()" func="yes">
 			<Overload retVal="" descr="Returns a string containing the text that would be displayed by 
 			the Image...Show Info command. To retrieve the contents of a text window, use getInfo('window.contents').
-			For an example, see the http://wsr.imagej.net/macros/ListDicomTags.txt ' ListDicomTags macros. See also: getMetadata.">
+			For an example, see the https://imagej.net/macros/ListDicomTags.txt ' ListDicomTags macros. See also: getMetadata.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getInfo('command.name')" func="yes">
 			<Overload retVal="" descr="Returns the name of the most recently invoked command. The names of commands invoked using 
 			keyboard shortcuts are preceded by '^' 
-			(' https://wsr.imagej.net/macros/examples/GetCommandNameDemo.txt'
+			(' https://imagej.net/macros/examples/GetCommandNameDemo.txt'
 			example).">
 			</Overload>
 		</KeyWord>
@@ -1220,7 +1220,7 @@
 		<KeyWord name="getLine" func="yes">
 			<Overload retVal="integer" descr="Returns the starting coordinates, ending coordinates and width of the current straight line 
 			selection. The coordinates and line width are in pixels. Sets x1 = -1 if there is no line selection. Refer to the '
-			http://wsr.imagej.net/macros/GetLineDemo.txt ' GetLineDemo macro for an example.">
+			https://imagej.net/macros/GetLineDemo.txt ' GetLineDemo macro for an example.">
 				<Param name="x1" />
 				<Param name="y1" />
 				<Param name="x2" />
@@ -1230,28 +1230,28 @@
 		</KeyWord>
 		<KeyWord name="getList('image.titles')" func="yes">
 			<Overload retVal="array" descr="Returns a list (array) of image window titles. For an example, see the '
-			http://wsr.imagej.net/macros/DisplayWindowTitles.txt ' DisplayWindowTitles macro.">
+			https://imagej.net/macros/DisplayWindowTitles.txt ' DisplayWindowTitles macro.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getList('window.titles')" func="yes">
 			<Overload retVal="array" descr="Returns a list (array) of non-image window titles. For an example, see the '
-			http://wsr.imagej.net/macros/DisplayWindowTitles.txt ' DisplayWindowTitles macro.">
+			https://imagej.net/macros/DisplayWindowTitles.txt ' DisplayWindowTitles macro.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getList('java.properties')" func="yes">
 			<Overload retVal="array" descr="Returns a list (array) of Java property keys. For an example, see the '
-			http://wsr.imagej.net/macros/DisplayJavaProperties.txt ' DisplayJavaProperties macro. See also: 
+			https://imagej.net/macros/DisplayJavaProperties.txt ' DisplayJavaProperties macro. See also: 
 			getInfo(key).">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getList('threshold.methods')" func="yes">
 			<Overload retVal="list" descr="Returns a list of the available automatic thresholding methods 
-			(' https://wsr.imagej.net/macros/examples/AutoThresholdingDemo.txt ' example).">
+			(' https://imagej.net/macros/examples/AutoThresholdingDemo.txt ' example).">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getList('LUTs')" func="yes">
 			<Overload retVal="array" descr="Returns, as an array, a list of the LUTs in the Image...Lookup Tables menu ('
-			http://wsr.imagej.net/macros/Time-Lapse_Color_Coder.txt ' example).">
+			https://imagej.net/macros/Time-Lapse_Color_Coder.txt ' example).">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getLocationAndSize" func="yes">
@@ -1266,7 +1266,7 @@
 		</KeyWord>
 		<KeyWord name="getLut" func="yes">
 			<Overload retVal="array" descr="Returns three arrays containing the red, green and blue intensity values from the
-			current lookup table. See the ' https://wsr.imagej.net/macros/LookupTables.txt ' LookupTables macros for examples.">
+			current lookup table. See the ' https://imagej.net/macros/LookupTables.txt ' LookupTables macros for examples.">
 				<Param name="reds" />
 				<Param name="greens" />
 				<Param name="blues" />
@@ -1286,7 +1286,7 @@
 		<KeyWord name="getMinAndMax" func="yes">
 			<Overload retVal="integer" descr="Returns the minimum and maximum displayed pixel values (display range).
 			getMinAndMax('a','b') returns variables with the names 'a' and 'b' with the min and max values.
-			http://wsr.imagej.net/macros/DisplayRangeMacros.txt ' DisplayRangeMacros for examples.">
+			https://imagej.net/macros/DisplayRangeMacros.txt ' DisplayRangeMacros for examples.">
 				<Param name="min" />
 				<Param name="max" />
 			</Overload>
@@ -1305,7 +1305,7 @@
 			Use value(x,y) to get calibrated pixel values from 8 and 16 bit images and intensity values from RGB images.
 			Note that pixels in RGB images contain red, green and 
 			blue components that need to be extracted using shifting and masking. See the
-			' https://wsr.imagej.net/macros/tools/ColorPickerTool.txt ' Color Picker Tool macro
+			' https://imagej.net/macros/tools/ColorPickerTool.txt ' Color Picker Tool macro
 			for an example that shows how to do this. Uses bilinear interpolation if 'x' or 'y' are not integers.
 			Use 'getValue(x,y)' to get calibrated pixel values from 8 and 16 bit images and intensity values from RGB images.
 			Note: The getPixel() function returns zero for locations outside the image whereas getValue() returns NaN.">
@@ -1315,7 +1315,7 @@
 		</KeyWord>
 		<KeyWord name="getPixelSize" func="yes">
 			<Overload retVal="string" descr="Returns the unit of length (as a string) and the pixel dimensions. 
-			For an example, see the ' https://wsr.imagej.net/macros/ShowImageInfo.txt ' ShowImageInfo macro. See also: getVoxelSize.">
+			For an example, see the ' https://imagej.net/macros/ShowImageInfo.txt ' ShowImageInfo macro. See also: getVoxelSize.">
 				<Param name="unit" />
 				<Param name="pixelWidth" />
 				<Param name="pixelHeight" />
@@ -1324,14 +1324,14 @@
 		<KeyWord name="getProfile()" func="yes">
 			<Overload retVal="" descr="Runs Analyze...Plot Profile (without displaying the plot) 
 			and returns the intensity values as an array. For an example, see the 
-			' https://wsr.imagej.net/macros/GetProfileExample.txt ' GetProfileExample macro. See 
+			' https://imagej.net/macros/GetProfileExample.txt ' GetProfileExample macro. See 
 			also: Plot.getValues().">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getRawStatistics" func="yes">
 			<Overload retVal="" descr="This function is similar to getStatistics except that the values returned are uncalibrated
 			and the histogram of 16-bit images has a bin width of one and is returned as a max+1 element array. For examples, refer	to
-			the ' https://wsr.imagej.net/macros/ShowStatistics.txt ' ShowStatistics macro set. See also: calibrate and List.setMeasurements">
+			the ' https://imagej.net/macros/ShowStatistics.txt ' ShowStatistics macro set. See also: calibrate and List.setMeasurements">
 				<Param name="nPixels" />
 				<Param name="mean" />
 				<Param name="min" />
@@ -1375,7 +1375,7 @@
 		</KeyWord>
 		<KeyWord name="getSelectionCoordinates" func="yes">
 			<Overload retVal="array" descr="Returns two arrays containing the X and Y coordinates, in pixels, of the points that define
-			the current selection. See the ' https://wsr.imagej.net/macros/SelectionCoordinates.txt ' SelectionCoordinates macro for 
+			the current selection. See the ' https://imagej.net/macros/SelectionCoordinates.txt ' SelectionCoordinates macro for 
 			an example. See also: selectionType, getSelectionBounds.">
 				<Param name="xpoints" />
 				<Param name="ypoints" />
@@ -1390,7 +1390,7 @@
 			<Overload retVal="" descr="Returns the area, average pixel value, minimum pixel value, maximum pixel value, standard 
 			deviation of the pixel values and histogram of the active image or selection. The histogram is returned as a 256 element 
 			array. For 8-bit and RGB images, the histogram bin width is one. For 16-bit and 32-bit images, the bin width is 
-			(max-min)/256. For examples, refer to the ' https://wsr.imagej.net/macros/ShowStatistics.txt ' ShowStatistics macro 
+			(max-min)/256. For examples, refer to the ' https://imagej.net/macros/ShowStatistics.txt ' ShowStatistics macro 
 			set. Note that trailing arguments can be omitted. For example, you can use getStatistics(area), getStatistics(area, mean) or 
 			getStatistics(area, mean, min, max). See also: getRawStatistics and List.setMeasurements">
 				<Param name="area" />
@@ -1487,7 +1487,7 @@
 		</KeyWord>
 		<KeyWord name="getValue('rgb.foreground')" func="yes">
 			<Overload retVal="" descr="Returns the current foreground color as an RGB pixel value ('
-			http://wsr.imagej.net/macros/examples/ForegroundBackgroundColors.txt ' example).">
+			https://imagej.net/macros/examples/ForegroundBackgroundColors.txt ' example).">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="getValue('rotation.angle')" func="yes">
@@ -1573,7 +1573,7 @@
 		</KeyWord>
 		<KeyWord name="IJ.pad" func="yes">
 			<Overload retVal="" descr="Pads 'n' with leading zeros and returns the result ('
-			https://wsr.imagej.net/macros/examples/StackOverlay.txt ' example).
+			https://imagej.net/macros/examples/StackOverlay.txt ' example).
 			Note that 'n' can be either a number or a string. See also: String.pad.">
 				<Param name="n" />
 				<Param name="length" />
@@ -1581,7 +1581,7 @@
 		</KeyWord>
 		<KeyWord name="IJ.redirectErrorMessages()" func="yes">
 			<Overload retVal="" descr="Causes next image opening error to be redirected to the Log window and prevents the macro from 
-			being aborted (' https://wsr.imagej.net/macros/examples/BatchMeasureWithRedirectedErrors.txt ' example).">
+			being aborted (' https://imagej.net/macros/examples/BatchMeasureWithRedirectedErrors.txt ' example).">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="IJ.renameResults" func="yes">
@@ -1628,7 +1628,7 @@
 			image ID (an integer). The operator string can include up to three modifiers: 'create' (e.g., 'add 
 			create') causes the result to be stored in a new window, '32-bit' causes the result to be 32-bit 
 			floating-point and 'stack' causes the entire stack to be processed. See the '
-			https://wsr.imagej.net/macros/ImageCalculatorDemo.txt ' ImageCalculatorDemo macros for examples.">
+			https://imagej.net/macros/ImageCalculatorDemo.txt ' ImageCalculatorDemo macros for examples.">
 				<Param name="operator" />
 				<Param name="img1" />
 				<Param name="img2" />
@@ -1757,7 +1757,7 @@
 			<Overload retVal="" descr="Returns true if the value of the number n is NaN (Not-a-Number). A common way to create a NaN is 
 			to divide zero by zero. Comparison with a NaN always returns false so 'if (n!=n)' is equivalent to 
 			(isNaN(n))'. Note that the numeric constant NaN is predefined in the macro language. The '
-			https://wsr.imagej.net/macros/examples/NaNs.txt ' NaNs macro demonstrates how to remove NaNs from an image.">
+			https://imagej.net/macros/examples/NaNs.txt ' NaNs macro demonstrates how to remove NaNs from an image.">
 				<Param name="n" />
 			</Overload>
 		</KeyWord>
@@ -1840,7 +1840,7 @@
 			headings) and values into the list. Use List.setMeasurements('limit') to measure using the 'Limit to 
 			threshold' option. All parameters listed in the Analyze...Set Measurements dialog box are measured, including those 
 			that are unchecked. Use List.getValue() in an assignment statement to retrieve the values. See the
-			' https://wsr.imagej.net/macros/DrawEllipse.txt ' DrawEllipse macro for an example.">
+			' https://imagej.net/macros/DrawEllipse.txt ' DrawEllipse macro for an example.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="List.setMeasurements('limit')" func="yes">
@@ -1866,7 +1866,7 @@
 			<Overload retVal="" descr="Creates an arrow selection, where 'style' is a string containing 'filled', 
 			'notched', 'open', 'headless' or 'bar', plus the optional modifiers 
 			'outline', 'double', 'small', 'medium' and 'large' ('
-			https://wsr.imagej.net/macros/examples/Arrows.txt ' example).
+			https://imagej.net/macros/examples/Arrows.txt ' example).
 			See also: 
 			quot;Roi.setStrokeWidth and quot;Roi.setStrokeColor.
 			Requires 1.49a.">
@@ -1963,7 +1963,7 @@
 			<Overload retVal="" descr="Creates a selection from a list of XY coordinates. The first argument should be 
 			'polygon', 'freehand', 'polyline', 'freeline', 'angle' or 'point', or the numeric value returned by selectionType.
 			The xpoints and ypoints arguments are numeric arrays that contain the X and Y coordinates. See the '
-			https://wsr.imagej.net/macros/MakeSelectionDemo.txt ' MakeSelectionDemo macro for examples.">
+			https://imagej.net/macros/MakeSelectionDemo.txt ' MakeSelectionDemo macro for examples.">
 				<Param name="type" />
 				<Param name="xpoints" />
 				<Param name="ypoints" />
@@ -1973,7 +1973,7 @@
 			<Overload retVal="" descr="Creates a text selection, where 'x' and 'y'
 			 are the coordinates (in pixels) of the upper left corner of the selection.
 			 The selection will use the font and size specified by the last call to setFont.
-			 The ' https://wsr.imagej.net/macros/examples/CreateOverlay.txt' CreateOverlay macro provides an example.">
+			 The ' https://imagej.net/macros/examples/CreateOverlay.txt' CreateOverlay macro provides an example.">
 				<Param name="string" />
 				<Param name="x" />
 				<Param name="y" />
@@ -2147,7 +2147,7 @@
 			<Overload retVal="array" descr="Returns a new array containing size elements. 
 			You can also create arrays by listing the elements, 
 			for example newArray(1,4,7) or newArray('a','b','c'). For more examples, see the '
-			https://wsr.imagej.net/macros/Arrays.txt ' Arrays macro.">
+			https://imagej.net/macros/Arrays.txt ' Arrays macro.">
 				<Param name="size" />
 			</Overload>
 		</KeyWord>
@@ -2168,7 +2168,7 @@
 			<Overload retVal="" descr="Defines a menu that will be added to the toolbar when the menu tool named macroName is installed. 
 			Menu tools are macros with names ending in 'Menu Tool'. StringArray is an array containing the menu commands. 
 			Returns a copy of stringArray. For an example, refer to the '
-			https://wsr.imagej.net/macros/toolsets/Toolbar%20Menus.txt ' Toolbar Menus toolset.">
+			https://imagej.net/macros/toolsets/Toolbar%20Menus.txt ' Toolbar Menus toolset.">
 				<Param name="macroName" />
 				<Param name="stringArray" />
 			</Overload>
@@ -2273,7 +2273,7 @@
 			<Overload retVal="" descr="Draws text at the specified location and adds it to the overlay.
 			The first character is drawn obove and to the right of (x,y).
 			Use setFont() to specify the font and setColor to set specify the color 
-			(' https://wsr.imagej.net/macros/examples/OverlayDrawStringDemo.txt ' example).">
+			(' https://imagej.net/macros/examples/OverlayDrawStringDemo.txt ' example).">
 				<Param name="'text'" />
 				<Param name="x" />
 				<Param name="y" />
@@ -2283,9 +2283,9 @@
 			<Overload retVal="" descr="Draws text at the specified location and adds it to the overlay.
 			The first character is drawn above and to the right of (x,y).
 			Use setFont() to specify the font and setColor to set specify the color 
-			(' https://wsr.imagej.net/macros/examples/OverlayDrawStringDemo.txt ' example).
+			(' https://imagej.net/macros/examples/OverlayDrawStringDemo.txt ' example).
 			Optional 4th paramenter: rotates text by 'angle', example: 
-			(' https://wsr.imagej.net/macros/examples/RotatedText.txt').">
+			(' https://imagej.net/macros/examples/RotatedText.txt').">
 				<Param name="'text'" />
 				<Param name="x" />
 				<Param name="y[" />
@@ -2389,7 +2389,7 @@
 		</KeyWord>
 		<KeyWord name="Overlay.setPosition" func="yes">
 			<Overload retVal="" descr="Sets the stack position (slice number) 'c' of the last item added to the overlay
-			example: ' https://wsr.imagej.net/macros/examples/StackOverlay.txt'
+			example: ' https://imagej.net/macros/examples/StackOverlay.txt'
 			Optional 'z' and 't': Sets the hyperstack position (channel, slice, frame) of the last item added to the overlay.">
 				<Param name="c[" />
 				<Param name="z" />
@@ -2438,7 +2438,7 @@
 			parseFloat('-Infinity') returns the special floating point value representing -Infinity.
 			parseFloat('NaN') returns the special floating point value representing NaN (not a number).
 			For examples, see '
-			https://wsr.imagej.net/macros/ParseFloatIntExamples.txt ' ParseFloatIntExamples.">
+			https://imagej.net/macros/ParseFloatIntExamples.txt ' ParseFloatIntExamples.">
 				<Param name="string" />
 			</Overload>
 		</KeyWord>
@@ -2453,7 +2453,7 @@
 			base of the number contained in the string. The radix must be an integer between 2 and 36. For radixes above 10, the letters 
 			of the alphabet indicate numerals greater than 9. Set radix to 16 to parse hexadecimal numbers.Returns NaN if the string 
 			cannot be converted into a integer. 
-			For examples, see ' https://wsr.imagej.net/macros/ParseFloatIntExamples.txt ' ParseFloatIntExamples.">
+			For examples, see ' https://imagej.net/macros/ParseFloatIntExamples.txt ' ParseFloatIntExamples.">
 				<Param name="string[" />
 				<Param name="radix]" />
 			</Overload>
@@ -2588,7 +2588,7 @@
 		</KeyWord>		
 		<KeyWord name="Plot.getValues" func="yes">
 			<Overload retVal="" descr="Returns the values displayed by clicking on 'List' in a plot or histogram window ('
-			https://wsr.imagej.net/macros/examples/PlotGetValuesDemo.txt ' example).">
+			https://imagej.net/macros/examples/PlotGetValuesDemo.txt ' example).">
 				<Param name="xpoints" />
 				<Param name="ypoints" />
 			</Overload>
@@ -2624,7 +2624,7 @@
 		</KeyWord>		
 		<KeyWord name="Plot.setBackgroundColor" func="yes">
 			<Overload retVal="" descr="Sets the background color of the plot frame ('
-			https://wsr.imagej.net/macros/examples/PlotBackgroundColorDemo.txt ' example).Requires 1.49h.">
+			https://imagej.net/macros/examples/PlotBackgroundColorDemo.txt ' example).Requires 1.49h.">
 				<Param name="color" />
 			</Overload>
 		</KeyWord>	
@@ -2698,7 +2698,7 @@
 		<KeyWord name="Plot.setLogScaleX" func="yes">
 			<Overload retVal="" descr="Sets the x axis scale to Logarithmic, or back to linear if the optional boolean argument is 
 			false. In versions up to 1.49s, it must be called immediately after Plot.create and before Plot.setLimits. See the '
-			https://wsr.imagej.net/macros/examples/LogLogPlot.txt ' LogLogPlot macro for an example.">
+			https://imagej.net/macros/examples/LogLogPlot.txt ' LogLogPlot macro for an example.">
 				<Param name="[boolean]" />
 			</Overload>
 		</KeyWord>
@@ -2771,7 +2771,7 @@
 			print(x+' '+y+' '+width+' '+height).
 			If the first argument is a file handle returned by File.open(path), 
 			then the second is saved in the referred file 
-			(see ' https://wsr.imagej.net/macros/SaveTextFileDemo.txt ' SaveTextFileDemo).
+			(see ' https://imagej.net/macros/SaveTextFileDemo.txt ' SaveTextFileDemo).
 			print('\\Update:new text') replaces the last line with 'new text'
  			print('\\Update8:new 8th line') replaces the 8th line with 'new 8th line'">
 				<Param name="string" />
@@ -2864,7 +2864,7 @@
 		<KeyWord name="resetMinAndMax" func="yes">
 			<Overload retVal="" descr="With 16-bit and 32-bit images, resets the minimum and maximum displayed pixel values (display 
 			range) to be the same as the current image's minimum and maximum pixel values. With 8-bit images, sets the display range to 
-			0-255. With RGB images, does nothing. See the ' https://wsr.imagej.net/macros/DisplayRangeMacros.txt ' 
+			0-255. With RGB images, does nothing. See the ' https://imagej.net/macros/DisplayRangeMacros.txt ' 
 			DisplayRangeMacros for examples.">
 			</Overload>
 		</KeyWord>
@@ -2928,7 +2928,7 @@
 		<KeyWord name="Roi.getFeretPoints" func="yes">
 			<Overload retVal="array" descr="Returns, as two arrays, the x and y coordinates of the pixels at the ends of each Feret axis
 			i.e. the end points of the MaxFeret are in array elements [0], [1] and MinFeret in [2], [3].
-			These points are uncalibrated (pixel coordinates, but not necessarily integer). See https://wsr.imagej.net/macros/DrawFeret.txt
+			These points are uncalibrated (pixel coordinates, but not necessarily integer). See https://imagej.net/macros/DrawFeret.txt
 			Requires ImageJ 1.52m28.">
 				<Param name="xpoints" />
 				<Param name="ypoints" />
@@ -2983,7 +2983,7 @@
 		</KeyWord>
 		<KeyWord name="Roi.getSplineAnchors" func="yes">
 			<Overload retVal="" descr="Returns the x and y coordinates of the anchor points of a spline fitted selection
-			(' https://wsr.imagej.net/macros/examples/GetSetAnchors.txt ' example).">
+			(' https://imagej.net/macros/examples/GetSetAnchors.txt ' example).">
 				<Param name="x" />
 				<Param name="y" />
 			</Overload>
@@ -3021,7 +3021,7 @@
 		</KeyWord>
 		<KeyWord name="Roi.setAntiAlias" func="yes">
 			<Overload retVal="" descr="Controls whether anti-aliasing is used when drawing selections.
-			Example:https://wsr.imagej.net/macros/AntiAliasingDemo.txt
+			Example:https://imagej.net/macros/AntiAliasingDemo.txt
 			Requires 1.52p.">
 				<Param name="boolean" />
 			</Overload>
@@ -3071,14 +3071,14 @@
 		</KeyWord>
 		<KeyWord name="Roi.setPolygonSplineAnchors" func="yes">
 			<Overload retVal="" descr="Creates or updates a spline fitted polygon selection
-			(' https://wsr.imagej.net/macros/examples/GetSetAnchors.txt ' example).">
+			(' https://imagej.net/macros/examples/GetSetAnchors.txt ' example).">
 				<Param name="x" />
 				<Param name="y" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Roi.setPolylineSplineAnchors" func="yes">
 			<Overload retVal="" descr="Creates or updates a spline fitted polyline selection
-			(' https://wsr.imagej.net/macros/examples/GetSetAnchors.txt ' example).">
+			(' https://imagej.net/macros/examples/GetSetAnchors.txt ' example).">
 				<Param name="x" />
 				<Param name="y" />
 			</Overload>
@@ -3301,7 +3301,7 @@
 		<KeyWord name="RoiManager.selected" func="yes">
 			<Overload retVal="" descr="Returns the number of selected ROIs in the ROI Manager list.
 			Requires 1.53e.
-			See also: '' https://imagej.nih.gov/ij/developer/macro/functions.html#RoiManager.size'' RoiManager.size">
+			See also: '' https://imagej.net/developer/macro/functions.html#RoiManager.size'' RoiManager.size">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="RoiManager.selectPosition" func="yes">
@@ -3347,7 +3347,7 @@
 			Use string concatenation to pass a variable as an argument.
 			With ImageJ 1.43 and later, variables can be passed without using string concatenation by adding
 			'ampersand character' to the variable name. For examples, see the 
-			' https://wsr.imagej.net/macros/ArgumentPassingDemo.txt ' ArgumentPassingDemo macro.">
+			' https://imagej.net/macros/ArgumentPassingDemo.txt ' ArgumentPassingDemo macro.">
 				<Param name="command[" />
 				<Param name="options]" />
 			</Overload>
@@ -3415,7 +3415,7 @@
 		<KeyWord name="selectionType() " func="yes">
 			<Overload retVal="" descr="Returns the selection type, where 0=rectangle, 1=oval, 2=polygon, 3=freehand, 4=traced, 
 			5=straight line, 6=segmented line, 7=freehand line, 8=angle, 9=composite and 10=point. Returns -1 if there is no selection. 
-			For an example, see the ' https://wsr.imagej.net/macros/ShowImageInfo.txt ' ShowImageInfo macro.
+			For an example, see the ' https://imagej.net/macros/ShowImageInfo.txt ' ShowImageInfo macro.
 			See also Roi.getType">
 			</Overload>
 		</KeyWord>
@@ -3428,7 +3428,7 @@
 			Use the getList('threshold.methods') function to get a list of the available methods. Add 'dark' to the method name
 			if the image has a dark background. Add '16-bit' to use the full 16-bit histogram when calculating the threshold of
 			16-bit images. Add 'stack' to use the histogram of the entire stack when calculating the threshold. For an example, see the
-			' https://wsr.imagej.net/macros/examples/AutoThresholdingDemo.txt ' AutoThresholdingDemo macro.
+			' https://imagej.net/macros/examples/AutoThresholdingDemo.txt ' AutoThresholdingDemo macro.
 			If NO parameter is set - it uses the 'Default' method to determine the threshold. It may select dark or bright 
 			areas as thresholded, as was the case with the Image...Adjust...Threshold 'Auto' option
 			in ImageJ 1.42o and earlier. See also: setThreshold, getThreshold, resetThreshold.">
@@ -3487,7 +3487,7 @@
 			The optional third argument is a string containing 'bold' or 'italic', or both. The third argument 
 			can also contain the keyword 'antialiased'. With ImageJ 1.54e and newer, text antialiasing is enabled
 			by default and you have to use the keyword 'no-smoothing' to display non-antialiased text.
-			For examples, run the ' https://wsr.imagej.net/macros/TextDemo.txt ' TextDemo macro.">
+			For examples, run the ' https://imagej.net/macros/TextDemo.txt ' TextDemo macro.">
 				<Param name="name" />
 				<Param name="size[" />
 				<Param name="style]" />
@@ -3525,9 +3525,9 @@
 			<Overload retVal="" descr="Simulates pressing the shift, alt or space keys, where keys is a string containing some 
 			combination of 'shift', 'alt' or 'space'. Any key not specified is set 'up'. Use 
 			setKeyDown('none') to set all keys in the 'up' position. Call setKeyDown('esc') to abort the 
-			currently running macro or plugin. For examples, see the ' https://wsr.imagej.net/macros/CompositeSelections.txt ' 
-			CompositeSelections, ' https://wsr.imagej.net/macros/DoWandDemo.txt ' DoWandDemo and '
-			https://wsr.imagej.net/macros/tools/AbortMacroActionTool.txt ' AbortMacroActionTool macros. See also: isKeyDown.">
+			currently running macro or plugin. For examples, see the ' https://imagej.net/macros/CompositeSelections.txt ' 
+			CompositeSelections, ' https://imagej.net/macros/DoWandDemo.txt ' DoWandDemo and '
+			https://imagej.net/macros/tools/AbortMacroActionTool.txt ' AbortMacroActionTool macros. See also: isKeyDown.">
 				<Param name="keys" />
 			</Overload>
 		</KeyWord>
@@ -3552,7 +3552,7 @@
 		</KeyWord>
 		<KeyWord name="setLut" func="yes">
 			<Overload retVal="" descr="Creates a new lookup table and assigns it to the current image. Three input arrays are required, 
-			each containing 256 intensity values. See the ' https://wsr.imagej.net/macros/LookupTables.txt ' LookupTables macros 
+			each containing 256 intensity values. See the ' https://imagej.net/macros/LookupTables.txt ' LookupTables macros 
 			for examples.">
 				<Param name="reds" />
 				<Param name="greens" />
@@ -3571,7 +3571,7 @@
 		</KeyWord>
 		<KeyWord name="setMinAndMax" func="yes">
 			<Overload retVal="" descr="Sets the minimum and maximum displayed pixel values (display range). 
-			See the ' https://wsr.imagej.net/macros/DisplayRangeMacros.txt ' DisplayRangeMacros for examples.
+			See the ' https://imagej.net/macros/DisplayRangeMacros.txt ' DisplayRangeMacros for examples.
 			Optional 3rd parameter: 'channels' - Sets the display range of specified channels in an RGB image,
 			where 4=red, 2=green, 1=blue, 6=red+green, etc. Note that the pixel data is altered since RGB images, unlike 
 			'../../docs/menus/image.html#make-composite'composite color images, do not have a LUT for each channel.">
@@ -3614,7 +3614,7 @@
 			<Overload retVal="" descr="Sets the transfer mode used by the Edit...Paste command,
 			where mode is 'Copy', 'Blend', 'Average', 'Difference', 'Transparent-white', 'Transparent-zero',
 			'AND', 'OR', 'XOR', 'Add', 'Subtract', 'Multiply', 'Divide, 'Min' or 'Max'.
-			The ' https://wsr.imagej.net/macros/GetCurrentPasteMode.txt ' macro demonstrates how to get the current paste mode.
+			The ' https://imagej.net/macros/GetCurrentPasteMode.txt ' macro demonstrates how to get the current paste mode.
 			In ImageJ 1.42 and later, the paste mode is saved and restored by the saveSettings and restoreSettings.">
 				<Param name="mode" />
 			</Overload>
@@ -3634,8 +3634,8 @@
 			(nResults is a predefined variable.) A row is added to the table if row=nResults.
 			The third argument is the value to be added or modified. With v1.47o or later, it can be a string. Call 
 			setResult('Label', row, string) to set the row label. Call updateResults() to display the updated table in the 
-			'Results' window. For examples, see the ' https://wsr.imagej.net/macros/SineCosineTable.txt ' 
-			SineCosineTable and ' https://wsr.imagej.net/macros/ConvexitySolidarity.txt ' ConvexitySolidarity macros.">
+			'Results' window. For examples, see the ' https://imagej.net/macros/SineCosineTable.txt ' 
+			SineCosineTable and ' https://imagej.net/macros/ConvexitySolidarity.txt ' ConvexitySolidarity macros.">
 				<Param name="Column" />
 				<Param name="row" />
 				<Param name="value" />
@@ -3645,9 +3645,9 @@
 			<Overload retVal="" descr="Sets the weighting factors used by the Analyze...Measure, Image...Type...8-bit and 
 			Analyze...Histogram commands when they convert RGB pixels values to grayscale. The sum of the weights must be 1.0. Use 
 			(1/3,1/3,1/3) for equal weighting of red, green and blue. The weighting factors in effect when the macro started are 
-			restored when it terminates. For examples, see the ' https://wsr.imagej.net/macros/MeasureRGB.txt ' MeasureRGB, '
-			https://wsr.imagej.net/macros/ExtractRGBChannels.txt ' ExtractRGBChannels and '
-			https://wsr.imagej.net/macros/RGB_Histogram.txt ' RGB_Histogram macros.">
+			restored when it terminates. For examples, see the ' https://imagej.net/macros/MeasureRGB.txt ' MeasureRGB, '
+			https://imagej.net/macros/ExtractRGBChannels.txt ' ExtractRGBChannels and '
+			https://imagej.net/macros/RGB_Histogram.txt ' RGB_Histogram macros.">
 				<Param name="redWeight" />
 				<Param name="greenWeight" />
 				<Param name="blueWeight" />
@@ -3655,7 +3655,7 @@
 		</KeyWord>
 		<KeyWord name="setSelectionLocation" func="yes">
 			<Overload retVal="" descr="Moves the current selection to (x,y), where x and y are the pixel coordinates of the upper left 
-			corner of the selection's bounding rectangle. The ' https://wsr.imagej.net/macros/RoiManagerMoveSelections.txt ' 
+			corner of the selection's bounding rectangle. The ' https://imagej.net/macros/RoiManagerMoveSelections.txt ' 
 			RoiManagerMoveSelections macro uses this function to move all the ROI Manager selections a specified distance. See also: 
 			getSelectionBounds.">
 				<Param name="x" />
@@ -3694,8 +3694,8 @@
 			name is 'rectangle', 'roundrect', 'elliptical', 'brush', 'polygon', 'freehand', 'line', 
 			'polyline', 'freeline', 'arrow', 'angle', 'point', 'multipoint', 
 			'wand', 'text', 'zoom', 'hand' or 'dropper'. Refer to the '
-			https://wsr.imagej.net/macros/SetToolDemo.txt ' SetToolDemo, ' https://wsr.imagej.net/macros/ToolShortcuts.txt ' 
-			ToolShortcuts or ' https://wsr.imagej.net/macros/ToolSwitcher.txt ' ToolSwitcher, macros for examples. See also: 
+			https://imagej.net/macros/SetToolDemo.txt ' SetToolDemo, ' https://imagej.net/macros/ToolShortcuts.txt ' 
+			ToolShortcuts or ' https://imagej.net/macros/ToolSwitcher.txt ' ToolSwitcher, macros for examples. See also: 
 			IJ.getToolName.">
 				<Param name="name or id" />
 			</Overload>
@@ -3703,7 +3703,7 @@
 		<KeyWord name="setupUndo()" func="yes">
 			<Overload retVal="" descr="Call this function before drawing on an image to allow the user the option of later restoring the 
 			original image using Edit/Undo. Note that setupUndo() may not work as intended with macros that call the run() function. For 
-			an example, see the ' https://wsr.imagej.net/macros/tools/DrawingTools.txt ' DrawingTools tool set.">
+			an example, see the ' https://imagej.net/macros/tools/DrawingTools.txt ' DrawingTools tool set.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="setVoxelSize" func="yes">
@@ -3719,18 +3719,18 @@
 		<KeyWord name="setZCoordinate" func="yes">
 			<Overload retVal="" descr="Sets the Z coordinate used by getPixel(), setPixel() and changeValues(). The argument must be in 
 			the range 0 to n-1, where n is the number of images in the stack. For an examples, see the '
-			https://wsr.imagej.net/macros/tools/ZProfileTool.txt ' Z Profile Plotter Tool.">
+			https://imagej.net/macros/tools/ZProfileTool.txt ' Z Profile Plotter Tool.">
 				<Param name="z" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="showMessage('message')" func="yes">
 			<Overload retVal="" descr="Displays 'message' in a dialog box. Can display HTML formatted text ('
-			https://wsr.imagej.net/macros/HtmlDialogDemo.txt ' example).">
+			https://imagej.net/macros/HtmlDialogDemo.txt ' example).">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="showMessage" func="yes">
 			<Overload retVal="" descr="Displays 'message' in a dialog box using 'title' as the the dialog box 
-			title. Can display HTML formatted text (' https://wsr.imagej.net/macros/HtmlDialogDemo.txt ' example).">
+			title. Can display HTML formatted text (' https://imagej.net/macros/HtmlDialogDemo.txt ' example).">
 				<Param name="title" />
 				<Param name="message" />
 			</Overload>
@@ -3747,7 +3747,7 @@
 			<Overload retVal="" descr="Updates the ImageJ progress bar, where progress ranges from 0 to 1.0.
 			The progress bar is not displayed if the time between the first and second calls to this function is
 			less than 30 milliseconds. It is erased when the macro terminates or progress is = 1.0. Use negative values
-			to show subordinate progress bars as moving dots (' https://wsr.imagej.net/macros/examples/DualProgressDemo.txt ' example).
+			to show subordinate progress bars as moving dots (' https://imagej.net/macros/examples/DualProgressDemo.txt ' example).
 			Optional 2nd parameter: Updates the progress bar, where the length of the bar is set to currentIndex/finalIndex of the 
 			maximum bar length. The bar is erased if currentIndex is greater than finalIndex or finalIndex = 0.">
 				<Param name="currentIndex[" />
@@ -3762,7 +3762,7 @@
 			The colors recognized in the 'options' string are 'red', 'green', 'blue', 'magenta', 'cyan', 'yellow',
 			'orange', 'black', 'white','gray' and 'pink'.
 			Examples: 'flash', 'flash pink', 'flash 1000ms','flash yellow 2000ms', 'flash image', 'flash image orange 500ms'
-			(example: ' https://wsr.imagej.net/macros/FlashingStatusMessages.txt')">
+			(example: ' https://imagej.net/macros/FlashingStatusMessages.txt')">
 				<Param name="message" />
 				<Param name="options" />
 			</Overload>
@@ -3781,8 +3781,8 @@
 		</KeyWord>
 		<KeyWord name="snapshot()" func="yes">
 			<Overload retVal="" descr="Creates a backup copy of the current image that can be later restored using the 
-			reset function. For examples, see the ' https://wsr.imagej.net/macros/ImageRotator.txt ' 
-			ImageRotator and ' https://wsr.imagej.net/macros/BouncingBar.txt ' BouncingBar macros.">
+			reset function. For examples, see the ' https://imagej.net/macros/ImageRotator.txt ' 
+			ImageRotator and ' https://imagej.net/macros/BouncingBar.txt ' BouncingBar macros.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="split" func="yes">
@@ -3922,7 +3922,7 @@
 		</KeyWord>
 		<KeyWord name="Stack.setOrthoViews" func="yes">
 			<Overload retVal="" descr="If an Orthogonal Views is active, its crosspoint is set to x, y, z ('
-			https://wsr.imagej.net/macros/OrthogonalViewsDemo.txt ' example).">
+			https://imagej.net/macros/OrthogonalViewsDemo.txt ' example).">
 				<Param name="x" />
 				<Param name="y" />
 				<Param name="z" />
@@ -4021,7 +4021,7 @@
 		</KeyWord>
 		<KeyWord name="String.getResultsHeadings " func="yes">
 			<Overload retVal="string" descr="Returns the Results window headers. '
-			https://wsr.imagej.net/macros/examples/PrintResults.txt ' Example.">
+			https://imagej.net/macros/examples/PrintResults.txt ' Example.">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="String.format" func="yes">
@@ -4245,7 +4245,7 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Table.sort" func="yes">
-			<Overload retVal="" descr="Sorts the table on the specified column (https://wsr.imagej.net/macros/LabelParticlesBySize.txt).">
+			<Overload retVal="" descr="Sorts the table on the specified column (https://imagej.net/macros/LabelParticlesBySize.txt).">
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Table.title" func="yes">
@@ -4304,7 +4304,7 @@
 			<Overload retVal="" descr="Single parameter (length): converts (in place) a scaled length to a length in pixels
 			using the properties of the current image.
 			Optional xy parameters: Converts scaled coordinates to unscaled pixel coordinates using the properties of the current 
-			image or plot. Also accepts arrays. Refer to the ' https://wsr.imagej.net/macros/examples/AdvancedPlots.txt ' 
+			image or plot. Also accepts arrays. Refer to the ' https://imagej.net/macros/examples/AdvancedPlots.txt ' 
 			AdvancedPlots macro set for examples.
 			Optional xyz parameters:Converts scaled (x,y,z) pixel coordinates to unscaled (raw) coordinates.">
 				<Param name="x[" />
@@ -4338,7 +4338,7 @@
 			the threshold while the dialog is open. To display a multi-line message, add newline characters
 			('\n') to string. This function is based on Michael Schmid's
 			' https://imagejdocu.tudor.lu/imagej-documentation-wiki/plugins/wait_for_user' Wait_For_User plugin.
-			Example: ' https://wsr.imagej.net/macros/WaitForUserDemo.txt ' WaitForUserDemo.
+			Example: ' https://imagej.net/macros/WaitForUserDemo.txt ' WaitForUserDemo.
 			Optional 'Title': This is a two argument version of waitForUser, where title is the dialog box title
 			and message is the text displayed in the dialog.">
 				<Param name="[title" />
