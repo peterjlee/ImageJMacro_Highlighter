@@ -13,7 +13,6 @@ while
 function
 macro
 
-
 .charAt
 .contains
 .endsWith
@@ -29,7 +28,6 @@ macro
 .trim
 
 Ext.
-
 
 abs
 acos
@@ -558,6 +556,7 @@ Table.setColumn
 Table.setLocationAndSize
 Table.setSelection
 Table.showArrays
+Table.showHistogramTable
 Table.showRowIndexes
 Table.showRowNumbers
 Table.size
