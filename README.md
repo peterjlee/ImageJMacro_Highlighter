@@ -7,10 +7,15 @@ For the current version of Notepad++ (for Windows) User Defined Language (UDL) f
 %AppData%\Roaming\Notepad++\userDefineLangs
 
 The corresponding AutoComplete file (which also contains function usage information that will be dispayed in a pop-up window) is placed in the autoCompletion subfolder of the installation directory. This file must be given the same name as defined in the UDL file line:
-<p>&lt;UserLang name=&quot;IJMacro&quot; ext=&quot;ijm&quot;, udlVersion=&quot;2.1&quot;&gt;</p>
+&lt;UserLang name=&quot;IJMacro&quot; ext=&quot;ijm&quot;, udlVersion=&quot;2.1&quot;&gt;
+
 In the case above the autoCompletion file should be renamed &quot;IJMacro.xml&quot;.
-<p><img src="/images/NPP_Autofill_popup_210x188.png" alt="NPP Autofill Pop-Up Menu"  height="188" /> </p>
-<p><img src="/images/NPP_Autocomplete_popup_746x102.png" alt="NPP Autocomplete help menu"  height="102" /> </p>
+
+The definitions in the AutoCompletion file were extracted from the [Built-in Macro Functions page.](https://wsr.imagej.net//developer/macro/functions.html)
+
+<img src="/images/NPP_Autofill_popup_210x188.png" alt="NPP Autofill Pop-Up Menu"  height="188" />
+
+<img src="/images/NPP_Autocomplete_popup_746x102.png" alt="NPP Autocomplete help menu"  height="102" />
 
 # ImageJ Macro Syntax Highlighter
 
