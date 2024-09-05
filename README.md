@@ -1,6 +1,6 @@
 # ImageJ Macro Syntax Highlighter and AutoComplete update
 
-Peter J. Lee NHFML
+Updated version with complete descriptions in AutoComplete by Peter J. Lee NHFML, using syntax demonstrated by Kota Miura in original below.
 
 IJMacro_Lang.xml is a &quot;User Defined Language&quot; (UDL) file for highlighting macro functions when editing macro scripts in Notepad++.
 For the current version of Notepad++ (for Windows) User Defined Language (UDL) files in xml format are placed in:
