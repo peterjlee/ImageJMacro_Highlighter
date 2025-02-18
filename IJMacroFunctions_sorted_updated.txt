@@ -378,6 +378,7 @@ Property.getInfo
 Property.getList
 Property.getNumber
 Property.getSliceLabel
+Property.getValue
 Property.setList
 Property.setSliceLabel
 random
@@ -420,6 +421,7 @@ Roi.setFontSize
 Roi.setGroup
 Roi.setGroupNames
 Roi.setJustification
+Roi.setMinStrokeWidth
 Roi.setName
 Roi.setPolygonSplineAnchors
 Roi.setPolylineSplineAnchors
@@ -431,6 +433,7 @@ Roi.setUnscalableStrokeWidth
 Roi.size
 Roi.translate
 roiManager
+RoiManager.delete
 RoiManager.getIndex
 RoiManager.multiCrop
 RoiManager.rotate
