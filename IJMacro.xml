@@ -2792,13 +2792,19 @@
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Property.getNumber" func="yes">
-			<Overload retVal="" descr="Returns the image property associated with key, as a number,
-			or returns NaN if key is not found or the property cannot be converted into a number. Requires 1.53b.">
+			<Overload retVal="number" descr="Alias for Property.getValue(key)">
+				<Param name="key" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Property.getSliceLabel" func="yes">
 			<Overload retVal="" descr="Returns the current slice label. The first line of the label (up to 60 characters)
 			is displayed as part of the image subtitle. With DICOM stacks, returns the DICOM header metadata (tags).">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="Property.getValue" func="yes">
+			<Overload retVal="number" descr="Returns the image property associated with key,as a number, or returns NaN if key is not found or
+			the property cannot be converted into a number. Requires 1.53n.">
+				<Param name="key" />
 			</Overload>
 		</KeyWord>
 		<KeyWord name="Property.set" func="yes">
@@ -3064,6 +3070,12 @@
 				<Param name="string" />
 			</Overload>
 		</KeyWord>
+		<KeyWord name="Roi.setMinStrokeWidth" func="yes">
+			<Overload retVal="" descr="Sets the minimum scaled stroke width example: http://wsr.imagej.net/macros/Polygons.ijm
+			Requires 1.54m.">
+				<Param name="minWidth" />
+			</Overload>
+		</KeyWord>
 		<KeyWord name="Roi.setName" func="yes">
 			<Overload retVal="" descr="Sets the selection name.">
 				<Param name="name" />
@@ -3271,6 +3283,11 @@
 		</KeyWord>
 		<KeyWord name="roiManager('update')" func="yes">
 			<Overload retVal="" descr="Replaces the selected ROI on the list with the current selection.">
+			</Overload>
+		</KeyWord>
+		<KeyWord name="RoiManager.delete" func="yes">
+			<Overload retVal="" descr="Deletes the ROI at 'index' and updates the display. Requires 1.54k.">
+				<Param name="index" />			
 			</Overload>
 		</KeyWord>
 		<KeyWord name="roiManager.multiCrop" func="yes">
@@ -3604,7 +3621,8 @@
 					commands in the Image...Type...sub-menu scale from the min and max displayed pixel value to 0-255
 					when converting from 16-bit or 32-bit to 8-bit or to 0-65535 when converting from 32-bit to 16-bit.
 					The min and max displayed pixel values can be set using the Image...Adjust...Brightness/Contrast dialog
-					or the setMinAndMax function. 			
+					or the setMinAndMax function.
+			('SetIJMenuBar', boolean) On Macs, show the ImageJ menu bar on image window activation. Requires 1.54m.
 			('ShowRowIndexes', boolean) Enables/disables display of Results table row indexes.">
 				<Param name="option" />
 				<Param name="boolean" />
